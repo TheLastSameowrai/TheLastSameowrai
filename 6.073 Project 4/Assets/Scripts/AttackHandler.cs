@@ -23,34 +23,35 @@ public class AttackHandler : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if (Input.GetKeyUp(KeyCode.Space))
-        {
-            Debug.Log("INPUT SPACE");
-
-            if (!isAttacking)
-            {
-                Debug.Log("NOT IS ATTACKING");
-                anim.SetBool("isAttacking", true);
-                isAttacking = true;
-            }
-        }
 
 	}
 
-    void StartWindup()
+    public void RequestAttack()
     {
-        Debug.Log("StartWindup");
+        if (!isAttacking)
+        {
+            anim.SetBool("isAttacking", true);
+            isAttacking = true;
+        }
     }
 
+    // Called when attack telegraph is called (at the start of the attack)
+    void StartWindup()
+    {
+        
+    }
+       
+    // Called when the attack itself starts
     void StartAttack()
     {
-        Debug.Log("StartAttack");
+        
         rb2d.velocity = new Vector2(2, 0);
     }
 
+    // Called when the attack is done
     void EndAttack()
     {
-        Debug.Log("EndAttack");
+        
         rb2d.velocity = new Vector2(0, 0);
 
         anim.SetBool("isAttacking", false);
