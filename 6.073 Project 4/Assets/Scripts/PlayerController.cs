@@ -3,23 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
-
-	public float speed;
-    public Rigidbody2D rb2d;
+   
     public AttackHandler ah;
     public StanceManager sm;
+    public EntityManager em;
 
     // Use this for initialization
     void Start () {
         ah = gameObject.GetComponent<AttackHandler>();
         sm = gameObject.GetComponent<StanceManager>();
-		rb2d = gameObject.GetComponent<Rigidbody2D> ();
+        em = gameObject.GetComponent<EntityManager>();
+
 	}
 
 	// Update is called at a fixed rate
 	void FixedUpdate () {
-		float translation = Input.GetAxis ("Horizontal") * speed;
-		rb2d.velocity = new Vector2 (translation, 0); 
+		float translation = Input.GetAxis ("Horizontal");
+
+        em.MoveEntity(translation);
 
         if (Input.GetKeyDown(KeyCode.Space))
         {

@@ -8,7 +8,7 @@ public class AttackHandler : MonoBehaviour {
 
     public Animator anim;
 
-    private bool isAttacking;
+    public bool isAttacking;
     
 	// Use this for initialization
 	void Start () {
