@@ -12,11 +12,18 @@ public class DemoEnemyController : MonoBehaviour
 
     public StanceManager sm;
 
+    public EntityManager em;
+
+    public EntityManager player;
+
+
+
     // Use this for initialization
     void Start()
     {
         ah = gameObject.GetComponent<AttackHandler>();
         sm = gameObject.GetComponent<StanceManager>();
+        em = gameObject.GetComponent<EntityManager>();
 
         InvokeRepeating("RandStance", 0, 3);
     }
