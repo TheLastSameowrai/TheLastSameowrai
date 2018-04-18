@@ -4,20 +4,23 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
+	public float speed;
     public Rigidbody2D rb2d;
-
     public AttackHandler ah;
-
     public StanceManager sm;
 
     // Use this for initialization
     void Start () {
         ah = gameObject.GetComponent<AttackHandler>();
         sm = gameObject.GetComponent<StanceManager>();
+		rb2d = gameObject.GetComponent<Rigidbody2D> ();
 	}
-	
+
 	// Update is called at a fixed rate
 	void FixedUpdate () {
+		float translation = Input.GetAxis ("Horizontal") * speed;
+		rb2d.velocity = new Vector2 (translation, 0); 
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             ah.RequestAttack();
