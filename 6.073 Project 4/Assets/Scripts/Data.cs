@@ -14,10 +14,8 @@ public class Data : MonoBehaviour {
     float start_time = 0;
     float level_time = 0;
 
-    // individual levels would have to be manually set as parameters as of now
-    public float level1 = 0;
-    public float level2 = 0;
-    
+    public LevelData[] levels;
+    List<LevelData> levelList = new List<LevelData>();
    
 
     // Use this for initialization
@@ -39,16 +37,13 @@ public class Data : MonoBehaviour {
         level_time = 0;
     }
     
-    public void levelComplete(string level)
+    public void levelComplete(string level, string result)
     {
-        if (level == "level1")
-        {
-            level1 = Time.time - level_time;
-        }
-        if (level == "level2")
-        {
-            level2 = Time.time - level_time;
-        }
+        LevelData newLevel = new LevelData();
+        newLevel.levelName = level;
+        newLevel.completeTime = Time.time - level_time;
+        newLevel.result = result;
+        levelList.Add(newLevel);
         level_time = Time.time;
     }
 
@@ -70,21 +65,51 @@ public class Data : MonoBehaviour {
         plays += 1;
     }
 
-    private string dictionaryToString(Dictionary<string, float> dict)
-    {
-        string[] entries = new string[dict.Count];
-        int index = 0;
-        foreach (KeyValuePair<string, float> entry in dict){
-            entries[index] = string.Format("\"{0}\": {1}", entry.Key, entry.Value);
-            index += 1;
-        }
-        return "{" + string.Join(",", entries) + "}";
-    }
-
     public void storeData()
     {
+        levelComplete("testLevel", "win");
+        levelComplete("newTest", "lose");
+        levels = levelList.ToArray();
         string filepath =  Application.dataPath + "/Data/" + id + ".json";
         File.WriteAllText(filepath, JsonUtility.ToJson(this, true));
     }
 
+}
+
+[Serializable]
+public class LevelData
+{
+    public string levelName;
+    public float completeTime;
+    public string result;
+}
+
+// JsonHelper code taken from https://stackoverflow.com/questions/36239705/serialize-and-deserialize-json-and-json-array-in-unity
+public static class JsonHelper
+{
+    public static T[] FromJson<T>(string json)
+    {
+        Wrapper<T> wrapper = JsonUtility.FromJson<Wrapper<T>>(json);
+        return wrapper.Items;
+    }
+
+    public static string ToJson<T>(T[] array)
+    {
+        Wrapper<T> wrapper = new Wrapper<T>();
+        wrapper.Items = array;
+        return JsonUtility.ToJson(wrapper);
+    }
+
+    public static string ToJson<T>(T[] array, bool prettyPrint)
+    {
+        Wrapper<T> wrapper = new Wrapper<T>();
+        wrapper.Items = array;
+        return JsonUtility.ToJson(wrapper, prettyPrint);
+    }
+
+    [Serializable]
+    private class Wrapper<T>
+    {
+        public T[] Items;
+    }
 }
