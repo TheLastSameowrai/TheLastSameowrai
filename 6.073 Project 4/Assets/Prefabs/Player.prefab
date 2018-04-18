@@ -177,6 +177,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitbox: {fileID: 0}
   hurtbox: {fileID: 0}
+  sm: {fileID: 0}
+  rb2d: {fileID: 0}
+  sprend: {fileID: 0}
+  anim: {fileID: 0}
+  ah: {fileID: 0}
+  speed: 5
+  looking: 0
 --- !u!114 &114252334873586612
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -190,6 +197,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb2d: {fileID: 0}
   anim: {fileID: 0}
+  isAttacking: 0
 --- !u!114 &114362716884302814
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -214,9 +222,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f1833fdca1ee2148abc1bcf3d4ad3dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb2d: {fileID: 0}
   ah: {fileID: 0}
   sm: {fileID: 0}
+  em: {fileID: 0}
 --- !u!212 &212737732321667210
 SpriteRenderer:
   m_ObjectHideFlags: 1

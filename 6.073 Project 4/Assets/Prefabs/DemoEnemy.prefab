@@ -191,6 +191,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitbox: {fileID: 0}
   hurtbox: {fileID: 0}
+  sm: {fileID: 0}
 --- !u!114 &114442805469461790
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -218,6 +219,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitbox: {fileID: 0}
   hurtbox: {fileID: 0}
+  sm: {fileID: 0}
 --- !u!114 &114898904032513410
 MonoBehaviour:
   m_ObjectHideFlags: 1
