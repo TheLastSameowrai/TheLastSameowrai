@@ -6,8 +6,6 @@ using System;
 public class DemoEnemyController : MonoBehaviour
 {
 
-    public Rigidbody2D rb2d;
-
     public AttackHandler ah;
 
     public StanceManager sm;
@@ -31,7 +29,13 @@ public class DemoEnemyController : MonoBehaviour
     // Update is called at a fixed rate
     void FixedUpdate()
     {
-        
+        Rigidbody2D playerBody = player.GetComponent<Rigidbody2D>();
+        Rigidbody2D enemyBody = em.GetComponent<Rigidbody2D>();
+        Vector2 moveDirection = playerBody.position - enemyBody.position;
+        moveDirection = moveDirection.normalized;
+        float translation = moveDirection.x;
+        em.MoveEntity(translation);
+
     }
 
     void RandStance()
