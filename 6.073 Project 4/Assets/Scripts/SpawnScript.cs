@@ -9,22 +9,25 @@ public class SpawnScript : MonoBehaviour {
     public GameObject EnemyPrefab;
     public GameObject Player;
 
+    public bool gameOver;
+
 	// Use this for initialization
 	void Start () {
         spawnRate = 2f;
         start_time = Time.time;
+        gameOver = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (Time.time - start_time > spawnRate)
+		if (! gameOver && Time.time - start_time > spawnRate)
         {
-            spawnEnemey();
+            spawnEnemy();
             start_time = Time.time;
         }
 	}
 
-    void spawnEnemey()
+    void spawnEnemy()
     {
         Vector3 spawnLocation = new Vector3(5.0f, 0, 0);
         GameObject enemy = (GameObject)Instantiate(EnemyPrefab, spawnLocation, new Quaternion());

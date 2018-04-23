@@ -101,6 +101,21 @@ public class EntityManager : MonoBehaviour {
 
     public void DestroyEntity()
     {
+        UIScript ui = GameObject.Find("UIScript").GetComponent("UIScript") as UIScript;
+        if (this.gameObject.tag == "Player")
+        {
+            SpawnScript spawn = GameObject.Find("SpawnScript").GetComponent("SpawnScript") as SpawnScript;
+            spawn.gameOver = true;
+
+            ui.gameOver = true;
+            ui.Timer.text = "Game Over";
+
+            GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+            foreach (GameObject enemy in enemies)
+            {
+                Object.Destroy(enemy);
+            }
+        }
         Object.Destroy(this.gameObject);
     }
 }
