@@ -210,7 +210,7 @@ MonoBehaviour:
   sprend: {fileID: 0}
   anim: {fileID: 0}
   ah: {fileID: 0}
-  speed: 5
+  speed: 2
   looking: 1
 --- !u!114 &114724590598357502
 MonoBehaviour:
