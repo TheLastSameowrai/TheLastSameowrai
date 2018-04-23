@@ -775,6 +775,16 @@ Prefab:
       propertyPath: m_ApplyRootMotion
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114252334873586612, guid: 66fff07191d8884409da7d8c6375679b,
+        type: 2}
+      propertyPath: attackSpeedScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114252334873586612, guid: 66fff07191d8884409da7d8c6375679b,
+        type: 2}
+      propertyPath: windUpSpeedScale
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114165955529504318, guid: 66fff07191d8884409da7d8c6375679b, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 66fff07191d8884409da7d8c6375679b, type: 2}

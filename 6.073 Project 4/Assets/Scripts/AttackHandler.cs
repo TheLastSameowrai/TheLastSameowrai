@@ -9,6 +9,10 @@ public class AttackHandler : MonoBehaviour {
     public Animator anim;
 
     private EntityManager em;
+
+    public float windUpSpeedScale = 1;
+
+    public float attackSpeedScale = 1;
     
 	// Use this for initialization
 	void Start () {
@@ -38,7 +42,7 @@ public class AttackHandler : MonoBehaviour {
     // Called when attack telegraph is called (at the start of the attack)
     void StartWindup()
     {
-        
+        anim.speed = windUpSpeedScale;
     }
        
     // Called when the attack itself starts
@@ -46,6 +50,7 @@ public class AttackHandler : MonoBehaviour {
     {
         int dir = em.looking;
         rb2d.velocity = new Vector2(dir*2, 0);
+        anim.speed = attackSpeedScale;
     }
 
     // Called when the attack is done
@@ -57,6 +62,7 @@ public class AttackHandler : MonoBehaviour {
         rb2d.velocity = new Vector2(0, 0);
 
         anim.SetBool("isAttacking", false);
+        anim.speed = 1;
         
 
     }
