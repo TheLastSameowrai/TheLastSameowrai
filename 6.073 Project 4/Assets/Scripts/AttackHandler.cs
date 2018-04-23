@@ -8,8 +8,6 @@ public class AttackHandler : MonoBehaviour {
 
     public Animator anim;
 
-    public bool isAttacking;
-
     private EntityManager em;
     
 	// Use this for initialization
@@ -21,8 +19,6 @@ public class AttackHandler : MonoBehaviour {
 
         em = gameObject.GetComponent<EntityManager>();
 
-
-        isAttacking = false;
 	}
 	
 	// Update is called once per frame
@@ -33,10 +29,9 @@ public class AttackHandler : MonoBehaviour {
 
     public void RequestAttack()
     {
-        if (!isAttacking)
+        if (!anim.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
         {
             anim.SetBool("isAttacking", true);
-            isAttacking = true;
         }
     }
 
@@ -56,10 +51,13 @@ public class AttackHandler : MonoBehaviour {
     // Called when the attack is done
     void EndAttack()
     {
-        
+        Debug.Log("Entity end attack");
+        Debug.Log(gameObject);
+
         rb2d.velocity = new Vector2(0, 0);
 
         anim.SetBool("isAttacking", false);
-        isAttacking = false;
+        
+
     }
 }

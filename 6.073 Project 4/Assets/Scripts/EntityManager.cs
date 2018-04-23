@@ -68,7 +68,7 @@ public class EntityManager : MonoBehaviour {
 			transform.position = new Vector3 (xPosition, 0, 0);
 		}
 
-		if (ah.isAttacking)
+        if (ah.anim.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
         {
             anim.SetFloat("speed", 0);
             rb2d.velocity = new Vector2(0, 0);
