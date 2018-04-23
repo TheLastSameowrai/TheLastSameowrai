@@ -157,7 +157,7 @@ Animator:
   m_GameObject: {fileID: 1234892525182322}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f454d9db0c57ac04dbe81499b828d093, type: 2}
+  m_Controller: {fileID: 9100000, guid: 9868cbb40b0a50840a7e1d4e4de4022f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -192,6 +192,12 @@ MonoBehaviour:
   hitbox: {fileID: 0}
   hurtbox: {fileID: 0}
   sm: {fileID: 0}
+  rb2d: {fileID: 0}
+  sprend: {fileID: 0}
+  anim: {fileID: 0}
+  ah: {fileID: 0}
+  speed: 0
+  looking: 0
 --- !u!114 &114442805469461790
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -203,9 +209,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddc6a9aa51ef7b34b935660c0d67c98e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb2d: {fileID: 0}
   ah: {fileID: 0}
   sm: {fileID: 0}
+  em: {fileID: 0}
+  target: {fileID: 0}
 --- !u!114 &114876616650653190
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -220,6 +227,12 @@ MonoBehaviour:
   hitbox: {fileID: 0}
   hurtbox: {fileID: 0}
   sm: {fileID: 0}
+  rb2d: {fileID: 0}
+  sprend: {fileID: 0}
+  anim: {fileID: 0}
+  ah: {fileID: 0}
+  speed: 0
+  looking: 0
 --- !u!114 &114898904032513410
 MonoBehaviour:
   m_ObjectHideFlags: 1
