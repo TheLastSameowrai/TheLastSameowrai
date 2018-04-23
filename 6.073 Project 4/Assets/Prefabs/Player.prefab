@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 114030194869983918}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -197,7 +197,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb2d: {fileID: 0}
   anim: {fileID: 0}
-  isAttacking: 0
 --- !u!114 &114362716884302814
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -222,9 +221,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f1833fdca1ee2148abc1bcf3d4ad3dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ah: {fileID: 0}
-  sm: {fileID: 0}
-  em: {fileID: 0}
+  lowSound: {fileID: 0}
+  midSound: {fileID: 0}
+  highSound: {fileID: 0}
 --- !u!212 &212737732321667210
 SpriteRenderer:
   m_ObjectHideFlags: 1
