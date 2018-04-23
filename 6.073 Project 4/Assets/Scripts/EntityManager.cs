@@ -25,6 +25,8 @@ public class EntityManager : MonoBehaviour {
 	private float rightXBound = 8.0f;
 	private float leftXBound = -8.0f;
 
+    private float hurtBoxXPosition;
+
     // Use this for initialization
     void Start () {
         hitbox = gameObject.GetComponent<BoxCollider2D>();
@@ -38,6 +40,8 @@ public class EntityManager : MonoBehaviour {
         anim = gameObject.GetComponent<Animator>();
 
         ah = gameObject.GetComponent<AttackHandler>();
+
+        hurtBoxXPosition = hurtbox.transform.position.x;
 	}
 
 	
@@ -51,7 +55,7 @@ public class EntityManager : MonoBehaviour {
             looking = -1;
         }
 
-        sprend.flipX = looking > 0 ? false : true;
+        gameObject.transform.localScale = looking > 0 ? new Vector3(1, 1, 1) : new Vector3(-1, 1, 1);
         
 	}
 
@@ -68,7 +72,7 @@ public class EntityManager : MonoBehaviour {
 			transform.position = new Vector3 (xPosition, 0, 0);
 		}
 
-		if (ah.isAttacking)
+        if (ah.anim.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
         {
             anim.SetFloat("speed", 0);
             rb2d.velocity = new Vector2(0, 0);

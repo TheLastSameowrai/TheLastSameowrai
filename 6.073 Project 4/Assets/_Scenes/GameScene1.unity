@@ -755,6 +755,26 @@ Prefab:
       propertyPath: highSound
       value: 
       objectReference: {fileID: 8300000, guid: 6decffe34efb3c34aaf18b7500f71710, type: 3}
+    - target: {fileID: 61867649243296936, guid: 66fff07191d8884409da7d8c6375679b,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 61867649243296936, guid: 66fff07191d8884409da7d8c6375679b,
+        type: 2}
+      propertyPath: m_UsedByComposite
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 61867649243296936, guid: 66fff07191d8884409da7d8c6375679b,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 95888423036806534, guid: 66fff07191d8884409da7d8c6375679b,
+        type: 2}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114165955529504318, guid: 66fff07191d8884409da7d8c6375679b, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 66fff07191d8884409da7d8c6375679b, type: 2}
