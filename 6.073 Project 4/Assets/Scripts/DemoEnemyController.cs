@@ -12,7 +12,7 @@ public class DemoEnemyController : MonoBehaviour
 
     public EntityManager em;
 
-    public EntityManager player;
+    public GameObject target;
 
 
 
@@ -22,19 +22,30 @@ public class DemoEnemyController : MonoBehaviour
         ah = gameObject.GetComponent<AttackHandler>();
         sm = gameObject.GetComponent<StanceManager>();
         em = gameObject.GetComponent<EntityManager>();
-
+       
         InvokeRepeating("RandStance", 0, 3);
     }
 
     // Update is called at a fixed rate
     void FixedUpdate()
     {
-        Rigidbody2D playerBody = player.GetComponent<Rigidbody2D>();
+        Rigidbody2D playerBody = target.GetComponent<Rigidbody2D>();
         Rigidbody2D enemyBody = em.GetComponent<Rigidbody2D>();
         Vector2 moveDirection = playerBody.position - enemyBody.position;
-        moveDirection = moveDirection.normalized;
-        float translation = moveDirection.x;
-        em.MoveEntity(translation);
+        //print("MoveDir");
+        //print(moveDirection);
+        Vector2 moveDirectionNorm = moveDirection.normalized;
+        //print("MoveDirNorm");
+        //print(moveDirectionNorm);
+        float translation = moveDirectionNorm.x;
+
+        
+        if(Math.Abs(moveDirection.x) < 6.0) {
+            ah.RequestAttack();
+        } else
+        {
+            em.MoveEntity(translation);
+        }
 
     }
 

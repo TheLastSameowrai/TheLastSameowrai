@@ -84,6 +84,7 @@ public class EntityManager : MonoBehaviour {
     public void DestroyEntity()
     {
         // TODO
+        print("DESTROYING");
         gameObject.SetActive(false);
     }
 }

@@ -9,6 +9,8 @@ public class AttackHandler : MonoBehaviour {
     public Animator anim;
 
     public bool isAttacking;
+
+    private EntityManager em;
     
 	// Use this for initialization
 	void Start () {
@@ -16,6 +18,9 @@ public class AttackHandler : MonoBehaviour {
         rb2d = gameObject.GetComponent<Rigidbody2D>();
 
         anim = gameObject.GetComponent<Animator>();
+
+        em = gameObject.GetComponent<EntityManager>();
+
 
         isAttacking = false;
 	}
@@ -44,8 +49,8 @@ public class AttackHandler : MonoBehaviour {
     // Called when the attack itself starts
     void StartAttack()
     {
-        
-        rb2d.velocity = new Vector2(2, 0);
+        int dir = em.looking;
+        rb2d.velocity = new Vector2(dir*2, 0);
     }
 
     // Called when the attack is done
