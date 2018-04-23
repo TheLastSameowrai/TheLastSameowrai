@@ -687,7 +687,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 51.71}
+  m_AnchoredPosition: {x: 0, y: 80.99}
   m_SizeDelta: {x: 500, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1664158869
@@ -725,6 +725,8 @@ MonoBehaviour:
   m_Text: 'press ''w'' and ''S'' to change your stance
 
     press ''space'' to initiate an attack
+
+    Use ''A'' and ''D'' to move left and right
 
 
     Match their stance to block and hit them with a different stance to murder them'

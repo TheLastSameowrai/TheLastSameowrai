@@ -38,7 +38,6 @@ public class DemoEnemyController : MonoBehaviour
         //print("MoveDirNorm");
         //print(moveDirectionNorm);
         float translation = moveDirectionNorm.x;
-		Debug.Log (moveDirection.x);
         
 		if((moveDirection.x > -4.0 && moveDirection.x < 0 && em.looking == -1) || (moveDirection.x < 4.0 && moveDirection.x > 0 && em.looking == 1)) {
             ah.RequestAttack();

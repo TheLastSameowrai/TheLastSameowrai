@@ -28,30 +28,27 @@ public class PlayerController : MonoBehaviour {
         em.MoveEntity(translation);
 
         bool attackFlag = false;
+		if (!ah.anim.GetCurrentAnimatorStateInfo (0).IsTag ("Attack")) {
+			if (Input.GetKeyDown (KeyCode.Space)) {
+				ah.RequestAttack ();
+				attackFlag = true;
+			}
+			if (Input.GetKeyDown(KeyCode.W))
+			{
+				sm.StanceUp ();
+				aud.clip = highSound;
+			}else if (Input.GetKeyDown(KeyCode.S))
+			{
+				sm.StanceDown ();
+				aud.clip = lowSound;
+			}
+			else
+			{
+				//aud.clip = midSound;
+			}
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            ah.RequestAttack();
-            attackFlag = true;
-        }
-
-        // Check for stance change input
-
-        if (Input.GetKey(KeyCode.W))
-        {
-            sm.ChangeStance(StanceManager.Stance.HIGH);
-            aud.clip = highSound;
-        }else if (Input.GetKey(KeyCode.S))
-        {
-            sm.ChangeStance(StanceManager.Stance.LOW);
-            aud.clip = lowSound;
-        }
-        else
-        {
-            sm.ChangeStance(StanceManager.Stance.MID);
-            aud.clip = midSound;
-        }
-
-        if (attackFlag) aud.Play();
+			if (attackFlag) aud.Play();
+		}
+   
     }
 }

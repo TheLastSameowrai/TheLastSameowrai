@@ -41,4 +41,36 @@ public class StanceManager : MonoBehaviour {
     {
         currentStance = s;
     }
+
+	public void StanceUp(){
+		switch (currentStance)
+		{
+		case Stance.HIGH:
+			break;
+		case Stance.MID:
+			currentStance = Stance.HIGH;
+			break;
+		case Stance.LOW:
+			currentStance = Stance.MID;
+			break;
+		default:
+			break;
+		}
+	}
+
+	public void StanceDown(){
+		switch (currentStance)
+		{
+		case Stance.HIGH:
+			currentStance = Stance.MID;
+			break;
+		case Stance.MID:
+			currentStance = Stance.LOW;
+			break;
+		case Stance.LOW:
+			break;
+		default:
+			break;
+		}
+	}
 }
