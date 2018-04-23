@@ -22,6 +22,9 @@ public class EntityManager : MonoBehaviour {
 
     public int looking; // 1 if looking right, -1 if looking left
 
+	private float rightXBound = 8.0f;
+	private float leftXBound = -8.0f;
+
     // Use this for initialization
     void Start () {
         hitbox = gameObject.GetComponent<BoxCollider2D>();
@@ -54,7 +57,18 @@ public class EntityManager : MonoBehaviour {
 
     public void MoveEntity(float translation)
     {
-        if (ah.isAttacking)
+		float xPosition = rb2d.transform.position.x;
+		if (xPosition > rightXBound) 
+		{
+			xPosition = rightXBound;
+			transform.position = new Vector3 (xPosition, 0, 0);
+		}
+		else if (xPosition < leftXBound) {
+			xPosition = leftXBound;
+			transform.position = new Vector3 (xPosition, 0, 0);
+		}
+
+		if (ah.isAttacking)
         {
             anim.SetFloat("speed", 0);
             rb2d.velocity = new Vector2(0, 0);
