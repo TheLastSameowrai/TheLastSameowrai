@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	// Update is called at a fixed rate
-	void FixedUpdate () {
+	void Update () {
 		float translation = Input.GetAxis ("Horizontal");
 
         em.MoveEntity(translation);

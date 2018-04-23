@@ -22,8 +22,8 @@ public class DemoEnemyController : MonoBehaviour
         ah = gameObject.GetComponent<AttackHandler>();
         sm = gameObject.GetComponent<StanceManager>();
         em = gameObject.GetComponent<EntityManager>();
-       
-        InvokeRepeating("RandStance", 0, 3);
+		RandStance ();
+        //InvokeRepeating("RandStance", 0, 3);
     }
 
     // Update is called at a fixed rate
@@ -38,9 +38,9 @@ public class DemoEnemyController : MonoBehaviour
         //print("MoveDirNorm");
         //print(moveDirectionNorm);
         float translation = moveDirectionNorm.x;
-
+		Debug.Log (moveDirection.x);
         
-        if(Math.Abs(moveDirection.x) < 6.0) {
+		if((moveDirection.x > -4.0 && moveDirection.x < 0 && em.looking == -1) || (moveDirection.x < 4.0 && moveDirection.x > 0 && em.looking == 1)) {
             ah.RequestAttack();
         } else
         {
