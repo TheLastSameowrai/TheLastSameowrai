@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/_Scenes/InstructionsScene.unity
     guid: 84843e0c4a83744e18ade6f654b8cb72
   - enabled: 0
-    path: Assets/__DELETED_GUID_Trash/f4e0fd17a5c174ec5911cea045b141f7
+    path: 
     guid: f4e0fd17a5c174ec5911cea045b141f7
   - enabled: 1
     path: Assets/_Scenes/GameScene1.unity
@@ -20,3 +20,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/CreditsScene.unity
     guid: 7b7fca930013841e895a0f972508fbec
+  - enabled: 1
+    path: Assets/_Scenes/GameScene2.unity
+    guid: 13fb90a9c4da14a85bf4bf8fbc3c1557
