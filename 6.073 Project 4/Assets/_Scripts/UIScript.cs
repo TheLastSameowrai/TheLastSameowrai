@@ -66,7 +66,6 @@ public class UIScript : MonoBehaviour {
         LevelConfigManager.dataManager.levelComplete("completed"); //Store Data for level
 		LevelConfigManager.Level = LevelConfigManager.Level + 1;
 		LevelConfigManager.EnemiesDefeated = 0;
-		LevelConfigManager.EnemiesSpawned = 0;
         LevelConfigManager.dataManager.nextLevel(LevelConfigManager.Level.ToString());
 		print ("LevelConfigManager.Level is now" + LevelConfigManager.Level);
 		//Destroy (proceedButton);
