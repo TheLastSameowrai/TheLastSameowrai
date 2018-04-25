@@ -37,12 +37,19 @@ public class UIScript : MonoBehaviour {
         }
 
 		if (LevelConfigManager.EnemiesDefeated >= LevelConfigManager.EnemiesToDefeat && !LevelConfigManager.GameOver) {
-			proceedButton.SetActive (true);
-			LevelConfigManager.Level = LevelConfigManager.Level + 1;
+			//print ("---Setting button to true---");
+			if (proceedButton != null) {
+				proceedButton.SetActive (true);
+			}
 		}
     }
 
 	public void ToNextLevel() {
+		LevelConfigManager.Level = LevelConfigManager.Level + 1;
+		print ("LevelConfigManager.Level is now" + LevelConfigManager.Level);
+		Destroy (proceedButton);
+		//proceedButton.SetActive (false);
+		print ("---Just set the button active to false----");
 		SceneManager.LoadScene ("GameScene");
 	}
 }

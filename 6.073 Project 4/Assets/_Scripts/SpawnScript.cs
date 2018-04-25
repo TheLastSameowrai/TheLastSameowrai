@@ -25,10 +25,13 @@ public class SpawnScript : MonoBehaviour {
 			LevelConfigManager.SpawnRate = 3f;
 			break;
 		case 2:
+			print ("------In case 2 SpawnScript------");
 			LevelConfigManager.EnemiesToDefeat = 2;
 			LevelConfigManager.SpawnRate = 2f;
 			break;
 		default:
+			print ("-----In case default SpawnScript---");
+			print ("LevelConfigManager.Level is" + LevelConfigManager.Level);
 			LevelConfigManager.EnemiesToDefeat = 3;
 			LevelConfigManager.SpawnRate = 1f;
 			break;

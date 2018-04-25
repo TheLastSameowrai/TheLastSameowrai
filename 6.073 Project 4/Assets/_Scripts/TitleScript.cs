@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class TitleScript : MonoBehaviour {
 
@@ -22,5 +23,4 @@ public class TitleScript : MonoBehaviour {
 	public void ToInstructionsScene() {
 		SceneManager.LoadScene ("InstructionsScene");
 	}
-
 }
