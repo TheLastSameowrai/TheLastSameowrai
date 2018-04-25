@@ -51,5 +51,6 @@ public class UIScript : MonoBehaviour {
 		//proceedButton.SetActive (false);
 		print ("---Just set the button active to false----");
 		SceneManager.LoadScene ("GameScene");
+
 	}
 }
