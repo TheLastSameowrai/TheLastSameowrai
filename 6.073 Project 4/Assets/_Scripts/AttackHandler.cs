@@ -42,12 +42,16 @@ public class AttackHandler : MonoBehaviour {
     // Called when attack telegraph is called (at the start of the attack)
     void StartWindup()
     {
+        Debug.Log("Entity start windup");
+        Debug.Log(gameObject);
         anim.speed = windUpSpeedScale;
     }
        
     // Called when the attack itself starts
     void StartAttack()
     {
+        Debug.Log("Entity start attack");
+        Debug.Log(gameObject);
         int dir = em.looking;
         rb2d.velocity = new Vector2(dir*2, 0);
         anim.speed = attackSpeedScale;
@@ -64,6 +68,5 @@ public class AttackHandler : MonoBehaviour {
         anim.SetBool("isAttacking", false);
         anim.speed = 1;
         
-
     }
 }
