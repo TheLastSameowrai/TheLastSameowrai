@@ -113,6 +113,8 @@ public class EntityManager : MonoBehaviour {
 
             //ui.gameOver = true;
             //ui.Timer.text = "Game Over";
+            LevelConfigManager.dataManager.levelComplete("game_over");
+            LevelConfigManager.dataManager.storeData();
 			LevelConfigManager.Timer.text = "Game Over";
 			LevelConfigManager.GameOver = true;
 
