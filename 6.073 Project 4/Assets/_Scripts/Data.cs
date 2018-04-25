@@ -6,45 +6,47 @@ using System.IO;
 
 public class Data : MonoBehaviour {
 
-    public string id = "";
-    public int plays = 0;
-    public int score = 0;
-    public string currentLevel = "";
-    public string status = "ongoing";
-    float start_time = 0;
-    float level_time = 0;
+    public string id;
+    public int plays;
+    public string currentLevel;
+    public string status;
+    float start_time;
+    float level_time;
 
     public LevelData[] levels;
-    List<LevelData> levelList = new List<LevelData>();
+    List<LevelData> levelList;
    
 
     // Use this for initialization
-    void Start () {
+    public void Start () {
         id = generateId();
+        plays = 1;
+        currentLevel = "1";
+        status = "ongoing";
         start_time = Time.time;
-	}
-
-    // Change status (options are "onging" and "game_over")
-    public void changeStatus(string s)
-    {
-        status = s;
+        level_time = start_time;
+        levelList = new List<LevelData>();
     }
+
 
     // Move on to next level and reset timer
     public void nextLevel(string level)
     {
         currentLevel = level;
-        level_time = 0;
+        level_time = Time.time;
     }
     
-    public void levelComplete(string level, string result)
+    public void levelComplete(string result)
     {
+        if (result == "game_over")
+        {
+            status = "game_over";
+        }
         LevelData newLevel = new LevelData();
-        newLevel.levelName = level;
+        newLevel.levelName = currentLevel;
         newLevel.completeTime = Time.time - level_time;
         newLevel.result = result;
         levelList.Add(newLevel);
-        level_time = Time.time;
     }
 
 
@@ -67,11 +69,12 @@ public class Data : MonoBehaviour {
 
     public void storeData()
     {
-        levelComplete("testLevel", "win");
-        levelComplete("newTest", "lose");
         levels = levelList.ToArray();
         string filepath =  Application.dataPath + "/Data/" + id + ".json";
-        File.WriteAllText(filepath, JsonUtility.ToJson(this, true));
+        // For now, doesn't actually store the data
+        // File.WriteAllText(filepath, JsonUtility.ToJson(this, true));
+        Debug.Log("Stored Data");
+        print(JsonUtility.ToJson(this, false));
     }
 
 }

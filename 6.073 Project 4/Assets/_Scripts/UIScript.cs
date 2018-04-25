@@ -40,6 +40,8 @@ public class UIScript : MonoBehaviour {
 			LevelConfigManager.Timer = timer;
 			LevelConfigManager.Timer.text = "00:00"; // Timer.text = "00:00";
 			LevelConfigManager.FirstTime = false;
+			LevelConfigManager.dataManager = new Data ();
+			LevelConfigManager.dataManager.Start (); // initialize Data
 		}
 	}
 
@@ -61,9 +63,11 @@ public class UIScript : MonoBehaviour {
     }
 
 	public void ToNextLevel() {
+        LevelConfigManager.dataManager.levelComplete("completed"); //Store Data for level
 		LevelConfigManager.Level = LevelConfigManager.Level + 1;
 		LevelConfigManager.EnemiesDefeated = 0;
 		LevelConfigManager.EnemiesSpawned = 0;
+        LevelConfigManager.dataManager.nextLevel(LevelConfigManager.Level.ToString());
 		print ("LevelConfigManager.Level is now" + LevelConfigManager.Level);
 		//Destroy (proceedButton);
 		proceedButton.SetActive (false);
