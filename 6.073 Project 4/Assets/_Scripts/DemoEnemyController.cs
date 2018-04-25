@@ -29,8 +29,11 @@ public class DemoEnemyController : MonoBehaviour
     // Update is called at a fixed rate
     void FixedUpdate()
     {
-        Rigidbody2D playerBody = target.GetComponent<Rigidbody2D>();
-        Rigidbody2D enemyBody = em.GetComponent<Rigidbody2D>();
+		if (target == null) {
+			return;
+		}
+		Rigidbody2D playerBody = target.GetComponent<Rigidbody2D> ();
+		Rigidbody2D enemyBody = em.GetComponent<Rigidbody2D>();
         Vector2 moveDirection = playerBody.position - enemyBody.position;
         //print("MoveDir");
         //print(moveDirection);

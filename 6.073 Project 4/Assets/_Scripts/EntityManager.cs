@@ -47,6 +47,10 @@ public class EntityManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (LevelConfigManager.GameOver) {
+			StartCoroutine (waiter ());
+		}
+
 		if(rb2d.velocity.x > 0)
         {
             looking = 1;
@@ -114,17 +118,26 @@ public class EntityManager : MonoBehaviour {
 			LevelConfigManager.Timer.text = "Game Over";
 			LevelConfigManager.GameOver = true;
 
-            GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-            foreach (GameObject enemy in enemies)
-            {
-                Object.Destroy(enemy);
-            }
+			Object.Destroy (this.gameObject);
+			/*GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+			foreach (GameObject enemy in enemies)
+			{
+				Object.Destroy(enemy);
+			}
+			Object.Destroy (this.gameObject);*/
         }
-
-		if (this.gameObject.tag == "Enemy") {
+		else if (this.gameObject.tag == "Enemy") {
+			Object.Destroy(this.gameObject);
 			LevelConfigManager.EnemiesDefeated = LevelConfigManager.EnemiesDefeated + 1;
 		}
-
-        Object.Destroy(this.gameObject);
     }
+
+	IEnumerator waiter() {
+		yield return new WaitForSeconds (1);
+		GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+		foreach (GameObject enemy in enemies)
+		{
+			Object.Destroy(enemy);
+		}
+	}
 }
