@@ -9,6 +9,7 @@ public class UIScript : MonoBehaviour {
 
     public Text timer;
 	public GameObject proceedButton;
+	public GameObject[] pauseObjects;
 
     //float startTime;
     //public bool gameOver;
@@ -34,7 +35,9 @@ public class UIScript : MonoBehaviour {
 		print ("In UISCRIPT start");
 		//DontDestroyOnLoad (transform.gameObject);
 		proceedButton.SetActive (false);
-
+		Time.timeScale = 1;
+		pauseObjects = GameObject.FindGameObjectsWithTag("ShowOnPause");
+		hidePaused();
 		if (LevelConfigManager.FirstTime) {
 			LevelConfigManager.StartTime = Time.time; //startTime = Time.time;
 			LevelConfigManager.Timer = timer;
@@ -47,6 +50,19 @@ public class UIScript : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		if (Input.GetKeyDown(KeyCode.P))
+		{
+				if (Time.timeScale == 1)
+				{
+					Time.timeScale = 0;
+					showPaused();
+				}
+				else if (Time.timeScale == 0)
+				{
+					Time.timeScale = 1;
+					hidePaused();
+				}
+		}
         if (!LevelConfigManager.GameOver)
         {
 			float elapsedTime = Time.time - LevelConfigManager.StartTime;
@@ -62,6 +78,18 @@ public class UIScript : MonoBehaviour {
 		}
     }
 
+	public void showPaused() {
+		foreach(GameObject g in pauseObjects){
+			g.SetActive (true);
+		}
+	}
+		
+	public void hidePaused(){
+		foreach (GameObject g in pauseObjects) {
+			g.SetActive (false);
+		}
+	}
+	
 	public void ToNextLevel() {
         LevelConfigManager.dataManager.levelComplete("completed"); //Store Data for level
 		LevelConfigManager.Level = LevelConfigManager.Level + 1;
