@@ -26,13 +26,13 @@ AnimationClip:
         outSlope: Infinity
         tangentMode: 103
       - serializedVersion: 2
-        time: 0.33333334
+        time: 0.083333336
         value: 1
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
       - serializedVersion: 2
-        time: 0.5833333
+        time: 0.33333334
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -48,11 +48,11 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: 21300000, guid: 089d94cca1541ef48adb203ef64cc53a, type: 3}
-    - time: 0.33333334
+    - time: 0.083333336
       value: {fileID: 21300000, guid: 8ddcf5a5ab1a46949b54ef6604edc7b2, type: 3}
-    - time: 0.41666666
+    - time: 0.16666667
       value: {fileID: 21300000, guid: 3db9aec96df1ce345954120afe0a4fb0, type: 3}
-    - time: 0.5
+    - time: 0.25
       value: {fileID: 21300000, guid: dde523fff140de2418b7b244c49c371d, type: 3}
     attribute: m_Sprite
     path: 
@@ -89,7 +89,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.5833333
+    m_StopTime: 0.41666666
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -115,13 +115,13 @@ AnimationClip:
         outSlope: Infinity
         tangentMode: 103
       - serializedVersion: 2
-        time: 0.33333334
+        time: 0.083333336
         value: 1
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
       - serializedVersion: 2
-        time: 0.5833333
+        time: 0.33333334
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -145,14 +145,21 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.33333334
+  - time: 0.083333336
     functionName: StartAttack
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.5833333
+  - time: 0.33333334
+    functionName: StartCoolDown
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.41666666
     functionName: EndAttack
     data: 
     objectReferenceParameter: {fileID: 0}

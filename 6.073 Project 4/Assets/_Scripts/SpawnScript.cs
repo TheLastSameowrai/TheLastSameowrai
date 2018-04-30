@@ -17,6 +17,13 @@ public class SpawnScript : MonoBehaviour {
 
 		LevelConfigManager.EnemiesDefeated = 0;
 		LevelConfigManager.EnemiesSpawned = 0;
+        LevelConfigManager.sameowraiAttackSpeed = 1;
+        LevelConfigManager.sameowraiWindupSpeed = 0.5f;
+        LevelConfigManager.sameowraiCoolDownSpeed = 0.5f;
+        LevelConfigManager.doguraiAttackSpeed = 1;
+        LevelConfigManager.doguraiWindupSpeed = 0.2f;
+        LevelConfigManager.doguraiCoolDownSpeed = 0.5f;
+
 
 		switch (LevelConfigManager.Level) {
 		case 1:
