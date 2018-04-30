@@ -40,7 +40,8 @@ public class AttackHandler : MonoBehaviour {
     {
         Debug.Log("Entity start windup");
         Debug.Log(gameObject);
-        if(gameObject.tag == "Enemy")
+        rb2d.velocity = new Vector2(0, 0);
+        if (gameObject.tag == "Enemy")
         {
             anim.speed = LevelConfigManager.doguraiWindupSpeed;
         }
@@ -56,8 +57,9 @@ public class AttackHandler : MonoBehaviour {
     {
         Debug.Log("Entity start attack");
         Debug.Log(gameObject);
+        
         int dir = em.looking;
-        rb2d.velocity = new Vector2(dir*2, 0);
+        
         if (gameObject.tag == "Enemy")
         {
             anim.speed = LevelConfigManager.doguraiAttackSpeed;
