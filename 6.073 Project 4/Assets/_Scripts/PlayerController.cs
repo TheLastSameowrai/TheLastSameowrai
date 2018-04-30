@@ -49,6 +49,23 @@ public class PlayerController : MonoBehaviour {
 
 			if (attackFlag) aud.Play();
 		}
+
+		if (transform.position.x - Camera.main.transform.position.x > 2) {
+			float difference = transform.position.x - Camera.main.transform.position.x - 2;
+			Camera.main.transform.Translate (difference, 0, 0);
+
+		} else if (transform.position.x - Camera.main.transform.position.x < -2) {
+			float difference = transform.position.x - Camera.main.transform.position.x + 2;
+			Camera.main.transform.Translate (difference, 0, 0);
+		}
+		if (Camera.main.transform.position.x <= -1.1) {
+			Camera.main.transform.SetPositionAndRotation (new Vector3 (-1.1f, 0, -10), Quaternion.identity);
+		}
+		if (Camera.main.transform.position.x >= 1.1) {
+			Camera.main.transform.SetPositionAndRotation(new Vector3(1.1f, 0, -10), Quaternion.identity);
+		}
+
+		GameObject.FindGameObjectWithTag ("UIScript").transform.SetPositionAndRotation (Camera.main.transform.position, Camera.main.transform.rotation);
    
     }
 }

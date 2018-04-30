@@ -39,6 +39,9 @@ public class DemoEnemyController : MonoBehaviour
         Rigidbody2D enemyBody = em.GetComponent<Rigidbody2D>();
         Vector2 playerVel = playerBody.velocity;
 
+		if (target == null) {
+			return;
+		}
         Vector2 moveDirection = playerBody.position - enemyBody.position;
         //print("MoveDir");
         //print(moveDirection);

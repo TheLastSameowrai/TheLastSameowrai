@@ -19,4 +19,7 @@ public static class LevelConfigManager {
 	public static int EnemiesDefeated;
 	public static int EnemiesSpawned;
 	public static float SpawnRate;
+
+    public static Data dataManager;
+
 }

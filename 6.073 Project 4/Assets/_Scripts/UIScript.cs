@@ -13,10 +13,26 @@ public class UIScript : MonoBehaviour {
     //float startTime;
     //public bool gameOver;
 
+	private static UIScript instance = null;
+
+	public static UIScript Instance {
+		get { return instance; }
+	}
+
+	void Awake() {
+		if (instance != null && instance != this) {
+			Destroy(this.gameObject);
+			return;
+		} else {
+			instance = this;
+		}
+		DontDestroyOnLoad(this.gameObject);
+	}
+
     // Use this for initialization
     void Start () {
 		print ("In UISCRIPT start");
-		DontDestroyOnLoad (transform.gameObject);
+		//DontDestroyOnLoad (transform.gameObject);
 		proceedButton.SetActive (false);
 
 		if (LevelConfigManager.FirstTime) {
@@ -24,6 +40,8 @@ public class UIScript : MonoBehaviour {
 			LevelConfigManager.Timer = timer;
 			LevelConfigManager.Timer.text = "00:00"; // Timer.text = "00:00";
 			LevelConfigManager.FirstTime = false;
+			LevelConfigManager.dataManager = new Data ();
+			LevelConfigManager.dataManager.Start (); // initialize Data
 		}
 	}
 
@@ -45,11 +63,15 @@ public class UIScript : MonoBehaviour {
     }
 
 	public void ToNextLevel() {
+        LevelConfigManager.dataManager.levelComplete("completed"); //Store Data for level
 		LevelConfigManager.Level = LevelConfigManager.Level + 1;
+		LevelConfigManager.EnemiesDefeated = 0;
+        LevelConfigManager.dataManager.nextLevel(LevelConfigManager.Level.ToString());
 		print ("LevelConfigManager.Level is now" + LevelConfigManager.Level);
-		Destroy (proceedButton);
-		//proceedButton.SetActive (false);
+		//Destroy (proceedButton);
+		proceedButton.SetActive (false);
 		print ("---Just set the button active to false----");
 		SceneManager.LoadScene ("GameScene");
+
 	}
 }
