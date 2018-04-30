@@ -100,6 +100,14 @@ public class UIScript : MonoBehaviour {
 		proceedButton.SetActive (false);
 		print ("---Just set the button active to false----");
 		SceneManager.LoadScene ("GameScene");
+	}
 
+	public void RestartGame() {
+		LevelConfigManager.GameOver = false;
+		LevelConfigManager.Level = 1;
+		LevelConfigManager.Timer.text = "00:00";
+		LevelConfigManager.StartTime = Time.time;
+		proceedButton.SetActive (false);
+		SceneManager.LoadScene ("GameScene");
 	}
 }
