@@ -32,13 +32,13 @@ public class StanceManager : MonoBehaviour
         switch (currentStance)
         {
             case Stance.HIGH:
-                sprend.color = Color.red;
+                
                 break;
             case Stance.MID:
-                sprend.color = Color.blue;
+                
                 break;
             case Stance.LOW:
-                sprend.color = Color.green;
+                
                 break;
             default:
                 break;
