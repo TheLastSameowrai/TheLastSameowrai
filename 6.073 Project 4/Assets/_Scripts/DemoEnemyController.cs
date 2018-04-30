@@ -14,6 +14,12 @@ public class DemoEnemyController : MonoBehaviour
 
     public GameObject target;
 
+    private int distFromPlayer = 3;
+
+    private float translation = 0;
+
+    private float MaxDistance = 5f;
+
 
 
     // Use this for initialization
@@ -31,17 +37,33 @@ public class DemoEnemyController : MonoBehaviour
     {
         Rigidbody2D playerBody = target.GetComponent<Rigidbody2D>();
         Rigidbody2D enemyBody = em.GetComponent<Rigidbody2D>();
+        Vector2 playerVel = playerBody.velocity;
+
         Vector2 moveDirection = playerBody.position - enemyBody.position;
         //print("MoveDir");
         //print(moveDirection);
-        Vector2 moveDirectionNorm = moveDirection.normalized;
-        //print("MoveDirNorm");
-        //print(moveDirectionNorm);
-        float translation = moveDirectionNorm.x;
+        //print(Vector2.Distance(playerBody.position, enemyBody.position));
+        var dist = Vector2.Distance(playerBody.position, enemyBody.position);
+        //if( moveDirection.x > distFromPlayer || moveDirection.x < -distFromPlayer) 
+        //{
+        //    translation = moveDirection.x/MaxDistance;
+        //    print(translation);
+        //    em.MoveEntity(translation);
+        //} else
         
-		if((moveDirection.x > -4.0 && moveDirection.x < 0 && em.looking == -1) || (moveDirection.x < 4.0 && moveDirection.x > 0 && em.looking == 1)) {
+        //{
+        //    ah.RequestAttack();
+        //}
+        Vector2 moveDirectionNorm = moveDirection.normalized;
+        print("MoveDirNorm");
+        print(moveDirectionNorm);
+        float translation = moveDirectionNorm.x;
+
+        if ((moveDirection.x > -4.0 && moveDirection.x < 0 && em.looking == -1) || (moveDirection.x < 4.0 && moveDirection.x > 0 && em.looking == 1))
+        {
             ah.RequestAttack();
-        } else
+        }
+        else
         {
             em.MoveEntity(translation);
         }

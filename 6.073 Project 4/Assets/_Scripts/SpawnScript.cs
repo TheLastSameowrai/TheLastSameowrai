@@ -32,10 +32,12 @@ public class SpawnScript : MonoBehaviour {
 		default:
 			print ("-----In case default SpawnScript---");
 			print ("LevelConfigManager.Level is" + LevelConfigManager.Level);
-			LevelConfigManager.EnemiesToDefeat = 3;
-			LevelConfigManager.SpawnRate = 1f;
+            
+			LevelConfigManager.EnemiesToDefeat = LevelConfigManager.Level * (int)(5/3.0);
+			LevelConfigManager.SpawnRate = (float)LevelConfigManager.Level/4f;
 			break;
 		}
+
 
         //spawnRate = 2f;
         startTime = Time.time;
