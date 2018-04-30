@@ -14,7 +14,7 @@ public class DemoEnemyController : MonoBehaviour
 
     public GameObject target;
 
-    private int distFromPlayer = 3;
+    private int distFromPlayer = 1;
 
     private float translation = 0;
 
@@ -43,31 +43,24 @@ public class DemoEnemyController : MonoBehaviour
 			return;
 		}
         Vector2 moveDirection = playerBody.position - enemyBody.position;
-        //print("MoveDir");
-        //print(moveDirection);
-        //print(Vector2.Distance(playerBody.position, enemyBody.position));
         var dist = Vector2.Distance(playerBody.position, enemyBody.position);
-        //if( moveDirection.x > distFromPlayer || moveDirection.x < -distFromPlayer) 
-        //{
-        //    translation = moveDirection.x/MaxDistance;
-        //    print(translation);
-        //    em.MoveEntity(translation);
-        //} else
-        
-        //{
-        //    ah.RequestAttack();
-        //}
         Vector2 moveDirectionNorm = moveDirection.normalized;
-        print("MoveDirNorm");
-        print(moveDirectionNorm);
         float translation = moveDirectionNorm.x;
 
-        if ((moveDirection.x > -4.0 && moveDirection.x < 0 && em.looking == -1) || (moveDirection.x < 4.0 && moveDirection.x > 0 && em.looking == 1))
+
+        if ((moveDirection.x > -distFromPlayer && moveDirection.x < 0 && em.looking == -1) || (moveDirection.x < distFromPlayer && moveDirection.x > 0 && em.looking == 1))
         {
+            if(playerVel.x > 0.5)
+            {
+                translation = -moveDirection.x / MaxDistance;
+                em.MoveEntity(translation);
+                enemyBody.velocity = new Vector2(moveDirection.x / moveDirection.x, 0);
+            }
             ah.RequestAttack();
         }
         else
         {
+            translation = moveDirection.x / MaxDistance;
             em.MoveEntity(translation);
         }
 
