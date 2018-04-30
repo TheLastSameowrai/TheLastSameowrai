@@ -32,13 +32,19 @@ public class StanceManager : MonoBehaviour
         switch (currentStance)
         {
             case Stance.HIGH:
-                
+                anim.SetLayerWeight(2, 1);
+                anim.SetLayerWeight(1, 0);
+                anim.SetLayerWeight(0, 0);
                 break;
             case Stance.MID:
-                
+                anim.SetLayerWeight(2, 0);
+                anim.SetLayerWeight(1, 1);
+                anim.SetLayerWeight(0, 0);
                 break;
             case Stance.LOW:
-                
+                anim.SetLayerWeight(2, 0);
+                anim.SetLayerWeight(1, 0);
+                anim.SetLayerWeight(0, 1);
                 break;
             default:
                 break;
