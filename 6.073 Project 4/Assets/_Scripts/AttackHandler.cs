@@ -9,10 +9,6 @@ public class AttackHandler : MonoBehaviour {
     public Animator anim;
 
     private EntityManager em;
-
-    public float windUpSpeedScale = 1;
-
-    public float attackSpeedScale = 1;
     
 	// Use this for initialization
 	void Start () {
@@ -44,7 +40,15 @@ public class AttackHandler : MonoBehaviour {
     {
         Debug.Log("Entity start windup");
         Debug.Log(gameObject);
-        anim.speed = windUpSpeedScale;
+        if(gameObject.tag == "Enemy")
+        {
+            anim.speed = LevelConfigManager.doguraiWindupSpeed;
+        }
+        else if(gameObject.tag == "Player")
+        {
+            anim.speed = LevelConfigManager.sameowraiWindupSpeed;
+        }
+        
     }
        
     // Called when the attack itself starts
@@ -54,7 +58,26 @@ public class AttackHandler : MonoBehaviour {
         Debug.Log(gameObject);
         int dir = em.looking;
         rb2d.velocity = new Vector2(dir*2, 0);
-        anim.speed = attackSpeedScale;
+        if (gameObject.tag == "Enemy")
+        {
+            anim.speed = LevelConfigManager.doguraiAttackSpeed;
+        }
+        else if (gameObject.tag == "Player")
+        {
+            anim.speed = LevelConfigManager.sameowraiAttackSpeed;
+        }
+    }
+
+    void StartCoolDown()
+    {
+        if (gameObject.tag == "Enemy")
+        {
+            anim.speed = LevelConfigManager.doguraiCoolDownSpeed;
+        }
+        else if (gameObject.tag == "Player")
+        {
+            anim.speed = LevelConfigManager.sameowraiCoolDownSpeed;
+        }
     }
 
     // Called when the attack is done
