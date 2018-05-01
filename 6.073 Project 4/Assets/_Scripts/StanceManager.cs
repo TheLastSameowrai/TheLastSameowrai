@@ -19,7 +19,7 @@ public class StanceManager : MonoBehaviour
     void Start()
     {
         sprend = gameObject.GetComponent<SpriteRenderer>();
-        anim = gameObject.GetComponent<Animator>();
+        anim = gameObject.GetComponentInChildren<Animator>();
         currentStance = Stance.MID;
         anim.SetLayerWeight(2, 0);
         anim.SetLayerWeight(1, 1);
