@@ -82,12 +82,14 @@ public class UIScript : MonoBehaviour {
 		foreach(GameObject g in pauseObjects){
 			g.SetActive (true);
 		}
+		timer.gameObject.SetActive (false);
 	}
 		
 	public void hidePaused(){
 		foreach (GameObject g in pauseObjects) {
 			g.SetActive (false);
 		}
+		timer.gameObject.SetActive (true);
 	}
 	
 	public void ToNextLevel() {
