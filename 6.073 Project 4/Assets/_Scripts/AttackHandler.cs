@@ -15,7 +15,7 @@ public class AttackHandler : MonoBehaviour {
 
         rb2d = gameObject.GetComponent<Rigidbody2D>();
 
-        anim = gameObject.GetComponent<Animator>();
+        anim = gameObject.GetComponentInChildren<Animator>();
 
         em = gameObject.GetComponent<EntityManager>();
 
@@ -36,7 +36,7 @@ public class AttackHandler : MonoBehaviour {
     }
 
     // Called when attack telegraph is called (at the start of the attack)
-    void StartWindup()
+    public void StartWindup()
     {
         Debug.Log("Entity start windup");
         Debug.Log(gameObject);
@@ -54,7 +54,7 @@ public class AttackHandler : MonoBehaviour {
     }
        
     // Called when the attack itself starts
-    void StartAttack()
+    public void StartAttack()
     {
         Debug.Log("Entity start attack");
         Debug.Log(gameObject);
@@ -71,7 +71,7 @@ public class AttackHandler : MonoBehaviour {
         }
     }
 
-    void StartCoolDown()
+    public void StartCoolDown()
     {
         if (gameObject.tag == "Enemy")
         {
@@ -84,7 +84,7 @@ public class AttackHandler : MonoBehaviour {
     }
 
     // Called when the attack is done
-    void EndAttack()
+    public void EndAttack()
     {
         Debug.Log("Entity end attack");
         Debug.Log(gameObject);

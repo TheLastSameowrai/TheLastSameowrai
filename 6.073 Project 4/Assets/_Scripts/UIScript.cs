@@ -50,7 +50,7 @@ public class UIScript : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown(KeyCode.P))
+		if (!LevelConfigManager.GameOver && Input.GetKeyDown(KeyCode.P))
 		{
 				if (Time.timeScale == 1)
 				{
@@ -63,6 +63,12 @@ public class UIScript : MonoBehaviour {
 					hidePaused();
 				}
 		}
+
+		if (Input.GetKeyDown (KeyCode.R)) 
+		{
+			RestartGame ();
+		}
+
         if (!LevelConfigManager.GameOver)
         {
 			float elapsedTime = Time.time - LevelConfigManager.StartTime;
@@ -82,12 +88,14 @@ public class UIScript : MonoBehaviour {
 		foreach(GameObject g in pauseObjects){
 			g.SetActive (true);
 		}
+		timer.gameObject.SetActive (false);
 	}
 		
 	public void hidePaused(){
 		foreach (GameObject g in pauseObjects) {
 			g.SetActive (false);
 		}
+		timer.gameObject.SetActive (true);
 	}
 	
 	public void ToNextLevel() {
@@ -100,6 +108,17 @@ public class UIScript : MonoBehaviour {
 		proceedButton.SetActive (false);
 		print ("---Just set the button active to false----");
 		SceneManager.LoadScene ("GameScene");
+	}
 
+	void RestartGame() {
+		Time.timeScale = 1;
+		hidePaused ();
+		LevelConfigManager.GameOver = false;
+		LevelConfigManager.Level = 1;
+		LevelConfigManager.Timer.text = "00:00";
+		LevelConfigManager.StartTime = Time.time;
+		LevelConfigManager.EnemiesDefeated = 0;
+		SceneManager.LoadScene ("GameScene");
+		proceedButton.SetActive (false);
 	}
 }

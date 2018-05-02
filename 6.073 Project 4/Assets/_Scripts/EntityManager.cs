@@ -30,14 +30,14 @@ public class EntityManager : MonoBehaviour {
     // Use this for initialization
     void Start () {
         hitbox = gameObject.GetComponent<BoxCollider2D>();
-        hurtbox = gameObject.transform.Find("HitDetector").GetComponent<BoxCollider2D>();
+		hurtbox = gameObject.transform.Find("SpriteHolder").Find("HitDetector").GetComponent<BoxCollider2D>();
         sm = gameObject.GetComponent<StanceManager>();
 
         rb2d = gameObject.GetComponent<Rigidbody2D>();
 
         sprend = gameObject.GetComponent<SpriteRenderer>();
 
-        anim = gameObject.GetComponent<Animator>();
+        anim = gameObject.GetComponentInChildren<Animator>();
 
         ah = gameObject.GetComponent<AttackHandler>();
 
