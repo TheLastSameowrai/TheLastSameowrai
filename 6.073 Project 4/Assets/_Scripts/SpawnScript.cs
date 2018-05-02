@@ -63,7 +63,7 @@ public class SpawnScript : MonoBehaviour {
 
     void spawnEnemy()
     {
-        Vector3 spawnLocation = new Vector3(5.0f, 0, 0);
+        Vector3 spawnLocation = new Vector3(5.0f, -1.15f, 0);
         GameObject enemy = (GameObject)Instantiate(EnemyPrefab, spawnLocation, new Quaternion());
         DemoEnemyController enemyController = enemy.GetComponent("DemoEnemyController") as DemoEnemyController;
         enemyController.target = Player;
