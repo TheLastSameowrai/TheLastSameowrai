@@ -85,6 +85,10 @@ public class EntityManager : MonoBehaviour {
         {
             anim.SetFloat("speed", Mathf.Abs(translation * speed));
             rb2d.velocity = new Vector2(translation * speed, 0);
+            if (gameObject.tag == "Player")
+            {
+                Debug.Log(rb2d.velocity);
+            }
         }
         
 
