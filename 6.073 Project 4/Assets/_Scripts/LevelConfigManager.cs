@@ -19,9 +19,13 @@ public static class LevelConfigManager {
 	public static int EnemiesDefeated;
 	public static int EnemiesSpawned;
 	public static float SpawnRate;
+
+	// Dog variables
     public static float doguraiWindupSpeed;
     public static float doguraiAttackSpeed;
     public static float doguraiCoolDownSpeed;
+
+	// Cat variables
     public static float sameowraiWindupSpeed;
     public static float sameowraiAttackSpeed;
     public static float sameowraiCoolDownSpeed;

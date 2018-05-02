@@ -63,6 +63,12 @@ public class UIScript : MonoBehaviour {
 					hidePaused();
 				}
 		}
+
+		if (Input.GetKeyDown (KeyCode.R)) 
+		{
+			RestartGame ();
+		}
+
         if (!LevelConfigManager.GameOver)
         {
 			float elapsedTime = Time.time - LevelConfigManager.StartTime;
@@ -104,7 +110,7 @@ public class UIScript : MonoBehaviour {
 		SceneManager.LoadScene ("GameScene");
 	}
 
-	public void RestartGame() {
+	void RestartGame() {
 		LevelConfigManager.GameOver = false;
 		LevelConfigManager.Level = 1;
 		LevelConfigManager.Timer.text = "00:00";
