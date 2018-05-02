@@ -22,6 +22,9 @@ public class EntityManager : MonoBehaviour {
 
     public int looking; // 1 if looking right, -1 if looking left
 
+	public bool staggering = false;
+	public int staggerCount = 0;
+
 	private float rightXBound = 8.0f;
 	private float leftXBound = -8.0f;
 
@@ -51,46 +54,57 @@ public class EntityManager : MonoBehaviour {
 			StartCoroutine (waiter ());
 		}
 
-		if(rb2d.velocity.x > 0)
-        {
-            looking = 1;
-        }else if(rb2d.velocity.x < 0)
-        {
-            looking = -1;
-        }
+		if (staggering) {
+			staggerCount++;
+			rb2d.velocity =  (new Vector2 (-1f * looking * 15f, 0));
+			if (staggerCount > 5) {
+				staggerCount = 0;
+				staggering = false;
+			}
+		} else {
+			if (rb2d.velocity.x > 0) {
+				looking = 1;
+			} else if (rb2d.velocity.x < 0) {
+				looking = -1;
+			}
 
-        gameObject.transform.localScale = looking > 0 ? new Vector3(1, 1, 1) : new Vector3(-1, 1, 1);
-        
+			gameObject.transform.localScale = looking > 0 ? new Vector3 (1, 1, 1) : new Vector3 (-1, 1, 1);
+		}
+
+		float xPosition = rb2d.transform.position.x;
+		if (xPosition > rightXBound) {
+			xPosition = rightXBound;
+			transform.position = new Vector3 (xPosition, -1.15f, 0);
+		} else if (xPosition < leftXBound) {
+			xPosition = leftXBound;
+			transform.position = new Vector3 (xPosition, -1.15f, 0);
+		}
 	}
 
     public void MoveEntity(float translation)
     {
-		float xPosition = rb2d.transform.position.x;
-		if (xPosition > rightXBound) 
-		{
-			xPosition = rightXBound;
-			transform.position = new Vector3 (xPosition, -1.15f, 0);
-		}
-		else if (xPosition < leftXBound) {
-			xPosition = leftXBound;
-			transform.position = new Vector3 (xPosition, -1.15f, 0);
-		}
+		if (!staggering) {
+			float xPosition = rb2d.transform.position.x;
+			if (xPosition > rightXBound) {
+				xPosition = rightXBound;
+				transform.position = new Vector3 (xPosition, -1.15f, 0);
+			} else if (xPosition < leftXBound) {
+				xPosition = leftXBound;
+				transform.position = new Vector3 (xPosition, -1.15f, 0);
+			}
 
-        if (ah.anim.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
-        {
-            anim.SetFloat("speed", 0);
-            rb2d.velocity = new Vector2(0, 0);
-        }
-        else
-        {
-            anim.SetFloat("speed", Mathf.Abs(translation * speed));
-            rb2d.velocity = new Vector2(translation * speed, 0);
-            if (gameObject.tag == "Player")
-            {
-                Debug.Log(rb2d.velocity);
-            }
-        }
-        
+
+			if (ah.anim.GetCurrentAnimatorStateInfo (0).IsTag ("Attack")) {
+				anim.SetFloat ("speed", 0);
+				rb2d.velocity = new Vector2 (0, 0);
+			} else {
+				anim.SetFloat ("speed", Mathf.Abs (translation * speed));
+				rb2d.velocity = new Vector2 (translation * speed, 0);
+				if (gameObject.tag == "Player") {
+					Debug.Log (rb2d.velocity);
+				}
+			}
+		}
 
     }
 
@@ -99,11 +113,12 @@ public class EntityManager : MonoBehaviour {
         if (collision.gameObject.tag == "HurtBox")
         {
             StanceManager other_sm = collision.gameObject.GetComponentInParent<StanceManager>();
-            if(sm.currentStance != other_sm.currentStance)
-            {
-                DestroyEntity();
-            }
-            
+			if (sm.currentStance != other_sm.currentStance) {
+				DestroyEntity ();
+			} else {
+				StaggerEntity ();
+				collision.gameObject.GetComponentInParent<EntityManager> ().StaggerEntity ();
+			}
         }
     }
 
@@ -135,6 +150,12 @@ public class EntityManager : MonoBehaviour {
 			LevelConfigManager.EnemiesDefeated = LevelConfigManager.EnemiesDefeated + 1;
 		}
     }
+
+	public void StaggerEntity(){
+		ah.EndAttack ();
+		staggering = true;
+		staggerCount = 0;
+	}
 
 	IEnumerator waiter() {
 		yield return new WaitForSeconds (1);

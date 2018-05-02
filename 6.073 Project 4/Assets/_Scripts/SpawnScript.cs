@@ -21,7 +21,7 @@ public class SpawnScript : MonoBehaviour {
         LevelConfigManager.sameowraiWindupSpeed = 0.5f;
         LevelConfigManager.sameowraiCoolDownSpeed = 0.5f;
         LevelConfigManager.doguraiAttackSpeed = 1;
-        LevelConfigManager.doguraiWindupSpeed = 0.2f;
+        LevelConfigManager.doguraiWindupSpeed = 0.1f;
         LevelConfigManager.doguraiCoolDownSpeed = 0.5f;
 
 
