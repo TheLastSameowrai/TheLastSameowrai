@@ -69,11 +69,11 @@ public class EntityManager : MonoBehaviour {
 		if (xPosition > rightXBound) 
 		{
 			xPosition = rightXBound;
-			transform.position = new Vector3 (xPosition, 0, 0);
+			transform.position = new Vector3 (xPosition, -1.15f, 0);
 		}
 		else if (xPosition < leftXBound) {
 			xPosition = leftXBound;
-			transform.position = new Vector3 (xPosition, 0, 0);
+			transform.position = new Vector3 (xPosition, -1.15f, 0);
 		}
 
         if (ah.anim.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
