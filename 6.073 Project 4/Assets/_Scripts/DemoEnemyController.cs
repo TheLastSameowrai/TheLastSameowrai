@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
@@ -14,7 +14,7 @@ public class DemoEnemyController : MonoBehaviour
 
     public GameObject target;
 
-    private int distFromPlayer = 1;
+    private int distFromPlayer = 3;
 
     private float translation = 0;
 
@@ -39,30 +39,32 @@ public class DemoEnemyController : MonoBehaviour
         Rigidbody2D enemyBody = em.GetComponent<Rigidbody2D>();
         Vector2 playerVel = playerBody.velocity;
 
-		if (target == null) {
-			return;
-		}
         Vector2 moveDirection = playerBody.position - enemyBody.position;
+        //print("MoveDir");
+        //print(moveDirection);
+        print(Vector2.Distance(playerBody.position, enemyBody.position));
         var dist = Vector2.Distance(playerBody.position, enemyBody.position);
-        Vector2 moveDirectionNorm = moveDirection.normalized;
-        float translation = moveDirectionNorm.x;
-
-
-        if ((moveDirection.x > -distFromPlayer && moveDirection.x < 0 && em.looking == -1) || (moveDirection.x < distFromPlayer && moveDirection.x > 0 && em.looking == 1))
+        if( moveDirection.x > distFromPlayer || moveDirection.x < -distFromPlayer) 
         {
-            if(playerVel.x > 0.5)
-            {
-                translation = -moveDirection.x / MaxDistance;
-                em.MoveEntity(translation);
-                enemyBody.velocity = new Vector2(moveDirection.x / moveDirection.x, 0);
-            }
+            translation = moveDirection.x/MaxDistance;
+            print(translation);
+            em.MoveEntity(translation);
+        } else
+        
+        {
             ah.RequestAttack();
         }
-        else
-        {
-            translation = moveDirection.x / MaxDistance;
-            em.MoveEntity(translation);
-        }
+        //Vector2 moveDirectionNorm = moveDirection.normalized;
+        //print("MoveDirNorm");
+        //print(moveDirectionNorm);
+        //float translation = moveDirectionNorm.x;
+        
+		//if((moveDirection.x > -4.0 && moveDirection.x < 0 && em.looking == -1) || (moveDirection.x < 4.0 && moveDirection.x > 0 && em.looking == 1)) {
+  //          ah.RequestAttack();
+  //      } else
+  //      {
+  //          em.MoveEntity(translation);
+  //      }
 
     }
 
