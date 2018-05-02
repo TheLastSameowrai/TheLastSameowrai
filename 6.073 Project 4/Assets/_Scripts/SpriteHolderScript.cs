@@ -9,11 +9,12 @@ public class SpriteHolderScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		ah = gameObject.GetComponentInParent<AttackHandler> ();
+		gameObject.GetComponent<Animator> ().feetPivotActive = 1f;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+		gameObject.GetComponent<Animator> ().feetPivotActive = 1f;
 	}
 
 	void StartWindup() {
