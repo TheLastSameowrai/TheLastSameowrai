@@ -50,7 +50,7 @@ public class UIScript : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown(KeyCode.P))
+		if (!LevelConfigManager.GameOver && Input.GetKeyDown(KeyCode.P))
 		{
 				if (Time.timeScale == 1)
 				{
@@ -111,11 +111,14 @@ public class UIScript : MonoBehaviour {
 	}
 
 	void RestartGame() {
+		Time.timeScale = 1;
+		hidePaused ();
 		LevelConfigManager.GameOver = false;
 		LevelConfigManager.Level = 1;
 		LevelConfigManager.Timer.text = "00:00";
 		LevelConfigManager.StartTime = Time.time;
-		proceedButton.SetActive (false);
+		LevelConfigManager.EnemiesDefeated = 0;
 		SceneManager.LoadScene ("GameScene");
+		proceedButton.SetActive (false);
 	}
 }
