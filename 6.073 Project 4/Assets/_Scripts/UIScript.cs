@@ -8,6 +8,7 @@ public class UIScript : MonoBehaviour {
 
 
     public Text timer;
+	public Slider healthBar;
 	public GameObject proceedButton;
 	public GameObject[] pauseObjects;
 
@@ -80,6 +81,8 @@ public class UIScript : MonoBehaviour {
 				proceedButton.SetActive (true);
 			}
 		}
+
+		healthBar.value = LevelConfigManager.playerHealth;
     }
 
 	public void showPaused() {

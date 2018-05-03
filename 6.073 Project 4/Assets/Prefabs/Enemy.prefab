@@ -192,6 +192,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentStance: 0
   sprend: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!114 &114518910160512138
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -211,7 +212,10 @@ MonoBehaviour:
   anim: {fileID: 0}
   ah: {fileID: 0}
   speed: 2
+  health: 1
   looking: 1
+  staggering: 0
+  staggerCount: 0
 --- !u!114 &114724590598357502
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -225,8 +229,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb2d: {fileID: 0}
   anim: {fileID: 0}
-  windUpSpeedScale: 0.2
-  attackSpeedScale: 1
 --- !u!212 &212851705503442890
 SpriteRenderer:
   m_ObjectHideFlags: 1

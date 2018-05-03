@@ -33,4 +33,6 @@ public static class LevelConfigManager {
 
     public static Data dataManager;
 
+	public static int playerHealth;
+
 }

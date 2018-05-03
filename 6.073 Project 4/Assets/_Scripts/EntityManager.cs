@@ -20,6 +20,8 @@ public class EntityManager : MonoBehaviour {
 
     public float speed;
 
+	public int health;
+
     public int looking; // 1 if looking right, -1 if looking left
 
 	public bool staggering = false;
@@ -50,6 +52,9 @@ public class EntityManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (this.gameObject.tag == "Player") {
+			LevelConfigManager.playerHealth = health;
+		}
 		if (LevelConfigManager.GameOver) {
 			StartCoroutine (waiter ());
 		}
@@ -114,7 +119,11 @@ public class EntityManager : MonoBehaviour {
         {
             StanceManager other_sm = collision.gameObject.GetComponentInParent<StanceManager>();
 			if (sm.currentStance != other_sm.currentStance) {
-				DestroyEntity ();
+				if (health > 1) {
+					health -= 1;
+				} else {
+					DestroyEntity ();
+				}
 			} else {
 				StaggerEntity ();
 				collision.gameObject.GetComponentInParent<EntityManager> ().StaggerEntity ();
@@ -132,6 +141,7 @@ public class EntityManager : MonoBehaviour {
 
             //ui.gameOver = true;
             //ui.Timer.text = "Game Over";
+			LevelConfigManager.playerHealth = 0;
             LevelConfigManager.dataManager.levelComplete("game_over");
             LevelConfigManager.dataManager.storeData();
 			LevelConfigManager.Timer.text = "Game Over";
