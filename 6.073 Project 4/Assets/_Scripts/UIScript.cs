@@ -9,6 +9,8 @@ public class UIScript : MonoBehaviour {
 
     public Text timer;
 	public Slider healthBar;
+	public GameObject transitionPopup;
+	public Text transitionText;
 	public GameObject proceedButton;
 	public GameObject[] pauseObjects;
 
@@ -36,7 +38,6 @@ public class UIScript : MonoBehaviour {
 		print ("In UISCRIPT start");
 		//DontDestroyOnLoad (transform.gameObject);
 		proceedButton.SetActive (false);
-		Time.timeScale = 1;
 		pauseObjects = GameObject.FindGameObjectsWithTag("ShowOnPause");
 		hidePaused();
 		if (LevelConfigManager.FirstTime) {
@@ -47,10 +48,17 @@ public class UIScript : MonoBehaviour {
 			LevelConfigManager.dataManager = new Data ();
 			LevelConfigManager.dataManager.Start (); // initialize Data
 		}
+		transitionText.text = "Level " + LevelConfigManager.Level.ToString() + "\n Press c to continue";
+		transitionPopup.SetActive (true);
+		Time.timeScale = 0;
 	}
 
 	// Update is called once per frame
 	void Update () {
+		if (transitionPopup.gameObject.active && Input.GetKeyDown (KeyCode.C)) {
+			Time.timeScale = 1;
+			transitionPopup.gameObject.SetActive (false);
+		}
 		if (!LevelConfigManager.GameOver && Input.GetKeyDown(KeyCode.P))
 		{
 			if (Time.timeScale == 1)
@@ -113,6 +121,9 @@ public class UIScript : MonoBehaviour {
 		proceedButton.SetActive (false);
 		print ("---Just set the button active to false----");
 		SceneManager.LoadScene ("GameScene");
+		transitionText.text = "Level " + LevelConfigManager.Level.ToString() + "\n Press c to continue";
+		transitionPopup.SetActive (true);
+		Time.timeScale = 0;
 	}
 
 	void RestartGame() {
@@ -125,5 +136,8 @@ public class UIScript : MonoBehaviour {
 		LevelConfigManager.EnemiesDefeated = 0;
 		SceneManager.LoadScene ("GameScene");
 		proceedButton.SetActive (false);
+		transitionText.text = "Level " + LevelConfigManager.Level.ToString() + "\n Press c to continue";
+		transitionPopup.SetActive (true);
+		Time.timeScale = 0;
 	}
 }
