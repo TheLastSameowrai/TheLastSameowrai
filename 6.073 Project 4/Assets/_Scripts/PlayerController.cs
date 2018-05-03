@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour {
         em.MoveEntity(translation);
 
         bool attackFlag = false;
-		if (!ah.anim.GetCurrentAnimatorStateInfo (0).IsTag ("Attack")) {
+		if (!ah.anim.GetCurrentAnimatorStateInfo (0).IsTag ("Attack") && ! LevelConfigManager.Paused) {
 			if (Input.GetKeyDown (KeyCode.Space)) {
 				ah.RequestAttack ();
 				attackFlag = true;

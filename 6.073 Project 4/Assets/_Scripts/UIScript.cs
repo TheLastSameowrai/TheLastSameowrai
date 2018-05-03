@@ -52,16 +52,14 @@ public class UIScript : MonoBehaviour {
 	void Update () {
 		if (!LevelConfigManager.GameOver && Input.GetKeyDown(KeyCode.P))
 		{
-				if (Time.timeScale == 1)
-				{
-					Time.timeScale = 0;
-					showPaused();
-				}
-				else if (Time.timeScale == 0)
-				{
-					Time.timeScale = 1;
-					hidePaused();
-				}
+			if (Time.timeScale == 1)
+			{
+				showPaused ();
+			}
+			else if (Time.timeScale == 0)
+			{
+				hidePaused();
+			}
 		}
 
 		if (Input.GetKeyDown (KeyCode.R)) 
@@ -85,17 +83,21 @@ public class UIScript : MonoBehaviour {
     }
 
 	public void showPaused() {
+		Time.timeScale = 0;
 		foreach(GameObject g in pauseObjects){
 			g.SetActive (true);
 		}
 		timer.gameObject.SetActive (false);
+		LevelConfigManager.Paused = true;
 	}
 		
 	public void hidePaused(){
+		Time.timeScale = 1;
 		foreach (GameObject g in pauseObjects) {
 			g.SetActive (false);
 		}
 		timer.gameObject.SetActive (true);
+		LevelConfigManager.Paused = false;
 	}
 	
 	public void ToNextLevel() {

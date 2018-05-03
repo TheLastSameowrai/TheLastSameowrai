@@ -12,6 +12,7 @@ public static class LevelConfigManager {
 
 	// Game state variables
 	public static bool GameOver = false;
+	public static bool Paused = false;
 	public static int Level = 1;
 
 	// Enemy variables
