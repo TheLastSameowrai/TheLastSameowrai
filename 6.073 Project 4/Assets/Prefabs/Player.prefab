@@ -295,6 +295,7 @@ MonoBehaviour:
   ah: {fileID: 0}
   speed: 5
   health: 5
+  damage: 1
   looking: 1
   staggering: 0
   staggerCount: 0

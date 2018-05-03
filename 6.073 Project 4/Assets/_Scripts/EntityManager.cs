@@ -21,6 +21,7 @@ public class EntityManager : MonoBehaviour {
     public float speed;
 
 	public int health;
+	public int damage;
 
     public int looking; // 1 if looking right, -1 if looking left
 
@@ -120,7 +121,7 @@ public class EntityManager : MonoBehaviour {
             StanceManager other_sm = collision.gameObject.GetComponentInParent<StanceManager>();
 			if (sm.currentStance != other_sm.currentStance) {
 				if (health > 1) {
-					health -= 1;
+					health -= collision.gameObject.GetComponentInParent<EntityManager>().damage;
 				} else {
 					DestroyEntity ();
 				}

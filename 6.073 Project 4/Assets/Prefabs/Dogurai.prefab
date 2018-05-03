@@ -375,6 +375,8 @@ MonoBehaviour:
   anim: {fileID: 0}
   ah: {fileID: 0}
   speed: 5
+  health: 0
+  damage: 1
   looking: 1
   staggering: 0
   staggerCount: 0
