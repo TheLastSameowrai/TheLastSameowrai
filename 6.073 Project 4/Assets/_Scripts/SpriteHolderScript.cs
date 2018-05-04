@@ -6,10 +6,13 @@ public class SpriteHolderScript : MonoBehaviour {
 
 	public AttackHandler ah;
 
+    public ParryHandler ph;
+
 	// Use this for initialization
 	void Start () {
 		ah = gameObject.GetComponentInParent<AttackHandler> ();
-		gameObject.GetComponent<Animator> ().feetPivotActive = 1f;
+        ph = gameObject.GetComponentInParent<ParryHandler>();
+        gameObject.GetComponent<Animator> ().feetPivotActive = 1f;
 	}
 	
 	// Update is called once per frame
@@ -32,4 +35,24 @@ public class SpriteHolderScript : MonoBehaviour {
 	void EndAttack() {
 		ah.EndAttack ();
 	}
+
+    void StartParryWindup()
+    {
+        ph.StartParryWindup();
+    }
+
+    void StartParry()
+    {
+        ph.StartParry();
+    }
+
+    void StartParryCooldown()
+    {
+        ph.StartParryCooldown();
+    }
+
+    void EndParry()
+    {
+        ph.EndParry();
+    }
 }

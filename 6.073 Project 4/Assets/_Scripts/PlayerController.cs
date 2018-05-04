@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
    
     private AttackHandler ah;
+    private ParryHandler ph;
     private StanceManager sm;
     private EntityManager em;
 
@@ -15,6 +16,7 @@ public class PlayerController : MonoBehaviour {
     // Use this for initialization
     void Start () {
         ah = gameObject.GetComponent<AttackHandler>();
+        ph = gameObject.GetComponent<ParryHandler>();
         sm = gameObject.GetComponent<StanceManager>();
         em = gameObject.GetComponent<EntityManager>();
         aud = gameObject.GetComponent<AudioSource>();
@@ -28,7 +30,15 @@ public class PlayerController : MonoBehaviour {
         em.MoveEntity(translation);
 
         bool attackFlag = false;
-		if (!ah.anim.GetCurrentAnimatorStateInfo (0).IsTag ("Attack") && ! LevelConfigManager.Paused) {
+        bool parryFlag = false;
+		if (!ah.anim.GetCurrentAnimatorStateInfo (0).IsTag ("Attack") && 
+            ! LevelConfigManager.Paused &&
+            !ah.anim.GetCurrentAnimatorStateInfo(0).IsTag("Parry")) {
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                ph.RequestParry();
+                parryFlag = true;
+            }
 			if (Input.GetKeyDown (KeyCode.Space)) {
 				ah.RequestAttack ();
 				attackFlag = true;

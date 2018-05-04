@@ -25,11 +25,17 @@ public static class LevelConfigManager {
     public static float doguraiWindupSpeed;
     public static float doguraiAttackSpeed;
     public static float doguraiCoolDownSpeed;
+    public static float doguraiParryWindupSpeed;
+    public static float doguraiParrySpeed;
+    public static float doguraiParryCooldownSpeed;
 
 	// Cat variables
     public static float sameowraiWindupSpeed;
     public static float sameowraiAttackSpeed;
     public static float sameowraiCoolDownSpeed;
+    public static float sameowraiParryWindupSpeed;
+    public static float sameowraiParrySpeed;
+    public static float sameowraiParryCooldownSpeed;
 
     public static Data dataManager;
 

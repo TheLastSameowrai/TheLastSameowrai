@@ -29,7 +29,8 @@ public class AttackHandler : MonoBehaviour {
 
     public void RequestAttack()
     {
-        if (!anim.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
+        if (!anim.GetCurrentAnimatorStateInfo(0).IsTag("Attack") &&
+           !anim.GetCurrentAnimatorStateInfo(0).IsTag("Parry"))
         {
             anim.SetBool("isAttacking", true);
         }
@@ -89,7 +90,7 @@ public class AttackHandler : MonoBehaviour {
         Debug.Log("Entity end attack");
         Debug.Log(gameObject);
 
-        rb2d.velocity = new Vector2(0, 0);
+        //rb2d.velocity = new Vector2(0, 0);
 
         anim.SetBool("isAttacking", false);
         anim.speed = 1;
