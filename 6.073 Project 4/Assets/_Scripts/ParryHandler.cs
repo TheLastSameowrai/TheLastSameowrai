@@ -39,7 +39,7 @@ public class ParryHandler : MonoBehaviour {
 
     public void StartParryWindup ()
     {
-
+        Debug.Log("Parry Windup");
         rb2d.velocity = new Vector2(0, 0);
         if (gameObject.tag == "Enemy")
         {
@@ -52,6 +52,7 @@ public class ParryHandler : MonoBehaviour {
 
     public void StartParry()
     {
+        Debug.Log("Parry Start");
         sprnd.color = Color.green;
         if (gameObject.tag == "Enemy")
         {
@@ -65,6 +66,7 @@ public class ParryHandler : MonoBehaviour {
 
     public void StartParryCooldown()
     {
+        Debug.Log("Parry Cooldown");
         sprnd.color = Color.white;
         if (gameObject.tag == "Enemy")
         {
@@ -78,6 +80,7 @@ public class ParryHandler : MonoBehaviour {
 
     public void EndParry()
     {
+        Debug.Log("Parry End");
         anim.SetBool("isParrying", false);
         anim.speed = 1;
     }
