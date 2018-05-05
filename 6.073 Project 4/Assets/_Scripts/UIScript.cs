@@ -13,6 +13,7 @@ public class UIScript : MonoBehaviour {
 	public Text transitionText;
 	public GameObject proceedButton;
 	public GameObject[] pauseObjects;
+	public GameObject instructions;
 
     //float startTime;
     //public bool gameOver;
@@ -48,9 +49,11 @@ public class UIScript : MonoBehaviour {
 			LevelConfigManager.dataManager = new Data ();
 			LevelConfigManager.dataManager.Start (); // initialize Data
 		}
-		transitionText.text = "Level " + LevelConfigManager.Level.ToString() + "\n Press c to continue";
+		transitionText.text = "Level " + LevelConfigManager.Level.ToString();
 		transitionPopup.SetActive (true);
 		Time.timeScale = 0;
+		LevelConfigManager.Paused = true;
+		instructions.SetActive (false);
 	}
 
 	// Update is called once per frame
@@ -58,6 +61,8 @@ public class UIScript : MonoBehaviour {
 		if (transitionPopup.gameObject.active && Input.GetKeyDown (KeyCode.C)) {
 			Time.timeScale = 1;
 			transitionPopup.gameObject.SetActive (false);
+			LevelConfigManager.Paused = false;
+			instructions.SetActive (true);
 		}
 		if (!LevelConfigManager.GameOver && Input.GetKeyDown(KeyCode.P))
 		{
@@ -121,9 +126,11 @@ public class UIScript : MonoBehaviour {
 		proceedButton.SetActive (false);
 		print ("---Just set the button active to false----");
 		SceneManager.LoadScene ("GameScene");
-		transitionText.text = "Level " + LevelConfigManager.Level.ToString() + "\n Press c to continue";
+		transitionText.text = "Level " + LevelConfigManager.Level.ToString();
 		transitionPopup.SetActive (true);
 		Time.timeScale = 0;
+		LevelConfigManager.Paused = true;
+		instructions.SetActive (false);
 	}
 
 	void RestartGame() {
@@ -136,8 +143,10 @@ public class UIScript : MonoBehaviour {
 		LevelConfigManager.EnemiesDefeated = 0;
 		SceneManager.LoadScene ("GameScene");
 		proceedButton.SetActive (false);
-		transitionText.text = "Level " + LevelConfigManager.Level.ToString() + "\n Press c to continue";
+		transitionText.text = "Level " + LevelConfigManager.Level.ToString();
 		transitionPopup.SetActive (true);
 		Time.timeScale = 0;
+		LevelConfigManager.Paused = true;
+		instructions.SetActive (false);
 	}
 }
