@@ -17,6 +17,7 @@ public class EntityManager : MonoBehaviour {
     public Animator anim;
 
     public AttackHandler ah;
+    public ParryHandler ph;
 
     public float speed;
 
@@ -26,7 +27,7 @@ public class EntityManager : MonoBehaviour {
     public int looking; // 1 if looking right, -1 if looking left
 
 	public bool staggering = false;
-	public int staggerCount = 0;
+
 
 	private float rightXBound = 8.0f;
 	private float leftXBound = -8.0f;
@@ -41,11 +42,13 @@ public class EntityManager : MonoBehaviour {
 
         rb2d = gameObject.GetComponent<Rigidbody2D>();
 
-        sprend = gameObject.GetComponent<SpriteRenderer>();
+        sprend = gameObject.GetComponentInChildren<SpriteRenderer>();
 
         anim = gameObject.GetComponentInChildren<Animator>();
 
         ah = gameObject.GetComponent<AttackHandler>();
+
+        ph = gameObject.GetComponent<ParryHandler>();
 
         hurtBoxXPosition = hurtbox.transform.position.x;
 	}
@@ -61,12 +64,8 @@ public class EntityManager : MonoBehaviour {
 		}
 
 		if (staggering) {
-			staggerCount++;
-			rb2d.velocity =  (new Vector2 (-1f * looking * 15f, 0));
-			if (staggerCount > 5) {
-				staggerCount = 0;
-				staggering = false;
-			}
+            // removed push back for parry riposte
+
 		} else {
 			if (rb2d.velocity.x > 0) {
 				looking = 1;
@@ -100,7 +99,8 @@ public class EntityManager : MonoBehaviour {
 			}
 
 
-			if (ah.anim.GetCurrentAnimatorStateInfo (0).IsTag ("Attack")) {
+			if (ah.anim.GetCurrentAnimatorStateInfo (0).IsTag ("Attack") ||
+                ah.anim.GetCurrentAnimatorStateInfo(0).IsTag("Parry")) {
 				anim.SetFloat ("speed", 0);
 				rb2d.velocity = new Vector2 (0, 0);
 			} else {
@@ -119,16 +119,31 @@ public class EntityManager : MonoBehaviour {
         if (collision.gameObject.tag == "HurtBox")
         {
             StanceManager other_sm = collision.gameObject.GetComponentInParent<StanceManager>();
-			if (sm.currentStance != other_sm.currentStance) {
-				if (health > 1) {
-					health -= collision.gameObject.GetComponentInParent<EntityManager>().damage;
-				} else {
-					DestroyEntity ();
-				}
-			} else {
-				StaggerEntity ();
-				collision.gameObject.GetComponentInParent<EntityManager> ().StaggerEntity ();
-			}
+
+            if (ph.isParryFramesActive) {
+                collision.gameObject.GetComponentInParent<EntityManager>().StaggerEntity();
+            }
+            else
+            {
+                if (sm.currentStance != other_sm.currentStance)
+                {
+                    if (health > 1)
+                    {
+                        health -= collision.gameObject.GetComponentInParent<EntityManager>().damage;
+                    }
+                    else
+                    {
+                        DestroyEntity();
+                    }
+                }
+                else
+                {
+
+                    StaggerEntity();
+                    collision.gameObject.GetComponentInParent<EntityManager>().StaggerEntity();
+                }
+            }
+
         }
     }
 
@@ -164,9 +179,30 @@ public class EntityManager : MonoBehaviour {
 
 	public void StaggerEntity(){
 		ah.EndAttack ();
+        ph.EndParry();
+
+        anim.SetBool("isStaggering", true);
+        sprend.color = Color.yellow;
 		staggering = true;
-		staggerCount = 0;
-	}
+
+        if (gameObject.tag == "Enemy")
+        {
+            anim.speed = LevelConfigManager.doguraiStunSpeed;
+        }
+        else if (gameObject.tag == "Player")
+        {
+            anim.speed = LevelConfigManager.sameowraiStunSpeed;
+        }
+    }
+
+    public void EndStagger()
+    {
+        Debug.Log("End Stagger");
+        staggering = false;
+        anim.SetBool("isStaggering", false);
+        sprend.color = Color.white;
+        anim.speed = 1;
+    }
 
 	IEnumerator waiter() {
 		yield return new WaitForSeconds (1);

@@ -1281,6 +1281,7 @@ MonoBehaviour:
   transitionText: {fileID: 1050101442}
   proceedButton: {fileID: 79839252}
   pauseObjects: []
+  instructions: {fileID: 0}
 --- !u!4 &1721688930
 Transform:
   m_ObjectHideFlags: 0
@@ -1348,6 +1349,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb2d: {fileID: 0}
   anim: {fileID: 0}
+  isParryFramesActive: 0
 --- !u!1 &1819631657
 GameObject:
   m_ObjectHideFlags: 0
