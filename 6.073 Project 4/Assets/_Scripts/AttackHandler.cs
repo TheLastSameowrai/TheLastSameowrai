@@ -40,7 +40,7 @@ public class AttackHandler : MonoBehaviour {
     public void StartWindup()
     {
         Debug.Log("Entity start windup");
-        Debug.Log(gameObject);
+       
         rb2d.velocity = new Vector2(0, 0);
 
         if (gameObject.tag == "Enemy")
@@ -58,7 +58,7 @@ public class AttackHandler : MonoBehaviour {
     public void StartAttack()
     {
         Debug.Log("Entity start attack");
-        Debug.Log(gameObject);
+        
         
         int dir = em.looking;
         
@@ -88,7 +88,7 @@ public class AttackHandler : MonoBehaviour {
     public void EndAttack()
     {
         Debug.Log("Entity end attack");
-        Debug.Log(gameObject);
+        
 
         //rb2d.velocity = new Vector2(0, 0);
 
