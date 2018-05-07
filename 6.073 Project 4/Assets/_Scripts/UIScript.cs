@@ -50,7 +50,7 @@ public class UIScript : MonoBehaviour {
 			LevelConfigManager.playerHealth = 5;
 			LevelConfigManager.dataManager.Start (); // initialize Data
 		}
-		transitionText.text = "Level " + LevelConfigManager.Level.ToString();
+		setLevelText ();
 		transitionPopup.SetActive (true);
 		Time.timeScale = 0;
 		LevelConfigManager.Paused = true;
@@ -127,7 +127,7 @@ public class UIScript : MonoBehaviour {
 		proceedButton.SetActive (false);
 		print ("---Just set the button active to false----");
 		SceneManager.LoadScene ("GameScene");
-		transitionText.text = "Level " + LevelConfigManager.Level.ToString();
+		setLevelText ();
 		transitionPopup.SetActive (true);
 		Time.timeScale = 0;
 		LevelConfigManager.Paused = true;
@@ -144,10 +144,49 @@ public class UIScript : MonoBehaviour {
 		LevelConfigManager.EnemiesDefeated = 0;
 		SceneManager.LoadScene ("GameScene");
 		proceedButton.SetActive (false);
-		transitionText.text = "Level " + LevelConfigManager.Level.ToString();
+		setLevelText ();
 		transitionPopup.SetActive (true);
 		Time.timeScale = 0;
 		LevelConfigManager.Paused = true;
 		instructions.SetActive (false);
+	}
+
+	void setLevelText() {
+		switch (LevelConfigManager.Level) {
+		case 1:
+			transitionText.text = "Hurry! I just saw Dokugawa Doggunate Bork go through that door, but his puppers are in your way. Defeat them with the appropriate stance to move on!";
+			break;
+		case 2:
+			transitionText.text = "Great job, young one! Be careful, these guys are a little stronger than the pups you just defeated.";
+			break;
+		case 3:
+			transitionText.text = "Old Man Meowza would be proud of you. But we can't celebrate yet. These fast puppers are running right at you!";
+			break;
+		case 4:
+			transitionText.text = "Wooooweee! Look at you go! You're growing to be a fine young - oh no! Watch your back!";
+			break;
+		case 5:
+			transitionText.text = "I've heard about these guys. These guys are strong and fast but have slow reflexes. Be careful!";
+			break;
+		case 6:
+			transitionText.text = "You must be tired from all this slaying. But push through young one! These fellas are not just strong but have more endurance as well!";
+			break;
+		case 7:
+			transitionText.text = "Meow meow meow~ Oh, sorry I was busy chasing a butterfly. Watch out for these doggos, they're pretty fast and they think you're their chew toy!";
+			break;
+		case 8:
+			transitionText.text = "We got pretty far in the doge-o didn't we? And by we, I mean you. Wait hold on... why are those bulky guys so fast. Ahh! Behind you!"; 
+			break;
+		case 9:
+			transitionText.text = "Phew, almost gave me cat-iac arrest, but you're almost there! Defeat these minions and bring honor to the clowder!";
+			break;
+		case 10:
+			transitionText.text = "HERE HE IS! The fearful Dokugawa Doggunate Bork!";
+			break;
+		default:
+			transitionText.text = "Level " + LevelConfigManager.Level.ToString();
+			break;
+		}
+		transitionText.text = transitionText.text.ToUpper();
 	}
 }
