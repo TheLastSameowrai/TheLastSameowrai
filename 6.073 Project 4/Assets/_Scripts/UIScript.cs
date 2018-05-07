@@ -187,5 +187,6 @@ public class UIScript : MonoBehaviour {
 			transitionText.text = "Level " + LevelConfigManager.Level.ToString();
 			break;
 		}
+		transitionText.text = transitionText.text.ToUpper();
 	}
 }
