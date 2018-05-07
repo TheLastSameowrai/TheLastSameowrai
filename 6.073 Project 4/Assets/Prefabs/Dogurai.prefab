@@ -388,12 +388,12 @@ MonoBehaviour:
   sprend: {fileID: 0}
   anim: {fileID: 0}
   ah: {fileID: 0}
+  ph: {fileID: 0}
   speed: 5
   health: 0
   damage: 1
   looking: 1
   staggering: 0
-  staggerCount: 0
 --- !u!114 &114193001775876638
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -449,6 +449,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ah: {fileID: 0}
   ph: {fileID: 0}
+  em: {fileID: 0}
 --- !u!212 &212065273453315972
 SpriteRenderer:
   m_ObjectHideFlags: 1

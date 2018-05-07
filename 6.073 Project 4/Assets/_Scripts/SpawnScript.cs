@@ -27,15 +27,18 @@ public class SpawnScript : MonoBehaviour {
         LevelConfigManager.sameowraiAttackSpeed = 1;
         LevelConfigManager.sameowraiWindupSpeed = 0.5f;
         LevelConfigManager.sameowraiCoolDownSpeed = 0.5f;
-        LevelConfigManager.sameowraiParryWindupSpeed = 3f;
+        LevelConfigManager.sameowraiParryWindupSpeed = 1f;
         LevelConfigManager.sameowraiParrySpeed = 0.1f;
-        LevelConfigManager.sameowraiParryCooldownSpeed = 3f;
+        LevelConfigManager.sameowraiParryCooldownSpeed = 1f;
+        LevelConfigManager.sameowraiStunSpeed = 0.5f;
+
         LevelConfigManager.doguraiAttackSpeed = 1;
         LevelConfigManager.doguraiWindupSpeed = 0.1f;
         LevelConfigManager.doguraiCoolDownSpeed = 0.5f;
         LevelConfigManager.doguraiParryWindupSpeed = 1f;
         LevelConfigManager.doguraiParrySpeed = 1f;
         LevelConfigManager.doguraiParryCooldownSpeed = 1f;
+        LevelConfigManager.doguraiStunSpeed = 0.1f;
 
 
 		switch (LevelConfigManager.Level) {

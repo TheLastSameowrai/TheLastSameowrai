@@ -12,6 +12,8 @@ public class ParryHandler : MonoBehaviour {
 
     private SpriteRenderer sprnd;
 
+    public bool isParryFramesActive;
+
     // Use this for initialization
     void Start () {
         rb2d = gameObject.GetComponent<Rigidbody2D>();
@@ -31,7 +33,8 @@ public class ParryHandler : MonoBehaviour {
     public void RequestParry()
     {
         if (!anim.GetCurrentAnimatorStateInfo(0).IsTag("Attack") &&
-            !anim.GetCurrentAnimatorStateInfo(0).IsTag("Parry"))
+            !anim.GetCurrentAnimatorStateInfo(0).IsTag("Parry") && 
+            !em.staggering)
         {
             anim.SetBool("isParrying", true);
         }
@@ -39,7 +42,7 @@ public class ParryHandler : MonoBehaviour {
 
     public void StartParryWindup ()
     {
-
+        Debug.Log("Parry Windup");
         rb2d.velocity = new Vector2(0, 0);
         if (gameObject.tag == "Enemy")
         {
@@ -52,6 +55,8 @@ public class ParryHandler : MonoBehaviour {
 
     public void StartParry()
     {
+        isParryFramesActive = true;
+        Debug.Log("Parry Start");
         sprnd.color = Color.green;
         if (gameObject.tag == "Enemy")
         {
@@ -65,6 +70,8 @@ public class ParryHandler : MonoBehaviour {
 
     public void StartParryCooldown()
     {
+        isParryFramesActive = false;
+        Debug.Log("Parry Cooldown");
         sprnd.color = Color.white;
         if (gameObject.tag == "Enemy")
         {
@@ -78,6 +85,7 @@ public class ParryHandler : MonoBehaviour {
 
     public void EndParry()
     {
+        Debug.Log("Parry End");
         anim.SetBool("isParrying", false);
         anim.speed = 1;
     }

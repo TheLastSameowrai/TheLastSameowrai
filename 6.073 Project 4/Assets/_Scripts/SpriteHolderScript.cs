@@ -8,10 +8,13 @@ public class SpriteHolderScript : MonoBehaviour {
 
     public ParryHandler ph;
 
+    public EntityManager em;
+
 	// Use this for initialization
 	void Start () {
 		ah = gameObject.GetComponentInParent<AttackHandler> ();
         ph = gameObject.GetComponentInParent<ParryHandler>();
+        em = gameObject.GetComponentInParent<EntityManager>();
         gameObject.GetComponent<Animator> ().feetPivotActive = 1f;
 	}
 	
@@ -54,5 +57,10 @@ public class SpriteHolderScript : MonoBehaviour {
     void EndParry()
     {
         ph.EndParry();
+    }
+
+    void EndStagger()
+    {
+        em.EndStagger();
     }
 }
