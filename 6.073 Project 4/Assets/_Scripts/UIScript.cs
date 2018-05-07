@@ -47,6 +47,7 @@ public class UIScript : MonoBehaviour {
 			LevelConfigManager.Timer.text = "00:00"; // Timer.text = "00:00";
 			LevelConfigManager.FirstTime = false;
 			LevelConfigManager.dataManager = new Data ();
+			LevelConfigManager.playerHealth = 5;
 			LevelConfigManager.dataManager.Start (); // initialize Data
 		}
 		transitionText.text = "Level " + LevelConfigManager.Level.ToString();

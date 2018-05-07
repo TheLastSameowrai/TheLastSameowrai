@@ -51,6 +51,11 @@ public class EntityManager : MonoBehaviour {
         ph = gameObject.GetComponent<ParryHandler>();
 
         hurtBoxXPosition = hurtbox.transform.position.x;
+
+		if (this.gameObject.tag == "Player" && LevelConfigManager.playerHealth > 0 ){
+			health = LevelConfigManager.playerHealth;
+		}
+
 	}
 
 	
