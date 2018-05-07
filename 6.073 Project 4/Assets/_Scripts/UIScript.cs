@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -14,6 +15,11 @@ public class UIScript : MonoBehaviour {
 	public GameObject proceedButton;
 	public GameObject[] pauseObjects;
 	public GameObject instructions;
+	public GameObject pavilionDay;
+	public GameObject pavilion;
+	public GameObject dojo;
+	public GameObject garden;
+	public GameObject final;
 
     //float startTime;
     //public bool gameOver;
@@ -51,6 +57,7 @@ public class UIScript : MonoBehaviour {
 			LevelConfigManager.dataManager.Start (); // initialize Data
 		}
 		setLevelText ();
+		setBackground ();
 		transitionPopup.SetActive (true);
 		Time.timeScale = 0;
 		LevelConfigManager.Paused = true;
@@ -128,6 +135,7 @@ public class UIScript : MonoBehaviour {
 		print ("---Just set the button active to false----");
 		SceneManager.LoadScene ("GameScene");
 		setLevelText ();
+		setBackground ();
 		transitionPopup.SetActive (true);
 		Time.timeScale = 0;
 		LevelConfigManager.Paused = true;
@@ -145,6 +153,7 @@ public class UIScript : MonoBehaviour {
 		SceneManager.LoadScene ("GameScene");
 		proceedButton.SetActive (false);
 		setLevelText ();
+		setBackground ();
 		transitionPopup.SetActive (true);
 		Time.timeScale = 0;
 		LevelConfigManager.Paused = true;
@@ -188,5 +197,39 @@ public class UIScript : MonoBehaviour {
 			break;
 		}
 		transitionText.text = transitionText.text.ToUpper();
+	}
+
+	void setBackground(){
+		pavilionDay.SetActive (false);
+		pavilion.SetActive (false);
+		dojo.SetActive (false);
+		garden.SetActive (false);
+		final.SetActive (false);
+
+		switch (LevelConfigManager.Level) {
+		case 1:
+		case 2:
+			pavilionDay.SetActive (true);
+			break;
+		case 3:
+		case 4:
+			pavilion.SetActive (true);
+			break;
+		case 5:
+		case 6:
+			dojo.SetActive (true);
+			break;
+		case 7:
+		case 8:
+		case 9:
+			garden.SetActive (true);
+			break;
+		case 10:
+			final.SetActive (true);
+			break;
+		default:
+			pavilion.SetActive (true);
+			break;
+		}
 	}
 }
