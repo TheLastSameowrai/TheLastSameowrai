@@ -113,10 +113,10 @@ public class SpawnScript : MonoBehaviour {
         switch (LevelConfigManager.Level)
         {
             case 1:
+                print("------In Level 1 SpawnScript------");
                 Vector3 spawnLocation = new Vector3(5.0f, -1.15f, 0);
                 GameObject enemy = (GameObject)Instantiate(EnemyPrefab, spawnLocation, new Quaternion());
                 DemoEnemyController enemyController = enemy.GetComponent("DemoEnemyController") as DemoEnemyController;
-
                 enemyController.target = Player;
                 EntityManager em = enemyController.GetComponent("EntityManager") as EntityManager;
                 em.health = 1;
@@ -125,6 +125,7 @@ public class SpawnScript : MonoBehaviour {
                 LevelConfigManager.EnemiesSpawned += 1;
                 break;
             case 2:
+                print("------In Level 2 SpawnScript------");
                 spawnLocation = new Vector3(5.0f, -1.15f, 0);
                 enemy = (GameObject)Instantiate(EnemyPrefab, spawnLocation, new Quaternion());
                 enemyController = enemy.GetComponent("DemoEnemyController") as DemoEnemyController;
@@ -135,6 +136,7 @@ public class SpawnScript : MonoBehaviour {
                 LevelConfigManager.EnemiesSpawned += 1;
                 break;
             case 3:
+                print("------In Level 3 SpawnScript------");
                 spawnLocation = new Vector3(5.0f, -1.15f, 0);
                 enemy = (GameObject)Instantiate(EnemyPrefab, spawnLocation, new Quaternion());
                 enemyController = enemy.GetComponent("DemoEnemyController") as DemoEnemyController;
@@ -147,6 +149,7 @@ public class SpawnScript : MonoBehaviour {
                 LevelConfigManager.EnemiesSpawned += 1;
                 break;
             case 4:
+                print("------In Level 4 SpawnScript------");
                 spawnLocation = new Vector3(5.0f, -1.15f, 0);
                 enemy = (GameObject)Instantiate(EnemyPrefab, spawnLocation, new Quaternion());
                 enemyController = enemy.GetComponent("DemoEnemyController") as DemoEnemyController;
@@ -158,6 +161,7 @@ public class SpawnScript : MonoBehaviour {
                 LevelConfigManager.EnemiesSpawned += 1;
                 break;
             case 5:
+                print("------In Level 5 SpawnScript------");
                 spawnLocation = new Vector3(5.0f, -1.15f, 0);
                 enemy = (GameObject)Instantiate(EnemyPrefab, spawnLocation, new Quaternion());
                 enemyController = enemy.GetComponent("DemoEnemyController") as DemoEnemyController;
@@ -171,6 +175,7 @@ public class SpawnScript : MonoBehaviour {
                 LevelConfigManager.EnemiesSpawned += 1;
                 break;
             case 6:
+                print("------In Level 6 SpawnScript------");
                 spawnLocation = new Vector3(5.0f, -1.15f, 0);
                 enemy = (GameObject)Instantiate(EnemyPrefab, spawnLocation, new Quaternion());
                 enemyController = enemy.GetComponent("DemoEnemyController") as DemoEnemyController;
@@ -183,6 +188,7 @@ public class SpawnScript : MonoBehaviour {
                 LevelConfigManager.EnemiesSpawned += 1;
                 break;
             case 7:
+                print("------In Level 7 SpawnScript------");
                 spawnLocation = new Vector3(5.0f, -1.15f, 0);
                 enemy = (GameObject)Instantiate(EnemyPrefab, spawnLocation, new Quaternion());
                 enemyController = enemy.GetComponent("DemoEnemyController") as DemoEnemyController;
@@ -196,6 +202,7 @@ public class SpawnScript : MonoBehaviour {
                 LevelConfigManager.EnemiesSpawned += 1;
                 break;
             case 8:
+                print("------In Level 8 SpawnScript------");
                 spawnLocation = new Vector3(-5.0f, -1.15f, 0);
                 enemy = (GameObject)Instantiate(EnemyPrefab, spawnLocation, new Quaternion());
                 enemyController = enemy.GetComponent("DemoEnemyController") as DemoEnemyController;
@@ -208,6 +215,7 @@ public class SpawnScript : MonoBehaviour {
                 LevelConfigManager.EnemiesSpawned += 1;
                 break;
             case 9:
+                print("------In Level 9 SpawnScript------");
                 spawnLocation = new Vector3(5.0f, -1.15f, 0);
                 enemy = (GameObject)Instantiate(EnemyPrefab, spawnLocation, new Quaternion());
                 enemyController = enemy.GetComponent("DemoEnemyController") as DemoEnemyController;
@@ -221,6 +229,7 @@ public class SpawnScript : MonoBehaviour {
                 LevelConfigManager.EnemiesSpawned += 1;
                 break;
             case 10:
+                print("------In Level 10 SpawnScript------");
                 spawnLocation = new Vector3(5.0f, -1.15f, 0);
                 enemy = (GameObject)Instantiate(EnemyPrefab, spawnLocation, new Quaternion());
                 enemyController = enemy.GetComponent("DemoEnemyController") as DemoEnemyController;
