@@ -61,6 +61,8 @@ public class EntityManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        //Debug.Log(gameObject);
+        //Debug.Log(staggering);
 		if (this.gameObject.tag == "Player") {
 			LevelConfigManager.playerHealth = health;
 		}
@@ -121,6 +123,7 @@ public class EntityManager : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+
 		if (this.gameObject.tag == "Enemy" && collision.GetComponentInParent<EntityManager> ().gameObject.tag == "Enemy") {
 			return;
 		}
@@ -129,12 +132,25 @@ public class EntityManager : MonoBehaviour {
             StanceManager other_sm = collision.gameObject.GetComponentInParent<StanceManager>();
 
             if (ph.isParryFramesActive) {
+                // Stagger enemy and cause player to attack immediately
                 collision.gameObject.GetComponentInParent<EntityManager>().StaggerEntity();
+
+                // End the parry
+                ph.CancelParry();
+
+                // Attack
+                anim.SetBool("isAttacking", true); // Need to do it this way because it seems that the animator doesn't leave parry 
+                                                   // state fast enough to use request attack
+                //ah.RequestAttack();
             }
             else
             {
-                if (sm.currentStance != other_sm.currentStance)
+
+                // If stances do not match or the other entity is staggered
+                if (sm.currentStance != other_sm.currentStance || staggering)
                 {
+                    Debug.Log(gameObject);
+                    Debug.Log("DEALING DAMGE TO OTHER");
 					if (health > collision.gameObject.GetComponentInParent<EntityManager>().damage)
                     {
                         health -= collision.gameObject.GetComponentInParent<EntityManager>().damage;
@@ -186,8 +202,8 @@ public class EntityManager : MonoBehaviour {
     }
 
 	public void StaggerEntity(){
-		ah.EndAttack ();
-        ph.EndParry();
+		ah.CancelAttack();
+        ph.CancelParry();
 
         anim.SetBool("isStaggering", true);
         sprend.color = Color.yellow;
