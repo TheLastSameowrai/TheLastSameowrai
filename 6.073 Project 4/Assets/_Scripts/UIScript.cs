@@ -133,13 +133,17 @@ public class UIScript : MonoBehaviour {
 		//Destroy (proceedButton);
 		proceedButton.SetActive (false);
 		print ("---Just set the button active to false----");
-		SceneManager.LoadScene ("GameScene");
-		setLevelText ();
-		setBackground ();
-		transitionPopup.SetActive (true);
-		Time.timeScale = 0;
-		LevelConfigManager.Paused = true;
-		instructions.SetActive (false);
+		if (LevelConfigManager.Level > 10) {
+			SceneManager.LoadScene ("CreditsScene");
+		} else {
+			SceneManager.LoadScene ("GameScene");
+			setLevelText ();
+			setBackground ();
+			transitionPopup.SetActive (true);
+			Time.timeScale = 0;
+			LevelConfigManager.Paused = true;
+			instructions.SetActive (false);
+		}
 	}
 
 	void RestartGame() {

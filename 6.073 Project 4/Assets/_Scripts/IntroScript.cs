@@ -34,4 +34,8 @@ public class IntroScript : MonoBehaviour {
 	public void ToInstructionsScene() {
 		SceneManager.LoadScene ("InstructionsScene");
 	}
+
+	public void toStartScene() {
+		SceneManager.LoadScene ("TitleScene");
+	}
 }
