@@ -23,4 +23,8 @@ public class TitleScript : MonoBehaviour {
 	public void ToInstructionsScene() {
 		SceneManager.LoadScene ("InstructionsScene");
 	}
+
+	public void ToIntroScene() {
+		SceneManager.LoadScene ("IntroScene");
+	}
 }
