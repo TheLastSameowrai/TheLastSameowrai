@@ -20,6 +20,7 @@ public class EntityManager : MonoBehaviour {
     public ParryHandler ph;
 
     public float speed;
+	public float attackSpeed;
 
 	public int health;
 	public int damage;
@@ -82,12 +83,14 @@ public class EntityManager : MonoBehaviour {
 		}
 
 		float xPosition = rb2d.transform.position.x;
-		if (xPosition > rightXBound) {
-			xPosition = rightXBound;
-			transform.position = new Vector3 (xPosition, -1.15f, 0);
-		} else if (xPosition < leftXBound) {
-			xPosition = leftXBound;
-			transform.position = new Vector3 (xPosition, -1.15f, 0);
+		if (!gameObject.CompareTag ("Enemy")) {
+			if (xPosition > rightXBound) {
+				xPosition = rightXBound;
+				transform.position = new Vector3 (xPosition, -1.15f, 0);
+			} else if (xPosition < leftXBound) {
+				xPosition = leftXBound;
+				transform.position = new Vector3 (xPosition, -1.15f, 0);
+			}
 		}
 	}
 
@@ -95,12 +98,14 @@ public class EntityManager : MonoBehaviour {
     {
 		if (!staggering) {
 			float xPosition = rb2d.transform.position.x;
-			if (xPosition > rightXBound) {
-				xPosition = rightXBound;
-				transform.position = new Vector3 (xPosition, -1.15f, 0);
-			} else if (xPosition < leftXBound) {
-				xPosition = leftXBound;
-				transform.position = new Vector3 (xPosition, -1.15f, 0);
+			if (!gameObject.CompareTag ("Enemy")) {
+				if (xPosition > rightXBound) {
+					xPosition = rightXBound;
+					transform.position = new Vector3 (xPosition, -1.15f, 0);
+				} else if (xPosition < leftXBound) {
+					xPosition = leftXBound;
+					transform.position = new Vector3 (xPosition, -1.15f, 0);
+				}
 			}
 
 

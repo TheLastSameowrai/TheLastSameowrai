@@ -7,11 +7,21 @@ public class SpawnScript : MonoBehaviour {
     //private float spawnRate;
     private float startTime;
 
-    public GameObject EnemyPrefab;
+    public GameObject WhiteDogurai;
+	public GameObject YellowDogurai;
+	public GameObject OrangeDogurai;
+	public GameObject GreenDogurai;
+	public GameObject BlueDogurai;
+	public GameObject PurpleDogurai;
+	public GameObject BrownDogurai;
+	public GameObject RedDogurai;
+	public GameObject BlackDogurai;
+
     public GameObject Player;
 
-    private int[] totalEnemies = { 3, 5, 8, 10, 10, 12, 15, 15 };
-    private float[] spawnRates = { 3f, 2.5f, 2.5f, 2f, 3f, 3f, 2.5f, 2.5f, 2f };
+    private int[] totalEnemies = { 3, 5, 8, 10, 10, 12, 15, 15, 15, 1 };
+    private float[] spawnRates = { 3f, 2.5f, 2.5f, 2.5f, 2.5f, 2f, 1.5f, 1f, 0.5f, 0f };
+	private int[] spawnProbabilities = { 100, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 
     private Vector3 spawnLocation;
     private GameObject enemy;
@@ -32,7 +42,6 @@ public class SpawnScript : MonoBehaviour {
         LevelConfigManager.sameowraiParryCooldownSpeed = 1f;
         LevelConfigManager.sameowraiStunSpeed = 0.5f;
 
-        LevelConfigManager.doguraiAttackSpeed = 1;
         LevelConfigManager.doguraiWindupSpeed = 0.1f;
         LevelConfigManager.doguraiCoolDownSpeed = 0.5f;
         LevelConfigManager.doguraiParryWindupSpeed = 1f;
@@ -40,57 +49,56 @@ public class SpawnScript : MonoBehaviour {
         LevelConfigManager.doguraiParryCooldownSpeed = 1f;
         LevelConfigManager.doguraiStunSpeed = 0.1f;
 
+		LevelConfigManager.EnemiesToDefeat = totalEnemies[LevelConfigManager.Level-1];
+		LevelConfigManager.SpawnRate = spawnRates[LevelConfigManager.Level-1];
 
-		switch (LevelConfigManager.Level) {
-		    case 1:
-			    print ("------In case 1 SpawnScript------");
-			    LevelConfigManager.EnemiesToDefeat = totalEnemies[LevelConfigManager.Level-1];
-			    LevelConfigManager.SpawnRate = spawnRates[LevelConfigManager.Level-1];
-			    break;
-		    case 2:
-			    print ("------In case 2 SpawnScript------");
-                LevelConfigManager.EnemiesToDefeat = totalEnemies[LevelConfigManager.Level - 1];
-			    LevelConfigManager.SpawnRate = spawnRates[LevelConfigManager.Level - 1];
-                break;
-            case 3:
-                print("------In case 3 SpawnScript------");
-                LevelConfigManager.EnemiesToDefeat = totalEnemies[LevelConfigManager.Level - 1];
-                LevelConfigManager.SpawnRate = spawnRates[LevelConfigManager.Level - 1];
-                break;
-            case 4:
-                print("------In case 4 SpawnScript------");
-                LevelConfigManager.EnemiesToDefeat = totalEnemies[LevelConfigManager.Level - 1];
-                LevelConfigManager.SpawnRate = spawnRates[LevelConfigManager.Level - 1];
-                break;
-            case 5:
-                LevelConfigManager.EnemiesToDefeat = totalEnemies[LevelConfigManager.Level - 1];
-                LevelConfigManager.SpawnRate = spawnRates[LevelConfigManager.Level - 1];
-                break;
-            case 6:
-                LevelConfigManager.EnemiesToDefeat = totalEnemies[LevelConfigManager.Level - 1];
-                LevelConfigManager.SpawnRate = spawnRates[LevelConfigManager.Level - 1];
-                break;
-            case 7:
-                LevelConfigManager.EnemiesToDefeat = totalEnemies[LevelConfigManager.Level - 1];
-                LevelConfigManager.SpawnRate = spawnRates[LevelConfigManager.Level - 1];
-                break;
-            case 8:
-                LevelConfigManager.EnemiesToDefeat = totalEnemies[LevelConfigManager.Level - 1];
-                LevelConfigManager.SpawnRate = spawnRates[LevelConfigManager.Level - 1];
-                break;
-            case 9:
-                LevelConfigManager.EnemiesToDefeat = totalEnemies[LevelConfigManager.Level - 1];
-                LevelConfigManager.SpawnRate = spawnRates[LevelConfigManager.Level - 1];
-                break;
-            default:
-			    print ("-----In case default SpawnScript---");
-			    print ("LevelConfigManager.Level is" + LevelConfigManager.Level);
-            
-			    LevelConfigManager.EnemiesToDefeat = LevelConfigManager.Level * (int)(5/3.0);
-			    LevelConfigManager.SpawnRate = (float)LevelConfigManager.Level/4f;
-			    break;
+		switch (LevelConfigManager.Level)
+		{
+		case 1:
+			print("------In Level 1 SpawnScript------");
+			spawnProbabilities = new int[]{ 100, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+			break;
+		case 2:
+			print("------In Level 2 SpawnScript------");
+			spawnProbabilities = new int[]{ 30, 70, 0, 0, 0, 0, 0, 0, 0, 0 };
+			break;
+		case 3:
+			print("------In Level 3 SpawnScript------");
+			spawnProbabilities = new int[]{ 10, 20, 70, 0, 0, 0, 0, 0, 0, 0 };
+			break;
+		case 4:
+			print("------In Level 4 SpawnScript------");
+			spawnProbabilities = new int[]{ 5, 10, 15, 70, 0, 0, 0, 0, 0, 0 };
+			break;
+		case 5:
+			print("------In Level 5 SpawnScript------");
+			spawnProbabilities = new int[]{ 0, 5, 10, 15, 70, 0, 0, 0, 0, 0 };
+			break;
+		case 6:
+			print("------In Level 6 SpawnScript------");
+			spawnProbabilities = new int[]{ 0, 0, 5, 10, 15, 70, 0, 0, 0, 0 };
+			break;
+		case 7:
+			print("------In Level 7 SpawnScript------");
+			spawnProbabilities = new int[]{ 0, 0, 0, 5, 10, 15, 70, 0, 0, 0 };
+			break;
+		case 8:
+			print("------In Level 8 SpawnScript------");
+			spawnProbabilities = new int[]{ 0, 0, 0, 0, 5, 10, 15, 70, 0, 0 };
+			break;
+		case 9:
+			print("------In Level 9 SpawnScript------");
+			spawnProbabilities = new int[]{ 0, 0, 0, 0, 0, 5, 10, 15, 70, 0 };
+			break;
+		case 10:
+			print("------In Level 10 SpawnScript------");
+			spawnProbabilities = new int[]{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 100 };
+			break;
+		default:
+			print("-----In case default SpawnScript---");
+			spawnProbabilities = new int[]{ 100, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+			break;
 		}
-
 
         //spawnRate = 2f;
         startTime = Time.time;
@@ -107,149 +115,175 @@ public class SpawnScript : MonoBehaviour {
         }
 	}
 
+
+	void spawnEnemyPrefab(int index){
+		Vector3 spawnRightLocation = new Vector3(13.0f, -1.15f, 0);
+		Vector3 spawnLeftLocation = new Vector3 (-13.0f, -1.15f, 0);
+		Vector3 spawnLocation = Random.Range (0, 2) < 1 ? spawnRightLocation : spawnLeftLocation;
+		switch (index) {
+			case 0:
+				GameObject enemy = (GameObject)Instantiate(WhiteDogurai, spawnLocation, new Quaternion());
+				DemoEnemyController enemyController = enemy.GetComponent("DemoEnemyController") as DemoEnemyController;
+				enemyController.target = Player;
+				break;
+			case 1:
+			 	enemy = (GameObject)Instantiate(YellowDogurai, spawnLocation, new Quaternion());
+			 	enemyController = enemy.GetComponent("DemoEnemyController") as DemoEnemyController;
+			    enemyController.target = Player;
+				break;
+			case 2:
+				enemy = (GameObject)Instantiate(OrangeDogurai, spawnLocation, new Quaternion());
+			    enemyController = enemy.GetComponent("DemoEnemyController") as DemoEnemyController;
+				enemyController.target = Player;
+				break;
+			case 3:
+				enemy = (GameObject)Instantiate(GreenDogurai, spawnLocation, new Quaternion());
+			    enemyController = enemy.GetComponent("DemoEnemyController") as DemoEnemyController;
+			    enemyController.target = Player;
+				break;
+			case 4:
+				enemy = (GameObject)Instantiate(BlueDogurai, spawnLocation, new Quaternion());
+				enemyController = enemy.GetComponent("DemoEnemyController") as DemoEnemyController;
+				enemyController.target = Player;
+				break;
+			case 5:
+				enemy = (GameObject)Instantiate(PurpleDogurai, spawnLocation, new Quaternion());
+				enemyController = enemy.GetComponent("DemoEnemyController") as DemoEnemyController;
+				enemyController.target = Player;
+				break;
+			case 6:
+				enemy = (GameObject)Instantiate(BrownDogurai, spawnLocation, new Quaternion());
+				enemyController = enemy.GetComponent("DemoEnemyController") as DemoEnemyController;
+				enemyController.target = Player;
+				break;
+			case 7:
+				enemy = (GameObject)Instantiate(RedDogurai, spawnLocation, new Quaternion());
+				enemyController = enemy.GetComponent("DemoEnemyController") as DemoEnemyController;
+				enemyController.target = Player;
+				break;
+			case 8:
+				enemy = (GameObject)Instantiate(BlackDogurai, spawnLocation, new Quaternion());
+				enemyController = enemy.GetComponent("DemoEnemyController") as DemoEnemyController;
+				enemyController.target = Player;
+				break;
+			default:
+				enemy = (GameObject)Instantiate(WhiteDogurai, spawnLocation, new Quaternion());
+				enemyController = enemy.GetComponent("DemoEnemyController") as DemoEnemyController;
+				enemyController.target = Player;
+				break;
+		}
+		LevelConfigManager.EnemiesSpawned += 1;
+	}
+
+
     void spawnEnemy()
     {
-        
-        switch (LevelConfigManager.Level)
-        {
-            case 1:
-                print("------In Level 1 SpawnScript------");
-                Vector3 spawnLocation = new Vector3(5.0f, -1.15f, 0);
-                GameObject enemy = (GameObject)Instantiate(EnemyPrefab, spawnLocation, new Quaternion());
-                DemoEnemyController enemyController = enemy.GetComponent("DemoEnemyController") as DemoEnemyController;
-                enemyController.target = Player;
-                EntityManager em = enemyController.GetComponent("EntityManager") as EntityManager;
-                em.health = 1;
-                em.damage = 1;
-                float attackSpeed = LevelConfigManager.doguraiAttackSpeed;
-                LevelConfigManager.EnemiesSpawned += 1;
-                break;
-            case 2:
-                print("------In Level 2 SpawnScript------");
-                spawnLocation = new Vector3(5.0f, -1.15f, 0);
-                enemy = (GameObject)Instantiate(EnemyPrefab, spawnLocation, new Quaternion());
-                enemyController = enemy.GetComponent("DemoEnemyController") as DemoEnemyController;
-                enemyController.target = Player;
-                em = enemyController.GetComponent("EntityManager") as EntityManager;
-                em.health = 1;
-                em.damage = 2;
-                LevelConfigManager.EnemiesSpawned += 1;
-                break;
-            case 3:
-                print("------In Level 3 SpawnScript------");
-                spawnLocation = new Vector3(5.0f, -1.15f, 0);
-                enemy = (GameObject)Instantiate(EnemyPrefab, spawnLocation, new Quaternion());
-                enemyController = enemy.GetComponent("DemoEnemyController") as DemoEnemyController;
-                enemyController.target = Player;
-                em = enemyController.GetComponent("EntityManager") as EntityManager;
-                em.health = 1;
-                em.damage = 1;
-                em.speed += em.speed / 2f;
-                LevelConfigManager.doguraiAttackSpeed = LevelConfigManager.doguraiAttackSpeed / 2f;
-                LevelConfigManager.EnemiesSpawned += 1;
-                break;
-            case 4:
-                print("------In Level 4 SpawnScript------");
-                spawnLocation = new Vector3(5.0f, -1.15f, 0);
-                enemy = (GameObject)Instantiate(EnemyPrefab, spawnLocation, new Quaternion());
-                enemyController = enemy.GetComponent("DemoEnemyController") as DemoEnemyController;
-                enemyController.target = Player;
-                em = enemyController.GetComponent("EntityManager") as EntityManager;
-                em.health = 1;
-                em.damage = 2;
-                //LevelConfigManager.doguraiAttackSpeed = LevelConfigManager.doguraiAttackSpeed / 2f;
-                LevelConfigManager.EnemiesSpawned += 1;
-                break;
-            case 5:
-                print("------In Level 5 SpawnScript------");
-                spawnLocation = new Vector3(5.0f, -1.15f, 0);
-                enemy = (GameObject)Instantiate(EnemyPrefab, spawnLocation, new Quaternion());
-                enemyController = enemy.GetComponent("DemoEnemyController") as DemoEnemyController;
-                enemyController.target = Player;
-                em = enemyController.GetComponent("EntityManager") as EntityManager;
-                em.health = 1;
-                em.damage = 100;
-                em.speed += em.speed / 2f;
-                attackSpeed = 1f;
-                LevelConfigManager.doguraiAttackSpeed = attackSpeed * 0.75f;
-                LevelConfigManager.EnemiesSpawned += 1;
-                break;
-            case 6:
-                print("------In Level 6 SpawnScript------");
-                spawnLocation = new Vector3(5.0f, -1.15f, 0);
-                enemy = (GameObject)Instantiate(EnemyPrefab, spawnLocation, new Quaternion());
-                enemyController = enemy.GetComponent("DemoEnemyController") as DemoEnemyController;
-                enemyController.target = Player;
-                em = enemyController.GetComponent("EntityManager") as EntityManager;
-                em.health = 2;
-                em.damage = 3;
-                attackSpeed = 1f;
-                LevelConfigManager.doguraiAttackSpeed = attackSpeed + attackSpeed / 2f;
-                LevelConfigManager.EnemiesSpawned += 1;
-                break;
-            case 7:
-                print("------In Level 7 SpawnScript------");
-                spawnLocation = new Vector3(5.0f, -1.15f, 0);
-                enemy = (GameObject)Instantiate(EnemyPrefab, spawnLocation, new Quaternion());
-                enemyController = enemy.GetComponent("DemoEnemyController") as DemoEnemyController;
-                enemyController.target = Player;
-                em = enemyController.GetComponent("EntityManager") as EntityManager;
-                em.health = 2;
-                em.damage = 2;
-                em.speed += em.speed * 0.75f;
-                attackSpeed = 1f;
-                LevelConfigManager.doguraiAttackSpeed = attackSpeed + attackSpeed*0.75f;
-                LevelConfigManager.EnemiesSpawned += 1;
-                break;
-            case 8:
-                print("------In Level 8 SpawnScript------");
-                spawnLocation = new Vector3(-5.0f, -1.15f, 0);
-                enemy = (GameObject)Instantiate(EnemyPrefab, spawnLocation, new Quaternion());
-                enemyController = enemy.GetComponent("DemoEnemyController") as DemoEnemyController;
-                enemyController.target = Player;
-                em = enemyController.GetComponent("EntityManager") as EntityManager;
-                em.health = 2;
-                em.damage = 3;
-                attackSpeed = 1f;
-                LevelConfigManager.doguraiAttackSpeed = attackSpeed - attackSpeed / 4f;
-                LevelConfigManager.EnemiesSpawned += 1;
-                break;
-            case 9:
-                print("------In Level 9 SpawnScript------");
-                spawnLocation = new Vector3(5.0f, -1.15f, 0);
-                enemy = (GameObject)Instantiate(EnemyPrefab, spawnLocation, new Quaternion());
-                enemyController = enemy.GetComponent("DemoEnemyController") as DemoEnemyController;
-                enemyController.target = Player;
-                em = enemyController.GetComponent("EntityManager") as EntityManager;
-                em.health = 2;
-                em.damage = 2;
-                em.speed += em.speed * 0.75f;
-                attackSpeed = 1f;
-                LevelConfigManager.doguraiAttackSpeed = attackSpeed - attackSpeed / 2f;
-                LevelConfigManager.EnemiesSpawned += 1;
-                break;
-            case 10:
-                print("------In Level 10 SpawnScript------");
-                spawnLocation = new Vector3(5.0f, -1.15f, 0);
-                enemy = (GameObject)Instantiate(EnemyPrefab, spawnLocation, new Quaternion());
-                enemyController = enemy.GetComponent("DemoEnemyController") as DemoEnemyController;
-                enemyController.target = Player;
-                em = enemyController.GetComponent("EntityManager") as EntityManager;
-                em.health = 2;
-                em.damage = 100;
-                em.speed += em.speed * 0.75f;
-                attackSpeed = 1f;
-                LevelConfigManager.doguraiAttackSpeed = attackSpeed - attackSpeed / 2f;
-                LevelConfigManager.EnemiesSpawned += 1;
-                break;
-            default:
-                print("-----In case default SpawnScript---");
-                spawnLocation = new Vector3(5.0f, -1.15f, 0);
-                enemy = (GameObject)Instantiate(EnemyPrefab, spawnLocation, new Quaternion());
-                enemyController = enemy.GetComponent("DemoEnemyController") as DemoEnemyController;
-                enemyController.target = Player;
-                LevelConfigManager.EnemiesSpawned = LevelConfigManager.EnemiesSpawned + 1;
-                break;
-        }
+		LoadedDie loadedDie = new LoadedDie (spawnProbabilities);
+		spawnEnemyPrefab (loadedDie.NextValue ());
     }
+}
+
+
+
+
+
+
+
+
+
+
+
+public class LoadedDie {
+	// Initializes a new loaded die.  Probs
+	// is an array of numbers indicating the relative
+	// probability of each choice relative to all the
+	// others.  For example, if probs is [3,4,2], then
+	// the chances are 3/9, 4/9, and 2/9, since the probabilities
+	// add up to 9.
+	public LoadedDie(int probs){
+		this.prob=new List<long>();
+		this.alias=new List<int>();
+		this.total=0;
+		this.n=probs;
+		this.even=true;
+	}
+
+	Random random=new Random();
+
+	List<long> prob;
+	List<int> alias;
+	long total;
+	int n;
+	bool even;
+
+	public LoadedDie(IEnumerable<int> probs){
+		// Raise an error if nil
+		this.prob=new List<long>();
+		this.alias=new List<int>();
+		this.total=0;
+		this.even=false;
+		var small=new List<int>();
+		var large=new List<int>();
+		var tmpprobs=new List<long>();
+		foreach(var p in probs){
+			tmpprobs.Add(p);
+		}
+		this.n=tmpprobs.Count;
+		// Get the max and min choice and calculate total
+		long mx=-1, mn=-1;
+		foreach(var p in tmpprobs){			
+			mx=(mx<0 || p>mx) ? p : mx;
+			mn=(mn<0 || p<mn) ? p : mn;
+			this.total+=p;
+		}
+		// We use a shortcut if all probabilities are equal
+		if(mx==mn){
+			this.even=true;
+			return;
+		}
+		// Clone the probabilities and scale them by
+		// the number of probabilities
+		for(var i=0;i<tmpprobs.Count;i++){
+			tmpprobs[i]*=this.n;
+			this.alias.Add(0);
+			this.prob.Add(0);
+		}
+		// Use Michael Vose's alias method
+		for(var i=0;i<tmpprobs.Count;i++){
+			if(tmpprobs[i]<this.total)
+				small.Add(i); // Smaller than probability sum
+			else
+				large.Add(i); // Probability sum or greater
+		}
+		// Calculate probabilities and aliases
+		while(small.Count>0 && large.Count>0){
+			var l=small[small.Count-1];small.RemoveAt(small.Count-1);
+			var g=large[large.Count-1];large.RemoveAt(large.Count-1);
+			this.prob[l]=tmpprobs[l];
+			this.alias[l]=g;
+			var newprob=(tmpprobs[g]+tmpprobs[l])-this.total;
+			tmpprobs[g]=newprob;
+			if(newprob<this.total)
+				small.Add(g);
+			else
+				large.Add(g);
+		}
+		foreach(var g in large)
+			this.prob[g]=this.total;
+		foreach(var l in small)
+			this.prob[l]=this.total;
+	}
+
+	// Returns the number of choices.
+	public int Count {
+		get {
+			return this.n;
+		}
+	}
+	// Chooses a choice at random, ranging from 0 to the number of choices
+	// minus 1.
+	public int NextValue(){
+		var i=Random.Range(0, this.n);
+		return (this.even || Random.Range(0, (int)this.total)<this.prob[i]) ? i : this.alias[i];
+	}
 }

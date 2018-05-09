@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 114362716884302814}
   - component: {fileID: 114030194869983918}
   - component: {fileID: 82084687307372168}
+  - component: {fileID: 114328927304191548}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -293,12 +294,12 @@ MonoBehaviour:
   sprend: {fileID: 0}
   anim: {fileID: 0}
   ah: {fileID: 0}
+  ph: {fileID: 0}
   speed: 5
-  health: 5
+  health: 10
   damage: 1
   looking: 1
   staggering: 0
-  staggerCount: 0
 --- !u!114 &114252334873586612
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -312,6 +313,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb2d: {fileID: 0}
   anim: {fileID: 0}
+--- !u!114 &114328927304191548
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1402048245879966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69f0bfc7b08d6874d955e7ea99c444d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb2d: {fileID: 0}
+  anim: {fileID: 0}
+  isParryFramesActive: 0
 --- !u!114 &114362716884302814
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -352,6 +367,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ah: {fileID: 0}
+  ph: {fileID: 0}
+  em: {fileID: 0}
 --- !u!212 &212935116383628470
 SpriteRenderer:
   m_ObjectHideFlags: 1

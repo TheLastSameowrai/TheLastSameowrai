@@ -23,7 +23,6 @@ public static class LevelConfigManager {
 
 	// Dog variables
     public static float doguraiWindupSpeed;
-    public static float doguraiAttackSpeed;
     public static float doguraiCoolDownSpeed;
     public static float doguraiParryWindupSpeed;
     public static float doguraiParrySpeed;

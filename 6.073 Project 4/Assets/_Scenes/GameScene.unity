@@ -234,7 +234,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aabd48c45230464db7f2021be2cf320, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyPrefab: {fileID: 1582613242040464, guid: 65ebe3ff39fd8e643bdda7a048ea9d2f,
+  WhiteDogurai: {fileID: 1193040161807266, guid: a87e4a97885fa24468cfdd20b1c837b2,
+    type: 2}
+  YellowDogurai: {fileID: 1744391287260026, guid: c0302159c34d3e14c8ded8ade9a744b2,
+    type: 2}
+  OrangeDogurai: {fileID: 1858066514707212, guid: d439214c019da09479d9f615713916a8,
+    type: 2}
+  GreenDogurai: {fileID: 1849921270051742, guid: 8e8db1b638f97e549b9014ad7530252e,
+    type: 2}
+  BlueDogurai: {fileID: 1335136922834076, guid: f2bff288ac38c4a4290adba21d153fae,
+    type: 2}
+  PurpleDogurai: {fileID: 1482263708751586, guid: 71e4c0712a23bb34e86ebeb159863753,
+    type: 2}
+  BrownDogurai: {fileID: 1800510513052598, guid: b8c64b091eb2fbd4886b6415e3d81d75,
+    type: 2}
+  RedDogurai: {fileID: 1578811820884350, guid: 0b07897f2a9695e4cad36ebb158d28ba, type: 2}
+  BlackDogurai: {fileID: 1345632030909580, guid: ed8f30041fe40894ba60fb848475d480,
     type: 2}
   Player: {fileID: 1811252437}
 --- !u!4 &111904590
@@ -803,21 +818,6 @@ Prefab:
     - target: {fileID: 4681519215013248, guid: 66fff07191d8884409da7d8c6375679b, type: 2}
       propertyPath: m_RootOrder
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 212935116383628470, guid: 66fff07191d8884409da7d8c6375679b,
-        type: 2}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 212935116383628470, guid: 66fff07191d8884409da7d8c6375679b,
-        type: 2}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 212935116383628470, guid: 66fff07191d8884409da7d8c6375679b,
-        type: 2}
-      propertyPath: m_Color.b
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 66fff07191d8884409da7d8c6375679b, type: 2}
@@ -1518,20 +1518,6 @@ GameObject:
   m_PrefabParentObject: {fileID: 1402048245879966, guid: 66fff07191d8884409da7d8c6375679b,
     type: 2}
   m_PrefabInternal: {fileID: 660269268}
---- !u!114 &1811252438
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1811252437}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69f0bfc7b08d6874d955e7ea99c444d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb2d: {fileID: 0}
-  anim: {fileID: 0}
-  isParryFramesActive: 0
 --- !u!1 &1818012223 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1418972880262334, guid: 26f6a08ed35ac47cd9ffc8441e23bd90,

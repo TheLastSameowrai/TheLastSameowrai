@@ -376,9 +376,10 @@ MonoBehaviour:
   anim: {fileID: 0}
   ah: {fileID: 0}
   ph: {fileID: 0}
-  speed: 5
-  health: 0
-  damage: 1
+  speed: 8
+  attackSpeed: 0.25
+  health: 1
+  damage: 100
   looking: 1
   staggering: 0
 --- !u!114 &114210173869527528

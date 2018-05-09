@@ -65,7 +65,7 @@ public class AttackHandler : MonoBehaviour {
         
         if (gameObject.tag == "Enemy")
         {
-            anim.speed = LevelConfigManager.doguraiAttackSpeed;
+			anim.speed = em.attackSpeed;
         }
         else if (gameObject.tag == "Player")
         {
