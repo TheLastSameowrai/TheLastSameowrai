@@ -76,6 +76,7 @@ public class PlayerController : MonoBehaviour {
 		}
 
 		GameObject.FindGameObjectWithTag ("UIScript").transform.SetPositionAndRotation (Camera.main.transform.position, Camera.main.transform.rotation);
+
    
     }
 }
