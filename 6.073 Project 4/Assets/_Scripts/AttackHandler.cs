@@ -40,7 +40,7 @@ public class AttackHandler : MonoBehaviour {
     // Called when attack telegraph is called (at the start of the attack)
     public void StartWindup()
     {
-        Debug.Log("Entity start windup");
+        //Debug.Log("Entity start windup");
        
         rb2d.velocity = new Vector2(0, 0);
 
@@ -58,7 +58,7 @@ public class AttackHandler : MonoBehaviour {
     // Called when the attack itself starts
     public void StartAttack()
     {
-        Debug.Log("Entity start attack");
+        //Debug.Log("Entity start attack");
         
         
         int dir = em.looking;
@@ -88,7 +88,7 @@ public class AttackHandler : MonoBehaviour {
     // Called when the attack is done
     public void EndAttack()
     {
-        Debug.Log("Entity end attack");
+        //Debug.Log("Entity end attack");
         
 
         //rb2d.velocity = new Vector2(0, 0);
@@ -96,5 +96,12 @@ public class AttackHandler : MonoBehaviour {
         anim.SetBool("isAttacking", false);
         anim.speed = 1;
         
+    }
+
+    public void CancelAttack()
+    {
+        //Debug.Log("Cancel Attack");
+        anim.SetBool("isAttacking", false);
+        anim.speed = 1;
     }
 }
