@@ -121,6 +121,9 @@ public class EntityManager : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+		if (this.gameObject.tag == "Enemy" && collision.GetComponentInParent<EntityManager> ().gameObject.tag == "Enemy") {
+			return;
+		}
         if (collision.gameObject.tag == "HurtBox")
         {
             StanceManager other_sm = collision.gameObject.GetComponentInParent<StanceManager>();
@@ -132,7 +135,7 @@ public class EntityManager : MonoBehaviour {
             {
                 if (sm.currentStance != other_sm.currentStance)
                 {
-                    if (health > 1)
+					if (health > collision.gameObject.GetComponentInParent<EntityManager>().damage)
                     {
                         health -= collision.gameObject.GetComponentInParent<EntityManager>().damage;
                     }
