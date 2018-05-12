@@ -12,6 +12,12 @@ public class Data : MonoBehaviour {
     public string status;
     float start_time;
     float level_time;
+	public int times_paused;
+	public int keys_pressed;
+	public int invalid_keys_pressed;
+	public int enemies_spawned;
+	public int enemies_killed;
+	public String enemy_lost;
 
     public LevelData[] levels;
     List<LevelData> levelList;

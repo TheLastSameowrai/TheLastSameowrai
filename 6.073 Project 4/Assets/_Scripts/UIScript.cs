@@ -54,6 +54,9 @@ public class UIScript : MonoBehaviour {
 			LevelConfigManager.FirstTime = false;
 			LevelConfigManager.dataManager = new Data ();
 			LevelConfigManager.playerHealth = 5;
+			LevelConfigManager.timesPaused = 0;
+			LevelConfigManager.invalidKeysPressed = 0;
+			LevelConfigManager.keysPressed = 0;
 			LevelConfigManager.dataManager.Start (); // initialize Data
 		}
 		setLevelText ();
@@ -66,6 +69,16 @@ public class UIScript : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+
+		if (Input.anyKeyDown) {
+			LevelConfigManager.keysPressed += 1;
+		}
+
+		if (!Input.GetKeyDown (KeyCode.C) && !Input.GetKeyDown (KeyCode.P) && !Input.GetKeyDown (KeyCode.R) && !Input.GetKeyDown (KeyCode.W) &&
+		    !Input.GetKeyDown (KeyCode.A) && !Input.GetKeyDown (KeyCode.S) && !Input.GetKeyDown (KeyCode.D) && !Input.GetKeyDown (KeyCode.Q)) {
+			LevelConfigManager.invalidKeysPressed += 1;
+		}
+
 		if (transitionPopup.gameObject.active && Input.GetKeyDown (KeyCode.C)) {
 			Time.timeScale = 1;
 			transitionPopup.gameObject.SetActive (false);
@@ -76,6 +89,7 @@ public class UIScript : MonoBehaviour {
 		{
 			if (Time.timeScale == 1)
 			{
+				LevelConfigManager.timesPaused += 1;
 				showPaused ();
 			}
 			else if (Time.timeScale == 0)
@@ -167,34 +181,34 @@ public class UIScript : MonoBehaviour {
 	void setLevelText() {
 		switch (LevelConfigManager.Level) {
 		case 1:
-			transitionText.text = "Hurry! I just saw Dokugawa Doggunate Bork go through that door, but his puppers are in your way. Defeat them with the appropriate stance to move on!";
+			transitionText.text = "Hurry! I just saw Dokugawa Doggunate Bork go through that door, but his puppers are in your way. <color='grey'> Defeat them with the appropriate stance to move on! </color>" ;
 			break;
 		case 2:
-			transitionText.text = "Great job, young one! Be careful, these guys are a little stronger than the pups you just defeated.";
+			transitionText.text = "Great job, young one! Be careful, these guys are a <color='yellow'> little stronger </color> than the pups you just defeated.";
 			break;
 		case 3:
-			transitionText.text = "Old Man Meowza would be proud of you. But we can't celebrate yet. These fast puppers are running right at you!";
+			transitionText.text = "Old Man Meowza would be proud of you. But we can't celebrate yet. These <color='orange'> fast puppers are running right at you! </color>";
 			break;
 		case 4:
-			transitionText.text = "Wooooweee! Look at you go! You're growing to be a fine young - oh no! Watch your back!";
+			transitionText.text = "Wooooweee! Look at you go! You're growing to be a fine young - oh no! <color='green'> Watch your back! </color> ";
 			break;
 		case 5:
-			transitionText.text = "I've heard about these guys. These guys are strong and fast but have slow reflexes. Be careful!";
+			transitionText.text = "I've heard about these guys. <color='blue'> These guys are strong and fast but have slow reflexes </color>. Be careful!";
 			break;
 		case 6:
-			transitionText.text = "You must be tired from all this slaying. But push through young one! These fellas are not just strong but have more endurance as well!";
+			transitionText.text = "You must be tired from all this slaying. But push through young one! <color='purple'> These fellas are not just strong but have more endurance as well! </color>";
 			break;
 		case 7:
-			transitionText.text = "Meow meow meow~ Oh, sorry I was busy chasing a butterfly. Watch out for these doggos, they're pretty fast and they think you're their chew toy!";
+			transitionText.text = "Meow meow meow~ Oh, sorry I was busy chasing a butterfly. Watch out for these doggos, <color='brown'> they're pretty fast and they think you're their chew toy! </color>";
 			break;
 		case 8:
-			transitionText.text = "We got pretty far in the doge-o didn't we? And by we, I mean you. Wait hold on... why are those bulky guys so fast. Ahh! Behind you!"; 
+			transitionText.text = "We got pretty far in the doge-o didn't we? And by we, I mean you. Wait hold on... <color='red'> why are those bulky guys so fast </color>. Ahh! Behind you!"; 
 			break;
 		case 9:
 			transitionText.text = "Phew, almost gave me cat-iac arrest, but you're almost there! Defeat these minions and bring honor to the clowder!";
 			break;
 		case 10:
-			transitionText.text = "HERE HE IS! The fearful Dokugawa Doggunate Bork!";
+			transitionText.text = "HERE HE IS! <color='black'> The fearful Dokugawa Doggunate Bork! </color>";
 			break;
 		default:
 			transitionText.text = "Level " + LevelConfigManager.Level.ToString();
