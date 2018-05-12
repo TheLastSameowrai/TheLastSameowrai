@@ -20,7 +20,7 @@ public class SpawnScript : MonoBehaviour {
     public GameObject Player;
 
     private int[] totalEnemies = { 3, 5, 8, 10, 10, 12, 15, 15, 15, 1 };
-    private float[] spawnRates = { 3f, 2.5f, 2.5f, 2.5f, 2.5f, 2f, 1.5f, 1f, 0.5f, 0f };
+    private float[] spawnRates = { 3f, 2.5f, 2.5f, 2.5f, 2.5f, 2f, 2f, 2f, 2f, 0f };
 	private int[] spawnProbabilities = { 100, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 
     private Vector3 spawnLocation;
@@ -76,19 +76,21 @@ public class SpawnScript : MonoBehaviour {
 			break;
 		case 6:
 			print("------In Level 6 SpawnScript------");
-			spawnProbabilities = new int[]{ 0, 0, 5, 10, 15, 70, 0, 0, 0, 0 };
+			spawnProbabilities = new int[]{ 0, 10, 10, 15, 15, 50, 0, 0, 0, 0 };
+			//spawnProbabilities = new int[]{ 0, 0, 5, 10, 15, 70, 0, 0, 0, 0 };
 			break;
 		case 7:
 			print("------In Level 7 SpawnScript------");
-			spawnProbabilities = new int[]{ 0, 0, 0, 5, 10, 15, 70, 0, 0, 0 };
+			spawnProbabilities = new int[]{ 0, 0, 10, 10, 15, 15, 50, 0, 0, 0 };
+			//spawnProbabilities = new int[]{ 0, 0, 0, 5, 10, 15, 70, 0, 0, 0 };
 			break;
 		case 8:
 			print("------In Level 8 SpawnScript------");
-			spawnProbabilities = new int[]{ 0, 0, 0, 0, 5, 10, 15, 70, 0, 0 };
+			spawnProbabilities = new int[]{ 0, 0, 0, 10, 10, 15, 15, 50, 0, 0 };
 			break;
 		case 9:
 			print("------In Level 9 SpawnScript------");
-			spawnProbabilities = new int[]{ 0, 0, 0, 0, 0, 5, 10, 15, 70, 0 };
+			spawnProbabilities = new int[]{ 0, 0, 0, 0, 10, 10, 15, 15, 50, 0 };
 			break;
 		case 10:
 			print("------In Level 10 SpawnScript------");
