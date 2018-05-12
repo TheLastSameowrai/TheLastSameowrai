@@ -17,18 +17,19 @@ public class IntroScript : MonoBehaviour {
 	float start_time;
 	// Use this for initialization
 	void Start () {
-		speed = 10;
 		start_time = Time.time;
 		start_position = new Vector3(0f, -7.5f, 90f);
 		target_position = new Vector3(0f, 7.5f, 90f);
 		t = 0;
-		total_time = 10.0f;
+		total_time = 15.0f;
 	}
 
 	// Update is called once per frame
 	void Update () {
-		t += Time.deltaTime/total_time;
-		canvas.transform.position = Vector3.Lerp (start_position, target_position, t);
+		if (Time.time - start_time > 1.0f) {
+			t += Time.deltaTime / total_time;
+			canvas.transform.position = Vector3.Lerp (start_position, target_position, t);
+		}
 	}
 
 	public void ToInstructionsScene() {
