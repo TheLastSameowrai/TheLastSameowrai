@@ -21,6 +21,7 @@ public class UIScript : MonoBehaviour {
 	public GameObject garden;
 	public GameObject final;
 
+    private AudioSource musicSource;
     public AudioClip levelMusic1;
 
 	public Texture2D blackForeground;
@@ -49,12 +50,12 @@ public class UIScript : MonoBehaviour {
     // Use this for initialization
     void Start () {
 		print ("In UISCRIPT start");
-		//DontDestroyOnLoad (transform.gameObject);
-		proceedButton.SetActive (false);
+		//DontDestroyOnLoad(transform.gameObject);
+		proceedButton.SetActive(false);
 		pauseObjects = GameObject.FindGameObjectsWithTag("ShowOnPause");
 		hidePaused();
 		if (LevelConfigManager.FirstTime) {
-            AudioSource musicSource = GameObject.Find("musicSource").GetComponent<AudioSource>();
+            musicSource = GameObject.Find("musicSource").GetComponent<AudioSource>();
             musicSource.Stop();
             musicSource.clip = levelMusic1;
 
@@ -62,22 +63,22 @@ public class UIScript : MonoBehaviour {
 			LevelConfigManager.Timer = timer;
 			LevelConfigManager.Timer.text = "00:00"; // Timer.text = "00:00";
 			LevelConfigManager.FirstTime = false;
-			LevelConfigManager.dataManager = new Data ();
+			LevelConfigManager.dataManager = new Data();
 			LevelConfigManager.playerHealth = 10;
 			print ("Player health is " + LevelConfigManager.playerHealth);
 			LevelConfigManager.timesPaused = 0;
 			LevelConfigManager.invalidKeysPressed = 0;
 			LevelConfigManager.keysPressed = 0;
-			LevelConfigManager.dataManager.Start (); // initialize Data
+			LevelConfigManager.dataManager.Start(); // initialize Data
 		}
 		setLevelText ();
 		setBackground ();
-		transitionPopup.SetActive (true);
+		transitionPopup.SetActive(true);
 		Time.timeScale = 0;
 		transitionCount = 0;
 		transitioning = false;
 		LevelConfigManager.Paused = true;
-		instructions.SetActive (false);
+		instructions.SetActive(false);
 	}
 
 	// Update is called once per frame
@@ -92,18 +93,19 @@ public class UIScript : MonoBehaviour {
 			LevelConfigManager.invalidKeysPressed += 1;
 		}
 
-		if (transitionPopup.gameObject.active && Input.GetKeyDown (KeyCode.C)) {
+		if (transitionPopup.gameObject.active && Input.GetKeyDown(KeyCode.C)) {
 			Time.timeScale = 1;
-			transitionPopup.gameObject.SetActive (false);
+			transitionPopup.gameObject.SetActive(false);
 			LevelConfigManager.Paused = false;
-			instructions.SetActive (true);
+			instructions.SetActive(true);
+            musicSource.Play();
 		}
 		if (!LevelConfigManager.GameOver && Input.GetKeyDown(KeyCode.P))
 		{
 			if (Time.timeScale == 1)
 			{
 				LevelConfigManager.timesPaused += 1;
-				showPaused ();
+				showPaused();
 			}
 			else if (Time.timeScale == 0)
 			{
