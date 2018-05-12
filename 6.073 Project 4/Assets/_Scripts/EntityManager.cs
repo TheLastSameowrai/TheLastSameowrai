@@ -91,7 +91,7 @@ public class EntityManager : MonoBehaviour {
 				transform.position = new Vector3 (xPosition, -1.15f, 0);
 				if (LevelConfigManager.EnemiesDefeated >= LevelConfigManager.EnemiesToDefeat && !LevelConfigManager.GameOver) {
 					UIScript uiScript = GameObject.Find ("UIScript").GetComponent<UIScript> ();
-					uiScript.ToNextLevel ();
+					uiScript.BeginTransition ();
 				}
 			} else if (xPosition < leftXBound) {
 				xPosition = leftXBound;
