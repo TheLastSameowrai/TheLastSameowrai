@@ -296,6 +296,7 @@ MonoBehaviour:
   ah: {fileID: 0}
   ph: {fileID: 0}
   speed: 5
+  attackSpeed: 0
   health: 10
   damage: 1
   looking: 1

@@ -9,6 +9,7 @@ public class UIScript : MonoBehaviour {
 
 
     public Text timer;
+	public Text levelUI;
 	public Slider healthBar;
 	public GameObject transitionPopup;
 	public Text transitionText;
@@ -53,7 +54,8 @@ public class UIScript : MonoBehaviour {
 			LevelConfigManager.Timer.text = "00:00"; // Timer.text = "00:00";
 			LevelConfigManager.FirstTime = false;
 			LevelConfigManager.dataManager = new Data ();
-			LevelConfigManager.playerHealth = 5;
+			LevelConfigManager.playerHealth = 10;
+			print ("Player health is " + LevelConfigManager.playerHealth);
 			LevelConfigManager.timesPaused = 0;
 			LevelConfigManager.invalidKeysPressed = 0;
 			LevelConfigManager.keysPressed = 0;
@@ -108,6 +110,7 @@ public class UIScript : MonoBehaviour {
 			float elapsedTime = Time.time - LevelConfigManager.StartTime;
             int minutes = ((int)elapsedTime) / 60;
 			LevelConfigManager.Timer.text = minutes.ToString("D2") + ":" + ((int)(elapsedTime) - 60 * minutes).ToString("D2");
+			levelUI.text = "Level " + LevelConfigManager.Level.ToString ();
         }
 
 		if (LevelConfigManager.EnemiesDefeated >= LevelConfigManager.EnemiesToDefeat && !LevelConfigManager.GameOver) {
@@ -118,6 +121,7 @@ public class UIScript : MonoBehaviour {
 		}
 
 		healthBar.value = LevelConfigManager.playerHealth;
+		print ("HealthBar value is " + healthBar.value);
     }
 
 	public void showPaused() {

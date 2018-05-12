@@ -85,10 +85,14 @@ public class EntityManager : MonoBehaviour {
 		}
 
 		float xPosition = rb2d.transform.position.x;
-		if (!gameObject.CompareTag ("Enemy")) {
+		if (gameObject.CompareTag ("Player")) {
 			if (xPosition > rightXBound) {
 				xPosition = rightXBound;
 				transform.position = new Vector3 (xPosition, -1.15f, 0);
+				if (LevelConfigManager.EnemiesDefeated >= LevelConfigManager.EnemiesToDefeat && !LevelConfigManager.GameOver) {
+					UIScript uiScript = GameObject.Find ("UIScript").GetComponent<UIScript> ();
+					uiScript.ToNextLevel ();
+				}
 			} else if (xPosition < leftXBound) {
 				xPosition = leftXBound;
 				transform.position = new Vector3 (xPosition, -1.15f, 0);
@@ -100,16 +104,6 @@ public class EntityManager : MonoBehaviour {
     {
 		if (!staggering) {
 			float xPosition = rb2d.transform.position.x;
-			if (!gameObject.CompareTag ("Enemy")) {
-				if (xPosition > rightXBound) {
-					xPosition = rightXBound;
-					transform.position = new Vector3 (xPosition, -1.15f, 0);
-				} else if (xPosition < leftXBound) {
-					xPosition = leftXBound;
-					transform.position = new Vector3 (xPosition, -1.15f, 0);
-				}
-			}
-
 
 			if (ah.anim.GetCurrentAnimatorStateInfo (0).IsTag ("Attack") ||
                 ah.anim.GetCurrentAnimatorStateInfo(0).IsTag("Parry")) {
