@@ -9,6 +9,7 @@ public class UIScript : MonoBehaviour {
 
 
     public Text timer;
+	public Text levelUI;
 	public Slider healthBar;
 	public GameObject transitionPopup;
 	public Text transitionText;
@@ -108,6 +109,7 @@ public class UIScript : MonoBehaviour {
 			float elapsedTime = Time.time - LevelConfigManager.StartTime;
             int minutes = ((int)elapsedTime) / 60;
 			LevelConfigManager.Timer.text = minutes.ToString("D2") + ":" + ((int)(elapsedTime) - 60 * minutes).ToString("D2");
+			levelUI.text = "Level " + LevelConfigManager.Level.ToString ();
         }
 
 		if (LevelConfigManager.EnemiesDefeated >= LevelConfigManager.EnemiesToDefeat && !LevelConfigManager.GameOver) {
