@@ -6,8 +6,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class UIScript : MonoBehaviour {
-
-
+    
     public Text timer;
 	public Text levelUI;
 	public Slider healthBar;
@@ -21,6 +20,8 @@ public class UIScript : MonoBehaviour {
 	public GameObject dojo;
 	public GameObject garden;
 	public GameObject final;
+
+    public AudioClip levelMusic1;
 
 	public Texture2D blackForeground;
 	private bool transitioning = false;
@@ -53,6 +54,10 @@ public class UIScript : MonoBehaviour {
 		pauseObjects = GameObject.FindGameObjectsWithTag("ShowOnPause");
 		hidePaused();
 		if (LevelConfigManager.FirstTime) {
+            AudioSource musicSource = GameObject.Find("musicSource").GetComponent<AudioSource>();
+            musicSource.Stop();
+            musicSource.clip = levelMusic1;
+
 			LevelConfigManager.StartTime = Time.time; //startTime = Time.time;
 			LevelConfigManager.Timer = timer;
 			LevelConfigManager.Timer.text = "00:00"; // Timer.text = "00:00";

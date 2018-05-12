@@ -16,6 +16,6 @@ public class InstructionsScript : MonoBehaviour {
 	}
 
 	public void NextScene() {
-		SceneManager.LoadScene ("GameScene");
+		SceneManager.LoadScene("GameScene");
 	}
 }
