@@ -26,9 +26,9 @@ public class IntroScript : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (Time.time - start_time > 1.0f) {
+		if (Time.time - start_time > 2.0f) {
 			t += Time.deltaTime / total_time;
-			canvas.transform.position = Vector3.Lerp (start_position, target_position, t);
+			canvas.transform.position = Vector3.Lerp(start_position, target_position, t);
 		}
 	}
 
