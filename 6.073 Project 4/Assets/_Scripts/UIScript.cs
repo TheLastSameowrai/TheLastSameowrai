@@ -54,7 +54,8 @@ public class UIScript : MonoBehaviour {
 			LevelConfigManager.Timer.text = "00:00"; // Timer.text = "00:00";
 			LevelConfigManager.FirstTime = false;
 			LevelConfigManager.dataManager = new Data ();
-			LevelConfigManager.playerHealth = 5;
+			LevelConfigManager.playerHealth = 10;
+			print ("Player health is " + LevelConfigManager.playerHealth);
 			LevelConfigManager.timesPaused = 0;
 			LevelConfigManager.invalidKeysPressed = 0;
 			LevelConfigManager.keysPressed = 0;
@@ -120,6 +121,7 @@ public class UIScript : MonoBehaviour {
 		}
 
 		healthBar.value = LevelConfigManager.playerHealth;
+		print ("HealthBar value is " + healthBar.value);
     }
 
 	public void showPaused() {
