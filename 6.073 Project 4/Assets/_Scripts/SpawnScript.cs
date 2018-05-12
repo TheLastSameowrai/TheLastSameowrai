@@ -19,9 +19,9 @@ public class SpawnScript : MonoBehaviour {
 
     public GameObject Player;
 
-    private int[] totalEnemies = { 3, 5, 8, 10, 10, 12, 15, 15, 15, 1 };
+    private int[] totalEnemies = { 3, 5, 8, 10, 10, 12, 15, 15, 25, 1 };
     private float[] spawnRates = { 3f, 2.5f, 2.5f, 2.5f, 2.5f, 2f, 2f, 2f, 2f, 0f };
-	private int[] spawnProbabilities = { 100, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+	private int[] spawnProbabilities = { 100, 0, 0, 0, 0, 0, 0, 0, 0 };
 
     private Vector3 spawnLocation;
     private GameObject enemy;
@@ -55,46 +55,56 @@ public class SpawnScript : MonoBehaviour {
 		switch (LevelConfigManager.Level)
 		{
 		case 1:
+			//WHITE
 			print("------In Level 1 SpawnScript------");
-			spawnProbabilities = new int[]{ 100, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+			spawnProbabilities = new int[]{ 100, 0, 0, 0, 0, 0, 0, 0, 0 };
 			break;
 		case 2:
+			//YELLOW
 			print("------In Level 2 SpawnScript------");
-			spawnProbabilities = new int[]{ 30, 70, 0, 0, 0, 0, 0, 0, 0, 0 };
+			spawnProbabilities = new int[]{ 30, 70, 0, 0, 0, 0, 0, 0, 0 };
 			break;
 		case 3:
+			//ORANGE
 			print("------In Level 3 SpawnScript------");
-			spawnProbabilities = new int[]{ 10, 20, 70, 0, 0, 0, 0, 0, 0, 0 };
+			spawnProbabilities = new int[]{ 10, 20, 70, 0, 0, 0, 0, 0, 0 };
 			break;
 		case 4:
+			//GREEN
 			print("------In Level 4 SpawnScript------");
-			spawnProbabilities = new int[]{ 5, 10, 15, 70, 0, 0, 0, 0, 0, 0 };
+			spawnProbabilities = new int[]{ 5, 10, 15, 70, 0, 0, 0, 0, 0 };
 			break;
 		case 5:
+			//BLUE
 			print("------In Level 5 SpawnScript------");
-			spawnProbabilities = new int[]{ 0, 5, 10, 15, 70, 0, 0, 0, 0, 0 };
+			spawnProbabilities = new int[]{ 0, 5, 10, 15, 70, 0, 0, 0, 0 };
 			break;
 		case 6:
+			//PURPLE
 			print("------In Level 6 SpawnScript------");
-			spawnProbabilities = new int[]{ 0, 10, 10, 15, 15, 50, 0, 0, 0, 0 };
+			spawnProbabilities = new int[]{ 0, 10, 10, 15, 15, 50, 0, 0, 0 };
 			//spawnProbabilities = new int[]{ 0, 0, 5, 10, 15, 70, 0, 0, 0, 0 };
 			break;
 		case 7:
+			//BROWN
 			print("------In Level 7 SpawnScript------");
-			spawnProbabilities = new int[]{ 0, 0, 10, 10, 15, 15, 50, 0, 0, 0 };
+			spawnProbabilities = new int[]{ 0, 0, 10, 10, 15, 15, 50, 0, 0 };
 			//spawnProbabilities = new int[]{ 0, 0, 0, 5, 10, 15, 70, 0, 0, 0 };
 			break;
 		case 8:
+			//RED
 			print("------In Level 8 SpawnScript------");
-			spawnProbabilities = new int[]{ 0, 0, 0, 10, 10, 15, 15, 50, 0, 0 };
+			spawnProbabilities = new int[]{ 0, 0, 0, 10, 10, 15, 15, 50, 0 };
 			break;
 		case 9:
+			//ALL
 			print("------In Level 9 SpawnScript------");
-			spawnProbabilities = new int[]{ 0, 0, 0, 0, 10, 10, 15, 15, 50, 0 };
+			spawnProbabilities = new int[]{ 2, 2, 5, 5, 15, 15, 18, 38, 0 };
 			break;
 		case 10:
+			//BLACK
 			print("------In Level 10 SpawnScript------");
-			spawnProbabilities = new int[]{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 100 };
+			spawnProbabilities = new int[]{ 0, 0, 0, 0, 0, 0, 0, 0, 100 };
 			break;
 		default:
 			print("-----In case default SpawnScript---");
