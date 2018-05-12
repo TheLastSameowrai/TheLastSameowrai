@@ -22,6 +22,10 @@ public class UIScript : MonoBehaviour {
 	public GameObject garden;
 	public GameObject final;
 
+	public Texture2D blackForeground;
+	private bool transitioning = false;
+	private int transitionCount = 0;
+	private int transitionMax = 30;
     //float startTime;
     //public bool gameOver;
 
@@ -65,6 +69,8 @@ public class UIScript : MonoBehaviour {
 		setBackground ();
 		transitionPopup.SetActive (true);
 		Time.timeScale = 0;
+		transitionCount = 0;
+		transitioning = false;
 		LevelConfigManager.Paused = true;
 		instructions.SetActive (false);
 	}
@@ -122,7 +128,27 @@ public class UIScript : MonoBehaviour {
 
 		healthBar.value = LevelConfigManager.playerHealth;
 		print ("HealthBar value is " + healthBar.value);
+
     }
+
+	void OnGUI(){
+		if (transitioning) {
+			transitionCount += 1;
+
+			GUI.color = new Color (GUI.color.r, GUI.color.g, GUI.color.b, (transitionCount * 1f) / (transitionMax * 1f));
+			GUI.DrawTexture (new Rect (new Vector2 (0, 0), new Vector2 (Screen.width, Screen.height)), blackForeground);
+			if (transitionCount == transitionMax) {
+				ToNextLevel ();
+				transitioning = false;
+			}
+		} else {
+			if (transitionCount > 0) {
+				transitionCount -= 1;
+				GUI.color = new Color (GUI.color.r, GUI.color.g, GUI.color.b, (transitionCount * 1f) / (transitionMax * 1f));
+				GUI.DrawTexture (new Rect (new Vector2 (0, 0), new Vector2 (Screen.width, Screen.height)), blackForeground);
+			}
+		}
+	}
 
 	public void showPaused() {
 		Time.timeScale = 0;
@@ -140,6 +166,13 @@ public class UIScript : MonoBehaviour {
 		}
 		timer.gameObject.SetActive (true);
 		LevelConfigManager.Paused = false;
+	}
+
+	public void BeginTransition(){
+		if (!transitioning) {
+			transitioning = true;
+			transitionCount = 0;
+		}
 	}
 	
 	public void ToNextLevel() {
