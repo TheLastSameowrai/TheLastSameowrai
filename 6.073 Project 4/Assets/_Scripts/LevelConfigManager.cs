@@ -42,8 +42,4 @@ public static class LevelConfigManager {
 
 	public static int playerHealth;
 
-	public static int keysPressed;
-	public static int invalidKeysPressed;
-	public static int timesPaused;
-
 }
