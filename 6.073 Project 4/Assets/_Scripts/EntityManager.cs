@@ -157,8 +157,16 @@ public class EntityManager : MonoBehaviour {
 					}
 					if (health > collision.gameObject.GetComponentInParent<EntityManager>().damage)
                     {
-                        health -= collision.gameObject.GetComponentInParent<EntityManager>().damage;
-                    }
+						if (staggering) {
+							health -= 2 * collision.gameObject.GetComponentInParent<EntityManager> ().damage;
+						} else {
+							health -= collision.gameObject.GetComponentInParent<EntityManager> ().damage;
+						}
+
+						if (health == 0) {
+							DestroyEntity ();
+						}
+					}
                     else
                     {
                         DestroyEntity();
