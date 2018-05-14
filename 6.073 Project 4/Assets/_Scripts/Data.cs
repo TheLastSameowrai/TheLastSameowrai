@@ -122,6 +122,12 @@ public class KeyData
 	public float hitTime;
 }
 
+[Serializable]
+public class StanceData
+{
+	public string stance;
+	public float changeTime;
+}
 
 // JsonHelper code taken from https://stackoverflow.com/questions/36239705/serialize-and-deserialize-json-and-json-array-in-unity
 public static class JsonHelper
