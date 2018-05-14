@@ -29,6 +29,8 @@ public class EntityManager : MonoBehaviour {
 
 	public bool staggering = false;
 
+    private int damageFlashFrames = 8;
+    private int damageFlashFramesCounter = 0;
 
 	private float rightXBound = 8.0f;
 	private float leftXBound = -8.0f;
@@ -98,6 +100,18 @@ public class EntityManager : MonoBehaviour {
 				transform.position = new Vector3 (xPosition, -1.15f, 0);
 			}
 		}
+
+        Debug.Log(damageFlashFramesCounter);
+
+        if(damageFlashFramesCounter > 1)
+        {
+            damageFlashFramesCounter -= 1;
+            sprend.color = Color.red;
+        }else if(damageFlashFramesCounter - 1 == 0)
+        {
+            damageFlashFramesCounter -= 1;
+            sprend.color = Color.white;
+        }
 	}
 
     public void MoveEntity(float translation)
@@ -157,8 +171,18 @@ public class EntityManager : MonoBehaviour {
 					}
 					if (health > collision.gameObject.GetComponentInParent<EntityManager>().damage)
                     {
-                        health -= collision.gameObject.GetComponentInParent<EntityManager>().damage;
-                    }
+                        damageFlashFramesCounter = damageFlashFrames;
+
+						if (staggering) {
+							health -= 2 * collision.gameObject.GetComponentInParent<EntityManager> ().damage;
+						} else {
+							health -= collision.gameObject.GetComponentInParent<EntityManager> ().damage;
+						}
+
+						if (health == 0) {
+							DestroyEntity ();
+						}
+					}
                     else
                     {
                         DestroyEntity();
