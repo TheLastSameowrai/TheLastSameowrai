@@ -1,0 +1,119 @@
+{
+    "id": "48a0079ab6110f06",
+    "plays": 1,
+    "pauses": 0,
+    "levels": [
+        {
+            "levelNumber": 1,
+            "playNumber": 1,
+            "completeTime": 13.93235969543457,
+            "currentTime": 13.93235969543457,
+            "enemies_killed": 3,
+            "enemies_spawned": 3,
+            "result": "complete"
+        }
+    ],
+    "enemiesHit": [],
+    "keysHit": [
+        {
+            "keyPressed": "C",
+            "valid": true,
+            "hitTime": 0.0
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 0.5985698699951172
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 1.2826118469238282
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 1.4827232360839844
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 1.9326744079589844
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 2.566120147705078
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 3.3308658599853517
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 3.5995330810546877
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 3.9987621307373049
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 4.165216445922852
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 4.349573135375977
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 6.649015426635742
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 7.299947738647461
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 7.482248306274414
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 9.214231491088868
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 9.865785598754883
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 10.032066345214844
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 10.232114791870118
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 10.665571212768555
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 10.982564926147461
+        }
+    ]
+}
