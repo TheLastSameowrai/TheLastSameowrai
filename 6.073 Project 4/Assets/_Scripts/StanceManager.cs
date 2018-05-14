@@ -65,14 +65,16 @@ public class StanceManager : MonoBehaviour
                 anim.SetLayerWeight(1, 0);
                 anim.SetLayerWeight(0, 0);
                 break;
-            case Stance.MID:
+		case Stance.MID:
+				LevelConfigManager.dataManager.stanceChange ("HIGH", Time.time);
                 currentStance = Stance.HIGH;
                 anim.SetLayerWeight(2, 1);
                 anim.SetLayerWeight(1, 0);
                 anim.SetLayerWeight(0, 0);
                 break;
             case Stance.LOW:
-                anim.SetLayerWeight(2, 0);
+				LevelConfigManager.dataManager.stanceChange ("MID", Time.time);
+				anim.SetLayerWeight(2, 0);
                 anim.SetLayerWeight(1, 1);
                 anim.SetLayerWeight(0, 0);
                 currentStance = Stance.MID;
@@ -87,12 +89,14 @@ public class StanceManager : MonoBehaviour
         switch (currentStance)
         {
             case Stance.HIGH:
+				LevelConfigManager.dataManager.stanceChange ("MID", Time.time);
                 anim.SetLayerWeight(2, 0);
                 anim.SetLayerWeight(1, 1);
                 anim.SetLayerWeight(0, 0);
                 currentStance = Stance.MID;
                 break;
             case Stance.MID:
+				LevelConfigManager.dataManager.stanceChange ("LOW", Time.time);
                 anim.SetLayerWeight(2, 0);
                 anim.SetLayerWeight(1, 0);
                 anim.SetLayerWeight(0, 1);

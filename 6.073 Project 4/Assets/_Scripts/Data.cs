@@ -21,6 +21,8 @@ public class Data : MonoBehaviour {
 	public KeyData[] keysHit;
 	List<KeyData> keysList;
    
+	public StanceData[] stanceChanges;
+	List<StanceData> stances;
 
     // Use this for initialization
     public void Start () {
@@ -32,6 +34,7 @@ public class Data : MonoBehaviour {
         levelList = new List<LevelData>();
 		enemyList = new List<EnemyData> ();
 		keysList = new List<KeyData> ();
+		stances = new List<StanceData> ();
     }
     
 	public void levelComplete(int level, float time, int enemies_killed, int enemies_spawned, string result)
@@ -65,6 +68,13 @@ public class Data : MonoBehaviour {
 		enemy.playNumber = plays;
 		enemy.hitTime = time - start_time;
 		enemyList.Add (enemy);
+	}
+
+	public void stanceChange(string stance, float time){
+		StanceData newStance = new StanceData ();
+		newStance.stance = stance;
+		newStance.changeTime = time - Time.time;
+		stances.Add (newStance);
 	}
 
     // Generate a 16 character long session ID
