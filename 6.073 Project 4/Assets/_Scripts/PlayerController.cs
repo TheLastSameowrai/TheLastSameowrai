@@ -45,17 +45,15 @@ public class PlayerController : MonoBehaviour {
 			}
 			if (Input.GetKeyDown(KeyCode.W))
 			{
-				sm.StanceUp ();
-				aud.clip = highSound;
-			}else if (Input.GetKeyDown(KeyCode.S))
+				sm.StanceUp();
+                if (sm.currentStance == StanceManager.Stance.HIGH) aud.clip = highSound;
+                else aud.clip = midSound;
+			} else if (Input.GetKeyDown(KeyCode.S))
 			{
 				sm.StanceDown ();
-				aud.clip = lowSound;
-			}
-			else
-			{
-				//aud.clip = midSound;
-			}
+                if (sm.currentStance == StanceManager.Stance.LOW) aud.clip = lowSound;
+                else aud.clip = midSound;
+            }
 
 			if (attackFlag) aud.Play();
 		}

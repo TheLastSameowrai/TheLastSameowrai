@@ -24,6 +24,7 @@ public class UIScript : MonoBehaviour {
 
     private AudioSource musicSource;
     public AudioClip levelMusic1;
+    public bool playlevelCompleteSound;
     public AudioClip levelCompleteSound;
 
 	public List<KeyCode> validKeys;
@@ -56,6 +57,7 @@ public class UIScript : MonoBehaviour {
 		//print ("In UISCRIPT start");
 		//DontDestroyOnLoad(transform.gameObject);
 		proceedButton.SetActive(false);
+        if (!playlevelCompleteSound) Destroy(proceedButton.GetComponent<AudioSource>());
 		pauseObjects = GameObject.FindGameObjectsWithTag("ShowOnPause");
 		hidePaused();
 		if (LevelConfigManager.FirstTime) {
@@ -139,7 +141,7 @@ public class UIScript : MonoBehaviour {
 
 		if (LevelConfigManager.EnemiesDefeated >= LevelConfigManager.EnemiesToDefeat && !LevelConfigManager.GameOver) {
             //print ("---Setting button to true---");
-            musicSource.Stop();
+            if (playlevelCompleteSound) musicSource.Stop();
             if (proceedButton != null) {
                 proceedButton.SetActive(true);
 			}
