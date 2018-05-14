@@ -980,6 +980,11 @@ Prefab:
       propertyPath: health
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 114448509452511878, guid: 66fff07191d8884409da7d8c6375679b,
+        type: 2}
+      propertyPath: blockSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 45c554b91885db24485479f94c25ca99, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 66fff07191d8884409da7d8c6375679b, type: 2}
   m_IsPrefabParent: 0
