@@ -137,7 +137,7 @@ public class SpawnScript : MonoBehaviour {
 			    enemyController = enemy.GetComponent("DemoEnemyController") as DemoEnemyController;
 				enemyController.target = Player;
 				break;
-		case 3:
+			case 3:
 				GameObject player = GameObject.FindGameObjectWithTag ("Player");
 				float xPosition = player.transform.position.x - 2 * LevelConfigManager.looking;
 				Vector3 newSpawn = new Vector3 (xPosition, -1.15f, 0);
@@ -164,7 +164,7 @@ public class SpawnScript : MonoBehaviour {
 				player = GameObject.FindGameObjectWithTag ("Player");
 				xPosition = player.transform.position.x - 2 * LevelConfigManager.looking;
 				newSpawn = new Vector3 (xPosition, -1.15f, 0);
-				enemy = (GameObject)Instantiate(RedDogurai, spawnLocation, new Quaternion());
+				enemy = (GameObject)Instantiate(RedDogurai, newSpawn, new Quaternion());
 				enemyController = enemy.GetComponent("DemoEnemyController") as DemoEnemyController;
 				enemyController.target = Player;
 				break;
