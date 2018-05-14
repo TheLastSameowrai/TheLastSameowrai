@@ -149,8 +149,8 @@ public class EntityManager : MonoBehaviour {
                 if (sm.currentStance != other_sm.currentStance || staggering)
                 {
 					
-                    Debug.Log(gameObject);
-                    Debug.Log("DEALING DAMGE TO OTHER");
+                    //Debug.Log(gameObject);
+                    //Debug.Log("DEALING DAMGE TO OTHER");
 					if (this.gameObject.tag == "Player") {
 						string enemyName = other_sm.name.Replace ("(Clone)", "");
 						LevelConfigManager.dataManager.enemyHit (enemyName, LevelConfigManager.Level, Time.time);
@@ -224,7 +224,7 @@ public class EntityManager : MonoBehaviour {
 
     public void EndStagger()
     {
-        Debug.Log("End Stagger");
+        //Debug.Log("End Stagger");
         staggering = false;
         anim.SetBool("isStaggering", false);
         sprend.color = Color.white;

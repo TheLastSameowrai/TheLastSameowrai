@@ -52,7 +52,7 @@ public class UIScript : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-		print ("In UISCRIPT start");
+		//print ("In UISCRIPT start");
 		//DontDestroyOnLoad(transform.gameObject);
 		proceedButton.SetActive(false);
 		pauseObjects = GameObject.FindGameObjectsWithTag("ShowOnPause");
@@ -68,7 +68,7 @@ public class UIScript : MonoBehaviour {
 			LevelConfigManager.FirstTime = false;
 			LevelConfigManager.dataManager = new Data();
 			LevelConfigManager.playerHealth = 10;
-			print ("Player health is " + LevelConfigManager.playerHealth);
+			//print ("Player health is " + LevelConfigManager.playerHealth);
 			LevelConfigManager.dataManager.Start(); // initialize Data
 		}
 		validKeys.Add (KeyCode.W);
@@ -196,10 +196,10 @@ public class UIScript : MonoBehaviour {
 		LevelConfigManager.dataManager.levelComplete(LevelConfigManager.Level, Time.time, LevelConfigManager.EnemiesDefeated, LevelConfigManager.EnemiesSpawned, "complete"); //Store Data for level
 		LevelConfigManager.Level = LevelConfigManager.Level + 1;
 		LevelConfigManager.EnemiesDefeated = 0;
-		print ("LevelConfigManager.Level is now" + LevelConfigManager.Level);
+		//print ("LevelConfigManager.Level is now" + LevelConfigManager.Level);
 		//Destroy (proceedButton);
 		proceedButton.SetActive (false);
-		print ("---Just set the button active to false----");
+		//print ("---Just set the button active to false----");
 		if (LevelConfigManager.Level > 10) {
 			SceneManager.LoadScene ("CreditsScene");
 		} else {
