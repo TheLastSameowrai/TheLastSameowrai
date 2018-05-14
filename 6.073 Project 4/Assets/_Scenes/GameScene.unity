@@ -1626,7 +1626,8 @@ MonoBehaviour:
   dojo: {fileID: 1818012223}
   garden: {fileID: 940082916}
   final: {fileID: 1632366489}
-  levelMusic1: {fileID: 8300000, guid: 3471a29f72cc5104787b1538e117c08b, type: 3}
+  levelMusic1: {fileID: 8300000, guid: 22e7489926cd58e4fb49414007433ffb, type: 3}
+  playlevelCompleteSound: 0
   levelCompleteSound: {fileID: 8300000, guid: 4a958aaf2423f7d46a711b360a768499, type: 3}
   validKeys: 
   blackForeground: {fileID: 2800000, guid: f7ee773d454c145bfbaa6d28a7a64f27, type: 3}
