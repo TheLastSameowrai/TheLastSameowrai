@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
@@ -23,6 +24,8 @@ public class UIScript : MonoBehaviour {
 
     private AudioSource musicSource;
     public AudioClip levelMusic1;
+
+	public List<KeyCode> validKeys;
 
 	public Texture2D blackForeground;
 	private bool transitioning = false;
@@ -66,11 +69,17 @@ public class UIScript : MonoBehaviour {
 			LevelConfigManager.dataManager = new Data();
 			LevelConfigManager.playerHealth = 10;
 			print ("Player health is " + LevelConfigManager.playerHealth);
-			LevelConfigManager.timesPaused = 0;
-			LevelConfigManager.invalidKeysPressed = 0;
-			LevelConfigManager.keysPressed = 0;
 			LevelConfigManager.dataManager.Start(); // initialize Data
 		}
+		validKeys.Add (KeyCode.W);
+		validKeys.Add (KeyCode.A);
+		validKeys.Add (KeyCode.S);
+		validKeys.Add (KeyCode.D);
+		validKeys.Add (KeyCode.P);
+		validKeys.Add (KeyCode.Q);
+		validKeys.Add (KeyCode.R);
+		validKeys.Add (KeyCode.C);
+		validKeys.Add (KeyCode.Space);
 		setLevelText ();
 		setBackground ();
 		transitionPopup.SetActive(true);
@@ -83,14 +92,15 @@ public class UIScript : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-
-		if (Input.anyKeyDown) {
-			LevelConfigManager.keysPressed += 1;
-		}
-
-		if (!Input.GetKeyDown (KeyCode.C) && !Input.GetKeyDown (KeyCode.P) && !Input.GetKeyDown (KeyCode.R) && !Input.GetKeyDown (KeyCode.W) &&
-		    !Input.GetKeyDown (KeyCode.A) && !Input.GetKeyDown (KeyCode.S) && !Input.GetKeyDown (KeyCode.D) && !Input.GetKeyDown (KeyCode.Q)) {
-			LevelConfigManager.invalidKeysPressed += 1;
+		foreach(KeyCode kcode in Enum.GetValues(typeof(KeyCode)))
+		{
+			if (Input.GetKeyDown (kcode)) {
+				if (validKeys.Contains (kcode)) {
+					LevelConfigManager.dataManager.keyPressed (kcode.ToString (), true, Time.time);
+				} else {
+					LevelConfigManager.dataManager.keyPressed (kcode.ToString (), false, Time.time); 
+				}
+			}
 		}
 
 		if (transitionPopup.gameObject.active && Input.GetKeyDown(KeyCode.C)) {
@@ -104,7 +114,7 @@ public class UIScript : MonoBehaviour {
 		{
 			if (Time.timeScale == 1)
 			{
-				LevelConfigManager.timesPaused += 1;
+				LevelConfigManager.dataManager.pauses += 1;
 				showPaused();
 			}
 			else if (Time.timeScale == 0)
@@ -134,7 +144,7 @@ public class UIScript : MonoBehaviour {
 		}
 
 		healthBar.value = LevelConfigManager.playerHealth;
-		print ("HealthBar value is " + healthBar.value);
+		// print ("HealthBar value is " + healthBar.value);
 
     }
 
@@ -183,10 +193,9 @@ public class UIScript : MonoBehaviour {
 	}
 	
 	public void ToNextLevel() {
-        LevelConfigManager.dataManager.levelComplete("completed"); //Store Data for level
+		LevelConfigManager.dataManager.levelComplete(LevelConfigManager.Level, Time.time, LevelConfigManager.EnemiesDefeated, LevelConfigManager.EnemiesSpawned, "complete"); //Store Data for level
 		LevelConfigManager.Level = LevelConfigManager.Level + 1;
 		LevelConfigManager.EnemiesDefeated = 0;
-        LevelConfigManager.dataManager.nextLevel(LevelConfigManager.Level.ToString());
 		print ("LevelConfigManager.Level is now" + LevelConfigManager.Level);
 		//Destroy (proceedButton);
 		proceedButton.SetActive (false);
@@ -208,6 +217,7 @@ public class UIScript : MonoBehaviour {
 		Time.timeScale = 1;
 		hidePaused ();
 		LevelConfigManager.GameOver = false;
+		LevelConfigManager.dataManager.plays += 1;
 		LevelConfigManager.Level = 1;
 		LevelConfigManager.Timer.text = "00:00";
 		LevelConfigManager.StartTime = Time.time;

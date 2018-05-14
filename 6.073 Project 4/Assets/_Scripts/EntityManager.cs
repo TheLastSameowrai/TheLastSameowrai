@@ -148,8 +148,13 @@ public class EntityManager : MonoBehaviour {
                 // If stances do not match or the other entity is staggered
                 if (sm.currentStance != other_sm.currentStance || staggering)
                 {
+					
                     Debug.Log(gameObject);
                     Debug.Log("DEALING DAMGE TO OTHER");
+					if (this.gameObject.tag == "Player") {
+						string enemyName = other_sm.name.Replace ("(Clone)", "");
+						LevelConfigManager.dataManager.enemyHit (enemyName, LevelConfigManager.Level, Time.time);
+					}
 					if (health > collision.gameObject.GetComponentInParent<EntityManager>().damage)
                     {
                         health -= collision.gameObject.GetComponentInParent<EntityManager>().damage;
@@ -181,8 +186,7 @@ public class EntityManager : MonoBehaviour {
             //ui.gameOver = true;
             //ui.Timer.text = "Game Over";
 			LevelConfigManager.playerHealth = 0;
-            LevelConfigManager.dataManager.levelComplete("game_over");
-            LevelConfigManager.dataManager.storeData();
+			LevelConfigManager.dataManager.levelComplete(LevelConfigManager.Level, Time.time, LevelConfigManager.EnemiesDefeated, LevelConfigManager.EnemiesSpawned, "game_over"); //Store Data for level
 			LevelConfigManager.Timer.text = "Game Over";
 			LevelConfigManager.GameOver = true;
 
