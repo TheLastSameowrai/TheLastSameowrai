@@ -139,7 +139,7 @@ public class SpawnScript : MonoBehaviour {
 				break;
 		case 3:
 				GameObject player = GameObject.FindGameObjectWithTag ("Player");
-				float xPosition = player.transform.position.x - LevelConfigManager.looking;
+				float xPosition = player.transform.position.x - 2 * LevelConfigManager.looking;
 				Vector3 newSpawn = new Vector3 (xPosition, -1.15f, 0);
 				enemy = (GameObject)Instantiate(GreenDogurai, newSpawn, new Quaternion());
 			    enemyController = enemy.GetComponent("DemoEnemyController") as DemoEnemyController;
