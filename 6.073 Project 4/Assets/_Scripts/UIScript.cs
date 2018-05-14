@@ -23,6 +23,7 @@ public class UIScript : MonoBehaviour {
 
     private AudioSource musicSource;
     public AudioClip levelMusic1;
+    public AudioClip levelCompleteSound;
 
 	public Texture2D blackForeground;
 	private bool transitioning = false;
@@ -102,20 +103,20 @@ public class UIScript : MonoBehaviour {
 		}
 		if (!LevelConfigManager.GameOver && Input.GetKeyDown(KeyCode.P))
 		{
-			if (Time.timeScale == 1)
-			{
+			if (Time.timeScale == 1) {
 				LevelConfigManager.timesPaused += 1;
+                musicSource.Pause();
 				showPaused();
-			}
-			else if (Time.timeScale == 0)
-			{
-				hidePaused();
+			} else if (Time.timeScale == 0) {
+                musicSource.UnPause();
+                hidePaused();
 			}
 		}
 
 		if (Input.GetKeyDown (KeyCode.R)) 
 		{
-			RestartGame ();
+            musicSource.Stop();
+            RestartGame();
 		}
 
         if (!LevelConfigManager.GameOver)
@@ -127,9 +128,10 @@ public class UIScript : MonoBehaviour {
         }
 
 		if (LevelConfigManager.EnemiesDefeated >= LevelConfigManager.EnemiesToDefeat && !LevelConfigManager.GameOver) {
-			//print ("---Setting button to true---");
-			if (proceedButton != null) {
-				proceedButton.SetActive (true);
+            //print ("---Setting button to true---");
+            musicSource.Stop();
+            if (proceedButton != null) {
+                proceedButton.SetActive(true);
 			}
 		}
 
@@ -145,7 +147,7 @@ public class UIScript : MonoBehaviour {
 			GUI.color = new Color (GUI.color.r, GUI.color.g, GUI.color.b, (transitionCount * 1f) / (transitionMax * 1f));
 			GUI.DrawTexture (new Rect (new Vector2 (0, 0), new Vector2 (Screen.width, Screen.height)), blackForeground);
 			if (transitionCount == transitionMax) {
-				ToNextLevel ();
+				ToNextLevel();
 				transitioning = false;
 			}
 		} else {
@@ -183,6 +185,8 @@ public class UIScript : MonoBehaviour {
 	}
 	
 	public void ToNextLevel() {
+        musicSource.Stop();
+        musicSource.clip = levelMusic1;
         LevelConfigManager.dataManager.levelComplete("completed"); //Store Data for level
 		LevelConfigManager.Level = LevelConfigManager.Level + 1;
 		LevelConfigManager.EnemiesDefeated = 0;
