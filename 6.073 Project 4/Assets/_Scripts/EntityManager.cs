@@ -135,7 +135,7 @@ public class EntityManager : MonoBehaviour {
 			float xPosition = rb2d.transform.position.x;
 
 			if (ah.anim.GetCurrentAnimatorStateInfo (0).IsTag ("Attack") ||
-                ah.anim.GetCurrentAnimatorStateInfo(0).IsTag("Parry")) {
+			    ah.anim.GetCurrentAnimatorStateInfo (0).IsTag ("Parry")) {
 				anim.SetFloat ("speed", 0);
 				rb2d.velocity = new Vector2 (0, 0);
 			} else {
@@ -145,6 +145,9 @@ public class EntityManager : MonoBehaviour {
 
 				}
 			}
+		} else {
+			rb2d.velocity = new Vector2 (0, 0);
+
 		}
 
     }
