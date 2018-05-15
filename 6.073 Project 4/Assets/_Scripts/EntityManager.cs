@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EntityManager : MonoBehaviour {
 
@@ -82,21 +83,33 @@ public class EntityManager : MonoBehaviour {
 			}
 
 			gameObject.transform.localScale = looking > 0 ? new Vector3 (1, 1, 1) : new Vector3 (-1, 1, 1);
-		}
+            if(gameObject.CompareTag("Enemy"))
+            {
+                Canvas healthCanvas = gameObject.GetComponentInChildren<Canvas>();
+                healthCanvas.transform.localScale = new Vector3(looking, 1, 1);
+                Text textLabel = healthCanvas.GetComponentInChildren<Text>();
+                textLabel.text = health.ToString();
+		    }
 
 		float xPosition = rb2d.transform.position.x;
-		if (gameObject.CompareTag ("Player")) {
-			if (xPosition > rightXBound) {
-				xPosition = rightXBound;
-				transform.position = new Vector3 (xPosition, -1.15f, 0);
-				if (LevelConfigManager.EnemiesDefeated >= LevelConfigManager.EnemiesToDefeat && !LevelConfigManager.GameOver) {
-					UIScript uiScript = GameObject.Find ("UIScript").GetComponent<UIScript> ();
-					uiScript.BeginTransition ();
-				}
-			} else if (xPosition < leftXBound) {
-				xPosition = leftXBound;
-				transform.position = new Vector3 (xPosition, -1.15f, 0);
-			}
+            if (gameObject.CompareTag("Player"))
+            {
+                if (xPosition > rightXBound)
+                {
+                    xPosition = rightXBound;
+                    transform.position = new Vector3(xPosition, -1.15f, 0);
+                    if (LevelConfigManager.EnemiesDefeated >= LevelConfigManager.EnemiesToDefeat && !LevelConfigManager.GameOver)
+                    {
+                        UIScript uiScript = GameObject.Find("UIScript").GetComponent<UIScript>();
+                        uiScript.BeginTransition();
+                    }
+                }
+                else if (xPosition < leftXBound)
+                {
+                    xPosition = leftXBound;
+                    transform.position = new Vector3(xPosition, -1.15f, 0);
+                }
+            }
 		}
 	}
 
