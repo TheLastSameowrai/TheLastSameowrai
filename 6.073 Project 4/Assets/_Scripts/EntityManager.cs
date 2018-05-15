@@ -92,7 +92,13 @@ public class EntityManager : MonoBehaviour {
                 Canvas healthCanvas = gameObject.GetComponentInChildren<Canvas>();
                 healthCanvas.transform.localScale = new Vector3(looking, 1, 1);
                 Text textLabel = healthCanvas.GetComponentInChildren<Text>();
-                textLabel.text = health.ToString();
+				textLabel.fontSize = 35;
+				textLabel.alignment = TextAnchor.MiddleLeft;
+				string healthLabel = "";
+				for (int i = 0; i < health; i++) { 
+					healthLabel += "︎❤";
+				}
+				textLabel.text = "<color='red'>" + healthLabel + "</color>";
 		    }
 
 		float xPosition = rb2d.transform.position.x;
