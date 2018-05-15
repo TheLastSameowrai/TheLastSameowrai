@@ -1,0 +1,113 @@
+{
+    "id": "97bcb5d1b17ffdb4",
+    "plays": 1,
+    "pauses": 0,
+    "levels": [
+        {
+            "levelNumber": 6,
+            "playNumber": 1,
+            "completeTime": 12.517541885375977,
+            "currentTime": 12.517541885375977,
+            "enemies_killed": 0,
+            "enemies_spawned": 6,
+            "result": "game_over"
+        }
+    ],
+    "enemiesHit": [
+        {
+            "enemyType": "PurpleDogurai",
+            "levelNumber": 6,
+            "playNumber": 1,
+            "hitTime": 6.517541885375977
+        },
+        {
+            "enemyType": "PurpleDogurai",
+            "levelNumber": 6,
+            "playNumber": 1,
+            "hitTime": 11.857542037963868
+        },
+        {
+            "enemyType": "BlueDogurai",
+            "levelNumber": 6,
+            "playNumber": 1,
+            "hitTime": 12.517541885375977
+        }
+    ],
+    "keysHit": [
+        {
+            "keyPressed": "C",
+            "valid": true,
+            "hitTime": 0.0
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 0.6020298004150391
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 1.9666309356689454
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 2.5702743530273439
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 3.251861572265625
+        },
+        {
+            "keyPressed": "Q",
+            "valid": true,
+            "hitTime": 4.254383087158203
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 5.73829460144043
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 6.204648971557617
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 6.254554748535156
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 6.3862457275390629
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 7.754364013671875
+        },
+        {
+            "keyPressed": "Q",
+            "valid": true,
+            "hitTime": 8.00653076171875
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 9.256492614746094
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 10.521888732910157
+        },
+        {
+            "keyPressed": "Q",
+            "valid": true,
+            "hitTime": 10.922420501708985
+        }
+    ]
+}

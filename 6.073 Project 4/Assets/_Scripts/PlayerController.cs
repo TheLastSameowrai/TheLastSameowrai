@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour {
 
     private AudioSource aud;
 
-    public AudioClip lowSound, midSound, highSound;
+    public AudioClip lowSound, midSound, highSound, blockSound;
 
     // Use this for initialization
     void Start () {
@@ -37,27 +37,27 @@ public class PlayerController : MonoBehaviour {
             if (Input.GetKeyDown(KeyCode.Q))
             {
                 ph.RequestParry();
+                aud.clip = blockSound;
                 parryFlag = true;
             }
 			if (Input.GetKeyDown (KeyCode.Space)) {
-				ah.RequestAttack ();
+				ah.RequestAttack();
+                switch(sm.currentStance) {
+                    case StanceManager.Stance.LOW:  aud.clip = lowSound;    break;
+                    case StanceManager.Stance.MID:  aud.clip = midSound;    break;
+                    case StanceManager.Stance.HIGH: aud.clip = highSound;   break;
+                }
 				attackFlag = true;
 			}
 			if (Input.GetKeyDown(KeyCode.W))
 			{
-				sm.StanceUp ();
-				aud.clip = highSound;
-			}else if (Input.GetKeyDown(KeyCode.S))
+				sm.StanceUp();
+			} else if (Input.GetKeyDown(KeyCode.S))
 			{
-				sm.StanceDown ();
-				aud.clip = lowSound;
-			}
-			else
-			{
-				//aud.clip = midSound;
-			}
+                sm.StanceDown();
+            }
 
-			if (attackFlag) aud.Play();
+			if (attackFlag || parryFlag) aud.Play();
 		}
 
 		if (transform.position.x - Camera.main.transform.position.x > 2) {

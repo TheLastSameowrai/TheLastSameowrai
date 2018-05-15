@@ -30,6 +30,8 @@ public class EntityManager : MonoBehaviour {
 
 	public bool staggering = false;
 
+    private int damageFlashFrames = 8;
+    private int damageFlashFramesCounter = 0;
 
 	private float rightXBound = 8.0f;
 	private float leftXBound = -8.0f;
@@ -82,6 +84,8 @@ public class EntityManager : MonoBehaviour {
 				looking = -1;
 			}
 
+			LevelConfigManager.looking = looking;
+
 			gameObject.transform.localScale = looking > 0 ? new Vector3 (1, 1, 1) : new Vector3 (-1, 1, 1);
             if(gameObject.CompareTag("Enemy"))
             {
@@ -111,6 +115,18 @@ public class EntityManager : MonoBehaviour {
                 }
             }
 		}
+
+        Debug.Log(damageFlashFramesCounter);
+
+        if(damageFlashFramesCounter > 1)
+        {
+            damageFlashFramesCounter -= 1;
+            sprend.color = Color.red;
+        }else if(damageFlashFramesCounter - 1 == 0)
+        {
+            damageFlashFramesCounter -= 1;
+            sprend.color = Color.white;
+        }
 	}
 
     public void MoveEntity(float translation)
@@ -161,12 +177,27 @@ public class EntityManager : MonoBehaviour {
                 // If stances do not match or the other entity is staggered
                 if (sm.currentStance != other_sm.currentStance || staggering)
                 {
-                    Debug.Log(gameObject);
-                    Debug.Log("DEALING DAMGE TO OTHER");
+					
+                    //Debug.Log(gameObject);
+                    //Debug.Log("DEALING DAMGE TO OTHER");
+					if (this.gameObject.tag == "Player") {
+						string enemyName = other_sm.name.Replace ("(Clone)", "");
+						LevelConfigManager.dataManager.enemyHit (enemyName, LevelConfigManager.Level, Time.time);
+					}
 					if (health > collision.gameObject.GetComponentInParent<EntityManager>().damage)
                     {
-                        health -= collision.gameObject.GetComponentInParent<EntityManager>().damage;
-                    }
+                        damageFlashFramesCounter = damageFlashFrames;
+
+						if (staggering) {
+							health -= 2 * collision.gameObject.GetComponentInParent<EntityManager> ().damage;
+						} else {
+							health -= collision.gameObject.GetComponentInParent<EntityManager> ().damage;
+						}
+
+						if (health == 0) {
+							DestroyEntity ();
+						}
+					}
                     else
                     {
                         DestroyEntity();
@@ -194,8 +225,7 @@ public class EntityManager : MonoBehaviour {
             //ui.gameOver = true;
             //ui.Timer.text = "Game Over";
 			LevelConfigManager.playerHealth = 0;
-            LevelConfigManager.dataManager.levelComplete("game_over");
-            LevelConfigManager.dataManager.storeData();
+			LevelConfigManager.dataManager.levelComplete(LevelConfigManager.Level, Time.time, LevelConfigManager.EnemiesDefeated, LevelConfigManager.EnemiesSpawned, "game_over"); //Store Data for level
 			LevelConfigManager.Timer.text = "Game Over";
 			LevelConfigManager.GameOver = true;
 
@@ -233,7 +263,7 @@ public class EntityManager : MonoBehaviour {
 
     public void EndStagger()
     {
-        Debug.Log("End Stagger");
+        //Debug.Log("End Stagger");
         staggering = false;
         anim.SetBool("isStaggering", false);
         sprend.color = Color.white;

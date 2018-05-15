@@ -8,53 +8,74 @@ public class Data : MonoBehaviour {
 
     public string id;
     public int plays;
-    public string currentLevel;
-    public string status;
+	public int pauses;
     float start_time;
     float level_time;
-	public int times_paused;
-	public int keys_pressed;
-	public int invalid_keys_pressed;
-	public int enemies_spawned;
-	public int enemies_killed;
-	public String enemy_lost;
 
     public LevelData[] levels;
     List<LevelData> levelList;
+
+	public EnemyData[] enemiesHit;
+	List<EnemyData> enemyList;
+
+	public KeyData[] keysHit;
+	List<KeyData> keysList;
    
+	public StanceData[] stanceChanges;
+	List<StanceData> stances;
 
     // Use this for initialization
     public void Start () {
         id = generateId();
         plays = 1;
-        currentLevel = "1";
-        status = "ongoing";
+		pauses = 0;
         start_time = Time.time;
         level_time = start_time;
         levelList = new List<LevelData>();
-    }
-
-
-    // Move on to next level and reset timer
-    public void nextLevel(string level)
-    {
-        currentLevel = level;
-        level_time = Time.time;
+		enemyList = new List<EnemyData> ();
+		keysList = new List<KeyData> ();
+		stances = new List<StanceData> ();
     }
     
-    public void levelComplete(string result)
+	public void levelComplete(int level, float time, int enemies_killed, int enemies_spawned, string result)
     {
-        if (result == "game_over")
-        {
-            status = "game_over";
-        }
-        LevelData newLevel = new LevelData();
-        newLevel.levelName = currentLevel;
-        newLevel.completeTime = Time.time - level_time;
-        newLevel.result = result;
-        levelList.Add(newLevel);
+		LevelData newLevel = new LevelData ();
+		newLevel.levelNumber = level;
+		newLevel.playNumber = plays;
+		newLevel.completeTime = time - level_time;
+		newLevel.currentTime = Time.time - start_time;
+		newLevel.enemies_killed = enemies_killed;
+		newLevel.enemies_spawned = enemies_spawned;
+		newLevel.result = result;
+		level_time = Time.time;
+		levelList.Add (newLevel);
+		storeData ();
     }
 
+	public void keyPressed(string key, bool valid, float time)
+	{
+		KeyData newKey = new KeyData ();
+		newKey.keyPressed = key;
+		newKey.valid = valid;
+		newKey.hitTime = time - start_time;
+		keysList.Add (newKey);
+	}
+
+	public void enemyHit(string enemyType, int level, float time){
+		EnemyData enemy = new EnemyData ();
+		enemy.enemyType = enemyType;
+		enemy.levelNumber = level;
+		enemy.playNumber = plays;
+		enemy.hitTime = time - start_time;
+		enemyList.Add (enemy);
+	}
+
+	public void stanceChange(string stance, float time){
+		StanceData newStance = new StanceData ();
+		newStance.stance = stance;
+		newStance.changeTime = time - Time.time;
+		stances.Add (newStance);
+	}
 
     // Generate a 16 character long session ID
     // Code taken from "https://madskristensen.net/blog/generate-unique-strings-and-numbers-in-c/"
@@ -67,20 +88,17 @@ public class Data : MonoBehaviour {
         } 
         return string.Format("{0:x}", i - DateTime.Now.Ticks);
     }
-
-    public void incPlays()
-    {
-        plays += 1;
-    }
-
+		
     public void storeData()
     {
         levels = levelList.ToArray();
+		enemiesHit = enemyList.ToArray ();
+		keysHit = keysList.ToArray ();
         string filepath =  Application.dataPath + "/Data/" + id + ".json";
         // For now, doesn't actually store the data
-        // File.WriteAllText(filepath, JsonUtility.ToJson(this, true));
-        Debug.Log("Stored Data");
-        print(JsonUtility.ToJson(this, false));
+        File.WriteAllText(filepath, JsonUtility.ToJson(this, true));
+        //Debug.Log("Stored Data");
+        //print(JsonUtility.ToJson(this, false));
     }
 
 }
@@ -88,9 +106,37 @@ public class Data : MonoBehaviour {
 [Serializable]
 public class LevelData
 {
-    public string levelName;
-    public float completeTime;
+    public int levelNumber;
+	public int playNumber;
+	public float completeTime;
+	public float currentTime;
+	public int enemies_killed;
+	public int enemies_spawned;
     public string result;
+}
+
+[Serializable]
+public class EnemyData
+{
+	public string enemyType;
+	public int levelNumber;
+	public int playNumber;
+	public float hitTime;
+}
+
+[Serializable]
+public class KeyData
+{
+	public string keyPressed;
+	public bool valid;
+	public float hitTime;
+}
+
+[Serializable]
+public class StanceData
+{
+	public string stance;
+	public float changeTime;
 }
 
 // JsonHelper code taken from https://stackoverflow.com/questions/36239705/serialize-and-deserialize-json-and-json-array-in-unity

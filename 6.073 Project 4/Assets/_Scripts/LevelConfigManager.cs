@@ -37,13 +37,10 @@ public static class LevelConfigManager {
     public static float sameowraiParrySpeed;
     public static float sameowraiParryCooldownSpeed;
     public static float sameowraiStunSpeed;
+	public static int looking;
 
     public static Data dataManager;
 
 	public static int playerHealth;
-
-	public static int keysPressed;
-	public static int invalidKeysPressed;
-	public static int timesPaused;
 
 }
