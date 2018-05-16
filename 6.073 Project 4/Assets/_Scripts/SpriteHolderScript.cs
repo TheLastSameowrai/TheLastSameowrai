@@ -63,4 +63,14 @@ public class SpriteHolderScript : MonoBehaviour {
     {
         em.EndStagger();
     }
+
+    void StartDeath()
+    {
+        em.StartDeath();
+    }
+
+    void DestroyEntity()
+    {
+        em.DestroyEntity();
+    }
 }

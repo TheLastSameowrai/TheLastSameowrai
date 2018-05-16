@@ -418,6 +418,7 @@ MonoBehaviour:
   damage: 100
   looking: 1
   staggering: 0
+  death: 0
 --- !u!114 &114210173869527528
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -301,6 +301,7 @@ MonoBehaviour:
   damage: 1
   looking: 1
   staggering: 0
+  death: 0
 --- !u!114 &114252334873586612
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -356,6 +357,7 @@ MonoBehaviour:
   lowSound: {fileID: 8300000, guid: daf5733c00501c1419a3815f67e7e897, type: 3}
   midSound: {fileID: 8300000, guid: 43b6a68ea2c0ac248ae563cb55c4749d, type: 3}
   highSound: {fileID: 8300000, guid: 6decffe34efb3c34aaf18b7500f71710, type: 3}
+  blockSound: {fileID: 0}
 --- !u!114 &114530109769117850
 MonoBehaviour:
   m_ObjectHideFlags: 1

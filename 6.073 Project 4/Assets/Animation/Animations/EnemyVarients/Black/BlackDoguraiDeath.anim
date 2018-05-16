@@ -5,7 +5,7 @@ AnimationClip:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: SameowraiDeath
+  m_Name: BlackDoguraiDeath
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -161,9 +161,9 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: 7dda5af39fd6f4d619fd3d2f9201f81b, type: 3}
+      value: {fileID: 21300000, guid: 467580c7a76534508b8c8416852f5418, type: 3}
     - time: 0.75
-      value: {fileID: 21300000, guid: 7dda5af39fd6f4d619fd3d2f9201f81b, type: 3}
+      value: {fileID: 21300000, guid: 467580c7a76534508b8c8416852f5418, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -211,8 +211,8 @@ AnimationClip:
       customType: 0
       isPPtrCurve: 0
     pptrCurveMapping:
-    - {fileID: 21300000, guid: 7dda5af39fd6f4d619fd3d2f9201f81b, type: 3}
-    - {fileID: 21300000, guid: 7dda5af39fd6f4d619fd3d2f9201f81b, type: 3}
+    - {fileID: 21300000, guid: 467580c7a76534508b8c8416852f5418, type: 3}
+    - {fileID: 21300000, guid: 467580c7a76534508b8c8416852f5418, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

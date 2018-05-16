@@ -370,6 +370,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb2d: {fileID: 0}
   anim: {fileID: 0}
+  isParryFramesActive: 0
 --- !u!114 &114184011848982652
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -390,10 +391,12 @@ MonoBehaviour:
   ah: {fileID: 0}
   ph: {fileID: 0}
   speed: 5
+  attackSpeed: 0
   health: 0
   damage: 1
   looking: 1
   staggering: 0
+  death: 0
 --- !u!114 &114193001775876638
 MonoBehaviour:
   m_ObjectHideFlags: 1

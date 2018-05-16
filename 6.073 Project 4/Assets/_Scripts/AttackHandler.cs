@@ -31,7 +31,8 @@ public class AttackHandler : MonoBehaviour {
     {
         if (!anim.GetCurrentAnimatorStateInfo(0).IsTag("Attack") &&
            !anim.GetCurrentAnimatorStateInfo(0).IsTag("Parry") && 
-           !em.staggering)
+           !em.staggering &&
+           !anim.GetCurrentAnimatorStateInfo(0).IsTag("Death"))
         {
             anim.SetBool("isAttacking", true);
         }

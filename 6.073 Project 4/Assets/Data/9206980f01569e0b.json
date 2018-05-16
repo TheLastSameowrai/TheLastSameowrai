@@ -1,0 +1,131 @@
+{
+    "id": "9206980f01569e0b",
+    "plays": 1,
+    "pauses": 0,
+    "levels": [
+        {
+            "levelNumber": 1,
+            "playNumber": 1,
+            "completeTime": 24.071352005004884,
+            "currentTime": 24.071352005004884,
+            "enemies_killed": 0,
+            "enemies_spawned": 3,
+            "result": "game_over"
+        }
+    ],
+    "enemiesHit": [
+        {
+            "enemyType": "WhiteDogurai",
+            "levelNumber": 1,
+            "playNumber": 1,
+            "hitTime": 11.533758163452149
+        },
+        {
+            "enemyType": "WhiteDogurai",
+            "levelNumber": 1,
+            "playNumber": 1,
+            "hitTime": 12.833757400512696
+        },
+        {
+            "enemyType": "WhiteDogurai",
+            "levelNumber": 1,
+            "playNumber": 1,
+            "hitTime": 14.133760452270508
+        },
+        {
+            "enemyType": "WhiteDogurai",
+            "levelNumber": 1,
+            "playNumber": 1,
+            "hitTime": 15.413759231567383
+        },
+        {
+            "enemyType": "WhiteDogurai",
+            "levelNumber": 1,
+            "playNumber": 1,
+            "hitTime": 16.7337589263916
+        },
+        {
+            "enemyType": "WhiteDogurai",
+            "levelNumber": 1,
+            "playNumber": 1,
+            "hitTime": 18.013757705688478
+        },
+        {
+            "enemyType": "WhiteDogurai",
+            "levelNumber": 1,
+            "playNumber": 1,
+            "hitTime": 19.333757400512697
+        },
+        {
+            "enemyType": "WhiteDogurai",
+            "levelNumber": 1,
+            "playNumber": 1,
+            "hitTime": 20.613759994506837
+        },
+        {
+            "enemyType": "WhiteDogurai",
+            "levelNumber": 1,
+            "playNumber": 1,
+            "hitTime": 21.933759689331056
+        },
+        {
+            "enemyType": "WhiteDogurai",
+            "levelNumber": 1,
+            "playNumber": 1,
+            "hitTime": 23.21375846862793
+        }
+    ],
+    "keysHit": [
+        {
+            "keyPressed": "C",
+            "valid": true,
+            "hitTime": 0.0
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 0.8117542266845703
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 5.20191764831543
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 6.891717910766602
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 6.974550247192383
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 8.117654800415039
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 8.979116439819336
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 9.194486618041993
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 9.343584060668946
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 9.989683151245118
+        }
+    ],
+    "stanceChanges": []
+}

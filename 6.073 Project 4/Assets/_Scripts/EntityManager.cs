@@ -30,6 +30,8 @@ public class EntityManager : MonoBehaviour {
 
 	public bool staggering = false;
 
+    public bool death = false;
+
     private int damageFlashFrames = 8;
     private int damageFlashFramesCounter = 0;
 
@@ -116,7 +118,7 @@ public class EntityManager : MonoBehaviour {
             }
 		}
 
-        Debug.Log(damageFlashFramesCounter);
+
 
         if(damageFlashFramesCounter > 1)
         {
@@ -131,7 +133,7 @@ public class EntityManager : MonoBehaviour {
 
     public void MoveEntity(float translation)
     {
-		if (!staggering) {
+		if (!staggering && !death) {
 			float xPosition = rb2d.transform.position.x;
 
 			if (ah.anim.GetCurrentAnimatorStateInfo (0).IsTag ("Attack") ||
@@ -195,12 +197,12 @@ public class EntityManager : MonoBehaviour {
 						}
 
 						if (health == 0) {
-							DestroyEntity ();
+							StartDeath ();
 						}
 					}
                     else
                     {
-                        DestroyEntity();
+                        StartDeath();
                     }
                 }
                 else
@@ -214,8 +216,18 @@ public class EntityManager : MonoBehaviour {
         }
     }
 
+    public void StartDeath() {
+        Debug.Log(gameObject + "StartDeath");
+        death = true;
+        anim.SetBool("isDying", true);
+        anim.speed = 1;
+        
+    }
+
+
     public void DestroyEntity()
     {
+        Debug.Log(gameObject + "DestroyEntity");
         //UIScript ui = GameObject.Find("UIScript").GetComponent("UIScript") as UIScript;
         if (this.gameObject.tag == "Player")
         {
