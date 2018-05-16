@@ -95,11 +95,9 @@ public class Data : MonoBehaviour {
 		enemiesHit = enemyList.ToArray ();
 		keysHit = keysList.ToArray ();
 		stanceChanges = stances.ToArray ();
-        string filepath =  Application.dataPath + "/Data/" + id + ".json";
-        // For now, doesn't actually store the data
-        File.WriteAllText(filepath, JsonUtility.ToJson(this, true));
-        //Debug.Log("Stored Data");
-        //print(JsonUtility.ToJson(this, false));
+		// UNCOMMENT THE TWO LINES BELOW FOR DATA TO BE STORED
+        //string filepath =  Application.dataPath + "/Data/" + id + ".json";
+        //File.WriteAllText(filepath, JsonUtility.ToJson(this, true));
     }
 
 }
