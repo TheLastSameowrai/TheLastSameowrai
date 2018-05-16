@@ -9,6 +9,7 @@ public class IntroScript : MonoBehaviour {
 
 	public GameObject canvas;
 	public float speed;
+	public bool allowSkip;
 	Vector3 start_position;
 	Vector3 target_position;
 	float t;
@@ -31,16 +32,22 @@ public class IntroScript : MonoBehaviour {
 			canvas.transform.position = Vector3.Lerp(start_position, target_position, t);
 		}
 
-		if (Input.anyKey) {
+		if (allowSkip && Input.anyKey) {
+			start_time -= 1000.0f;
 			total_time = t;
 		}
 	}
 
 	public void ToInstructionsScene() {
 		SceneManager.LoadScene ("InstructionsScene");
+		total_time = 15.0f;
+		Destroy (gameObject);
 	}
 
 	public void toStartScene() {
+		Destroy (GameObject.Find ("musicSource"));
 		SceneManager.LoadScene ("TitleScene");
+		total_time = 15.0f;
+		Destroy (gameObject);
 	}
 }

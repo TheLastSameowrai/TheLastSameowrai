@@ -207,7 +207,19 @@ public class UIScript : MonoBehaviour {
 		proceedButton.SetActive (false);
 		//print ("---Just set the button active to false----");
 		if (LevelConfigManager.Level > 10) {
+			musicSource.clip = levelCompleteSound;
+			musicSource.Play ();
 			SceneManager.LoadScene ("CreditsScene");
+			Time.timeScale = 1;
+			LevelConfigManager.FirstTime = true;
+			LevelConfigManager.playerHealth = 10;
+			LevelConfigManager.GameOver = false;
+			LevelConfigManager.dataManager.plays += 1;
+			LevelConfigManager.Level = 1;
+			LevelConfigManager.Timer.text = "00:00";
+			LevelConfigManager.StartTime = Time.time;
+			LevelConfigManager.EnemiesDefeated = 0;
+			Destroy (GameObject.Find ("Background"));
 			Destroy (this.gameObject);
 		} else {
 			SceneManager.LoadScene ("GameScene");

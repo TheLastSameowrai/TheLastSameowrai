@@ -1,0 +1,4808 @@
+{
+    "id": "2e3b859773682c1e",
+    "plays": 1,
+    "pauses": 0,
+    "levels": [
+        {
+            "levelNumber": 1,
+            "playNumber": 1,
+            "completeTime": 15.09974193572998,
+            "currentTime": 15.09974193572998,
+            "enemies_killed": 3,
+            "enemies_spawned": 3,
+            "result": "complete"
+        },
+        {
+            "levelNumber": 2,
+            "playNumber": 1,
+            "completeTime": 18.567947387695314,
+            "currentTime": 33.66769027709961,
+            "enemies_killed": 5,
+            "enemies_spawned": 5,
+            "result": "complete"
+        },
+        {
+            "levelNumber": 3,
+            "playNumber": 1,
+            "completeTime": 26.938220977783204,
+            "currentTime": 60.60591125488281,
+            "enemies_killed": 8,
+            "enemies_spawned": 8,
+            "result": "complete"
+        },
+        {
+            "levelNumber": 4,
+            "playNumber": 1,
+            "completeTime": 30.90338897705078,
+            "currentTime": 91.5093002319336,
+            "enemies_killed": 10,
+            "enemies_spawned": 10,
+            "result": "complete"
+        },
+        {
+            "levelNumber": 5,
+            "playNumber": 1,
+            "completeTime": 30.003135681152345,
+            "currentTime": 121.51243591308594,
+            "enemies_killed": 10,
+            "enemies_spawned": 10,
+            "result": "complete"
+        },
+        {
+            "levelNumber": 6,
+            "playNumber": 1,
+            "completeTime": 29.637344360351564,
+            "currentTime": 151.1497802734375,
+            "enemies_killed": 12,
+            "enemies_spawned": 12,
+            "result": "complete"
+        },
+        {
+            "levelNumber": 7,
+            "playNumber": 1,
+            "completeTime": 38.30534362792969,
+            "currentTime": 189.4551239013672,
+            "enemies_killed": 15,
+            "enemies_spawned": 15,
+            "result": "complete"
+        },
+        {
+            "levelNumber": 8,
+            "playNumber": 1,
+            "completeTime": 37.270660400390628,
+            "currentTime": 226.7257843017578,
+            "enemies_killed": 15,
+            "enemies_spawned": 15,
+            "result": "complete"
+        },
+        {
+            "levelNumber": 9,
+            "playNumber": 1,
+            "completeTime": 58.25593566894531,
+            "currentTime": 284.9817199707031,
+            "enemies_killed": 25,
+            "enemies_spawned": 25,
+            "result": "complete"
+        },
+        {
+            "levelNumber": 10,
+            "playNumber": 1,
+            "completeTime": 13.867462158203125,
+            "currentTime": 298.84918212890627,
+            "enemies_killed": 1,
+            "enemies_spawned": 1,
+            "result": "complete"
+        }
+    ],
+    "enemiesHit": [
+        {
+            "enemyType": "PurpleDogurai",
+            "levelNumber": 6,
+            "playNumber": 1,
+            "hitTime": 136.3622283935547
+        },
+        {
+            "enemyType": "PurpleDogurai",
+            "levelNumber": 6,
+            "playNumber": 1,
+            "hitTime": 140.26222229003907
+        },
+        {
+            "enemyType": "PurpleDogurai",
+            "levelNumber": 6,
+            "playNumber": 1,
+            "hitTime": 140.30221557617188
+        },
+        {
+            "enemyType": "PurpleDogurai",
+            "levelNumber": 6,
+            "playNumber": 1,
+            "hitTime": 142.76222229003907
+        },
+        {
+            "enemyType": "PurpleDogurai",
+            "levelNumber": 6,
+            "playNumber": 1,
+            "hitTime": 144.56222534179688
+        },
+        {
+            "enemyType": "PurpleDogurai",
+            "levelNumber": 6,
+            "playNumber": 1,
+            "hitTime": 144.56222534179688
+        },
+        {
+            "enemyType": "BrownDogurai",
+            "levelNumber": 7,
+            "playNumber": 1,
+            "hitTime": 157.06222534179688
+        },
+        {
+            "enemyType": "BrownDogurai",
+            "levelNumber": 7,
+            "playNumber": 1,
+            "hitTime": 159.62222290039063
+        },
+        {
+            "enemyType": "BrownDogurai",
+            "levelNumber": 7,
+            "playNumber": 1,
+            "hitTime": 159.8222198486328
+        },
+        {
+            "enemyType": "BlueDogurai",
+            "levelNumber": 7,
+            "playNumber": 1,
+            "hitTime": 161.2022247314453
+        },
+        {
+            "enemyType": "OrangeDogurai",
+            "levelNumber": 7,
+            "playNumber": 1,
+            "hitTime": 161.26222229003907
+        },
+        {
+            "enemyType": "OrangeDogurai",
+            "levelNumber": 7,
+            "playNumber": 1,
+            "hitTime": 162.62222290039063
+        },
+        {
+            "enemyType": "BrownDogurai",
+            "levelNumber": 7,
+            "playNumber": 1,
+            "hitTime": 163.4022216796875
+        },
+        {
+            "enemyType": "BrownDogurai",
+            "levelNumber": 7,
+            "playNumber": 1,
+            "hitTime": 163.62222290039063
+        },
+        {
+            "enemyType": "GreenDogurai",
+            "levelNumber": 7,
+            "playNumber": 1,
+            "hitTime": 164.4022216796875
+        },
+        {
+            "enemyType": "BrownDogurai",
+            "levelNumber": 7,
+            "playNumber": 1,
+            "hitTime": 164.50222778320313
+        },
+        {
+            "enemyType": "BrownDogurai",
+            "levelNumber": 7,
+            "playNumber": 1,
+            "hitTime": 164.6022186279297
+        },
+        {
+            "enemyType": "GreenDogurai",
+            "levelNumber": 7,
+            "playNumber": 1,
+            "hitTime": 168.022216796875
+        },
+        {
+            "enemyType": "BrownDogurai",
+            "levelNumber": 7,
+            "playNumber": 1,
+            "hitTime": 173.66221618652345
+        },
+        {
+            "enemyType": "BrownDogurai",
+            "levelNumber": 7,
+            "playNumber": 1,
+            "hitTime": 173.66221618652345
+        },
+        {
+            "enemyType": "PurpleDogurai",
+            "levelNumber": 7,
+            "playNumber": 1,
+            "hitTime": 180.3622283935547
+        },
+        {
+            "enemyType": "PurpleDogurai",
+            "levelNumber": 7,
+            "playNumber": 1,
+            "hitTime": 180.4022216796875
+        },
+        {
+            "enemyType": "PurpleDogurai",
+            "levelNumber": 7,
+            "playNumber": 1,
+            "hitTime": 184.522216796875
+        },
+        {
+            "enemyType": "RedDogurai",
+            "levelNumber": 8,
+            "playNumber": 1,
+            "hitTime": 192.50222778320313
+        },
+        {
+            "enemyType": "RedDogurai",
+            "levelNumber": 8,
+            "playNumber": 1,
+            "hitTime": 192.50222778320313
+        },
+        {
+            "enemyType": "RedDogurai",
+            "levelNumber": 8,
+            "playNumber": 1,
+            "hitTime": 195.56222534179688
+        },
+        {
+            "enemyType": "RedDogurai",
+            "levelNumber": 8,
+            "playNumber": 1,
+            "hitTime": 200.06222534179688
+        },
+        {
+            "enemyType": "PurpleDogurai",
+            "levelNumber": 8,
+            "playNumber": 1,
+            "hitTime": 202.1022186279297
+        },
+        {
+            "enemyType": "RedDogurai",
+            "levelNumber": 8,
+            "playNumber": 1,
+            "hitTime": 204.66221618652345
+        },
+        {
+            "enemyType": "RedDogurai",
+            "levelNumber": 8,
+            "playNumber": 1,
+            "hitTime": 204.7022247314453
+        },
+        {
+            "enemyType": "BrownDogurai",
+            "levelNumber": 8,
+            "playNumber": 1,
+            "hitTime": 211.56222534179688
+        },
+        {
+            "enemyType": "BrownDogurai",
+            "levelNumber": 8,
+            "playNumber": 1,
+            "hitTime": 216.12222290039063
+        },
+        {
+            "enemyType": "RedDogurai",
+            "levelNumber": 8,
+            "playNumber": 1,
+            "hitTime": 216.7022247314453
+        },
+        {
+            "enemyType": "RedDogurai",
+            "levelNumber": 8,
+            "playNumber": 1,
+            "hitTime": 218.80221557617188
+        },
+        {
+            "enemyType": "RedDogurai",
+            "levelNumber": 8,
+            "playNumber": 1,
+            "hitTime": 222.96221923828126
+        },
+        {
+            "enemyType": "RedDogurai",
+            "levelNumber": 9,
+            "playNumber": 1,
+            "hitTime": 231.06222534179688
+        },
+        {
+            "enemyType": "RedDogurai",
+            "levelNumber": 9,
+            "playNumber": 1,
+            "hitTime": 231.84222412109376
+        },
+        {
+            "enemyType": "RedDogurai",
+            "levelNumber": 9,
+            "playNumber": 1,
+            "hitTime": 235.80221557617188
+        },
+        {
+            "enemyType": "RedDogurai",
+            "levelNumber": 9,
+            "playNumber": 1,
+            "hitTime": 237.86221313476563
+        },
+        {
+            "enemyType": "BrownDogurai",
+            "levelNumber": 9,
+            "playNumber": 1,
+            "hitTime": 246.26222229003907
+        },
+        {
+            "enemyType": "PurpleDogurai",
+            "levelNumber": 9,
+            "playNumber": 1,
+            "hitTime": 251.48220825195313
+        },
+        {
+            "enemyType": "PurpleDogurai",
+            "levelNumber": 9,
+            "playNumber": 1,
+            "hitTime": 251.50222778320313
+        },
+        {
+            "enemyType": "RedDogurai",
+            "levelNumber": 9,
+            "playNumber": 1,
+            "hitTime": 254.08221435546876
+        },
+        {
+            "enemyType": "PurpleDogurai",
+            "levelNumber": 9,
+            "playNumber": 1,
+            "hitTime": 254.18222045898438
+        },
+        {
+            "enemyType": "PurpleDogurai",
+            "levelNumber": 9,
+            "playNumber": 1,
+            "hitTime": 257.34222412109377
+        },
+        {
+            "enemyType": "GreenDogurai",
+            "levelNumber": 9,
+            "playNumber": 1,
+            "hitTime": 262.1822204589844
+        },
+        {
+            "enemyType": "GreenDogurai",
+            "levelNumber": 9,
+            "playNumber": 1,
+            "hitTime": 262.1822204589844
+        },
+        {
+            "enemyType": "RedDogurai",
+            "levelNumber": 9,
+            "playNumber": 1,
+            "hitTime": 265.1822204589844
+        },
+        {
+            "enemyType": "BrownDogurai",
+            "levelNumber": 9,
+            "playNumber": 1,
+            "hitTime": 267.9822082519531
+        },
+        {
+            "enemyType": "RedDogurai",
+            "levelNumber": 9,
+            "playNumber": 1,
+            "hitTime": 270.22222900390627
+        },
+        {
+            "enemyType": "RedDogurai",
+            "levelNumber": 9,
+            "playNumber": 1,
+            "hitTime": 271.1622314453125
+        },
+        {
+            "enemyType": "RedDogurai",
+            "levelNumber": 9,
+            "playNumber": 1,
+            "hitTime": 271.1622314453125
+        },
+        {
+            "enemyType": "PurpleDogurai",
+            "levelNumber": 9,
+            "playNumber": 1,
+            "hitTime": 273.9822082519531
+        },
+        {
+            "enemyType": "PurpleDogurai",
+            "levelNumber": 9,
+            "playNumber": 1,
+            "hitTime": 275.32220458984377
+        },
+        {
+            "enemyType": "BrownDogurai",
+            "levelNumber": 9,
+            "playNumber": 1,
+            "hitTime": 276.58221435546877
+        },
+        {
+            "enemyType": "PurpleDogurai",
+            "levelNumber": 9,
+            "playNumber": 1,
+            "hitTime": 276.6222229003906
+        },
+        {
+            "enemyType": "PurpleDogurai",
+            "levelNumber": 9,
+            "playNumber": 1,
+            "hitTime": 277.9222106933594
+        },
+        {
+            "enemyType": "RedDogurai",
+            "levelNumber": 9,
+            "playNumber": 1,
+            "hitTime": 278.3622131347656
+        },
+        {
+            "enemyType": "PurpleDogurai",
+            "levelNumber": 9,
+            "playNumber": 1,
+            "hitTime": 280.26220703125
+        },
+        {
+            "enemyType": "BrownDogurai",
+            "levelNumber": 9,
+            "playNumber": 1,
+            "hitTime": 280.5622253417969
+        },
+        {
+            "enemyType": "GreenDogurai",
+            "levelNumber": 9,
+            "playNumber": 1,
+            "hitTime": 280.6622314453125
+        },
+        {
+            "enemyType": "GreenDogurai",
+            "levelNumber": 9,
+            "playNumber": 1,
+            "hitTime": 280.6822204589844
+        },
+        {
+            "enemyType": "BlackDogurai",
+            "levelNumber": 10,
+            "playNumber": 1,
+            "hitTime": 288.6622314453125
+        },
+        {
+            "enemyType": "BlackDogurai",
+            "levelNumber": 10,
+            "playNumber": 1,
+            "hitTime": 292.0622253417969
+        },
+        {
+            "enemyType": "BlackDogurai",
+            "levelNumber": 10,
+            "playNumber": 1,
+            "hitTime": 292.4822082519531
+        }
+    ],
+    "keysHit": [
+        {
+            "keyPressed": "C",
+            "valid": true,
+            "hitTime": 0.0
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 0.3974008560180664
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 0.6983547210693359
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 0.8317546844482422
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 0.9324417114257813
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 1.5975747108459473
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 2.264902114868164
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 2.7646303176879885
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 3.0974388122558595
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 3.2971858978271486
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 3.6322784423828127
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 3.831601142883301
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 3.9324121475219728
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 4.2005157470703129
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 5.364542007446289
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 5.631943702697754
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 5.832021713256836
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 6.13218879699707
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 6.731663703918457
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 7.231895446777344
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 8.448976516723633
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 8.565049171447754
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 9.200014114379883
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 9.331782341003418
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 9.600162506103516
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 9.800111770629883
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 10.099745750427246
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 10.931830406188965
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 11.065247535705567
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 12.365433692932129
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 15.09974193572998
+        },
+        {
+            "keyPressed": "C",
+            "valid": true,
+            "hitTime": 15.09974193572998
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 15.399779319763184
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 15.699763298034668
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 16.19964599609375
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 16.432647705078126
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 16.732627868652345
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 16.93246841430664
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 17.23288345336914
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 17.56527328491211
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 18.13302230834961
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 18.532516479492189
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 18.69906234741211
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 19.767406463623048
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 19.915096282958986
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 20.849159240722658
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 21.067413330078126
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 22.167400360107423
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 22.86768341064453
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 23.16693878173828
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 23.600265502929689
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 23.900562286376954
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 24.600048065185548
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 24.80020523071289
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 25.73503875732422
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 25.935543060302736
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 26.36703872680664
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 27.167465209960939
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 28.46908950805664
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 28.701309204101564
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 29.466915130615236
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 29.600570678710939
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 31.0352783203125
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 31.335250854492189
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 33.10089874267578
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 33.66769027709961
+        },
+        {
+            "keyPressed": "C",
+            "valid": true,
+            "hitTime": 33.66769027709961
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 33.93510437011719
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 34.26842498779297
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 36.23494338989258
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 36.56828689575195
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 36.968650817871097
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 37.0676383972168
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 37.83518600463867
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 37.970497131347659
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 39.402076721191409
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 40.002498626708987
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 40.86846923828125
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 42.03525924682617
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 42.802330017089847
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 42.97029113769531
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 44.16987228393555
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 44.77084732055664
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 44.97016906738281
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 46.40327453613281
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 46.97014617919922
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 47.13663864135742
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 48.538185119628909
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 49.33815383911133
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 49.53812789916992
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 49.70290756225586
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 50.50295639038086
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 50.602935791015628
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 52.83802032470703
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 53.00320816040039
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 54.23798370361328
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 55.43808364868164
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 55.5378303527832
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 55.738006591796878
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 56.26982879638672
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 56.405941009521487
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 58.102943420410159
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 60.60591125488281
+        },
+        {
+            "keyPressed": "C",
+            "valid": true,
+            "hitTime": 60.60591125488281
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 60.94121551513672
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 61.106666564941409
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 61.33970642089844
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 63.606597900390628
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 63.70581817626953
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 63.77439880371094
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 63.94099426269531
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 64.54061126708985
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 64.70604705810547
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 65.94117736816406
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 66.17381286621094
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 66.27360534667969
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 69.24116516113281
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 69.50910186767578
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 69.74081420898438
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 70.57405853271485
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 71.10722351074219
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 71.240966796875
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 73.54103088378906
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 73.64054870605469
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 73.7086181640625
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 74.40892791748047
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 74.54125213623047
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 74.67396545410156
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 75.54031372070313
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 76.17440032958985
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 76.31072998046875
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 76.31072998046875
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 76.44072723388672
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 78.64138793945313
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 78.74227905273438
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 81.94224548339844
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 82.27682495117188
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 83.6764144897461
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 83.7750473022461
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 86.2426528930664
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 86.34300231933594
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 88.64118957519531
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 89.37638854980469
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 90.04241180419922
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 90.8438949584961
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 91.5093002319336
+        },
+        {
+            "keyPressed": "C",
+            "valid": true,
+            "hitTime": 91.5093002319336
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 91.7734146118164
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 94.47453308105469
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 94.57333374023438
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 96.873779296875
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 96.97511291503906
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 99.5088119506836
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 99.70841217041016
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 99.8413314819336
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 100.6744613647461
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 100.77399444580078
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 101.90888214111328
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 101.97663879394531
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 104.44181060791016
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 104.54173278808594
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 106.87675476074219
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 107.0765609741211
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 107.34186553955078
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 107.5084228515625
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 109.10887145996094
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 109.90934753417969
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 110.14396667480469
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 112.07625579833985
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 112.3759765625
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 112.4777603149414
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 114.50865173339844
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 114.77652740478516
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 115.14392852783203
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 117.37664031982422
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 117.54427337646485
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 117.67644500732422
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 119.30927276611328
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 119.57681274414063
+        },
+        {
+            "keyPressed": "C",
+            "valid": true,
+            "hitTime": 121.51243591308594
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 121.84671783447266
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 123.51435852050781
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 123.94650268554688
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 124.17951965332031
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 125.71461486816406
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 125.94673156738281
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 127.51434326171875
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 127.91459655761719
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 128.41368103027345
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 128.480224609375
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 129.114013671875
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 129.21392822265626
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 130.28062438964845
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 130.6145477294922
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 131.37986755371095
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 131.54676818847657
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 132.91441345214845
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 133.0472869873047
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 133.6140594482422
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 133.78269958496095
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 133.9477081298828
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 134.1474609375
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 134.31468200683595
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 134.61402893066407
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 134.68165588378907
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 134.81417846679688
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 135.0140838623047
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 135.28253173828126
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 135.51397705078126
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 135.68228149414063
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 135.8140106201172
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 135.98236083984376
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 136.1144561767578
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 136.24673461914063
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 136.38229370117188
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 136.51425170898438
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 136.9822998046875
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 137.11407470703126
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 137.24765014648438
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 137.38206481933595
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 138.04800415039063
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 138.14842224121095
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 138.8821563720703
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 139.2825927734375
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 139.9821319580078
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 140.1151123046875
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 140.61460876464845
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 141.01504516601563
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 141.16616821289063
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 141.34774780273438
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 141.5475311279297
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 141.8817138671875
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 141.91465759277345
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 142.1149444580078
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 142.2819366455078
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 142.7503662109375
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 142.88134765625
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 143.35012817382813
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 143.58164978027345
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 143.71470642089845
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 143.88194274902345
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 144.1155242919922
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 144.2501220703125
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 144.3820037841797
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 144.48202514648438
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 144.91488647460938
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 145.01541137695313
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 145.31527709960938
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 145.38209533691407
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 145.54983520507813
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 145.7153778076172
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 145.88174438476563
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 146.01487731933595
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 146.181884765625
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 146.28280639648438
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 146.4153289794922
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 146.58187866210938
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 146.7813262939453
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 147.15000915527345
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 147.31544494628907
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 147.44725036621095
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 147.6154327392578
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 147.78152465820313
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 147.9154052734375
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 148.08224487304688
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 148.18206787109376
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 148.38169860839845
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 148.64990234375
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 149.514404296875
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 151.1497802734375
+        },
+        {
+            "keyPressed": "C",
+            "valid": true,
+            "hitTime": 151.1497802734375
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 151.4160614013672
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 151.75013732910157
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 152.74917602539063
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 153.48419189453126
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 153.7840576171875
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 153.88412475585938
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 154.05233764648438
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 154.28384399414063
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 154.41754150390626
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 154.584228515625
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 154.71583557128907
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 154.8168182373047
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 154.95016479492188
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 155.1168975830078
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 155.3167724609375
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 155.4330291748047
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 155.5840301513672
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 155.751953125
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 155.88409423828126
+        },
+        {
+            "keyPressed": "Q",
+            "valid": true,
+            "hitTime": 156.1501007080078
+        },
+        {
+            "keyPressed": "Q",
+            "valid": true,
+            "hitTime": 157.9159698486328
+        },
+        {
+            "keyPressed": "Q",
+            "valid": true,
+            "hitTime": 159.433349609375
+        },
+        {
+            "keyPressed": "Q",
+            "valid": true,
+            "hitTime": 160.4176025390625
+        },
+        {
+            "keyPressed": "Q",
+            "valid": true,
+            "hitTime": 161.7844696044922
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 162.45156860351563
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 162.6199951171875
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 162.751708984375
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 162.85157775878907
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 162.985107421875
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 163.1852264404297
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 163.3168182373047
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 163.4516143798828
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 163.61993408203126
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 163.71925354003907
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 163.88458251953126
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 164.05137634277345
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 164.2199249267578
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 164.35159301757813
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 164.51715087890626
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 164.65162658691407
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 164.784423828125
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 164.9518280029297
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 165.25125122070313
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 165.35183715820313
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 165.45176696777345
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 165.58457946777345
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 165.75148010253907
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 165.9178009033203
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 166.21986389160157
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 166.41773986816407
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 167.0182342529297
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 167.2847442626953
+        },
+        {
+            "keyPressed": "Q",
+            "valid": true,
+            "hitTime": 167.41928100585938
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 168.9516143798828
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 169.28509521484376
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 169.68521118164063
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 169.9518585205078
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 170.11981201171876
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 170.25198364257813
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 170.4197235107422
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 170.55198669433595
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 171.55242919921876
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 171.6857452392578
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 171.95217895507813
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 172.11972045898438
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 172.25230407714845
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 172.652099609375
+        },
+        {
+            "keyPressed": "Q",
+            "valid": true,
+            "hitTime": 172.9190673828125
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 174.3195343017578
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 174.4525146484375
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 175.15225219726563
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 175.2191619873047
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 175.3526611328125
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 175.48753356933595
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 175.65252685546876
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 175.81903076171876
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 175.95277404785157
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 176.0875701904297
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 176.18553161621095
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 176.3849639892578
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 176.71929931640626
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 176.8526153564453
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 176.9196319580078
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 177.08749389648438
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 177.2191925048828
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 177.58482360839845
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 177.6876678466797
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 178.15243530273438
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 178.52088928222657
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 178.68756103515626
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 179.2527618408203
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 179.28683471679688
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 179.42068481445313
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 179.91917419433595
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 180.0873565673828
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 180.21896362304688
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 180.35365295410157
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 180.6529083251953
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 180.787353515625
+        },
+        {
+            "keyPressed": "Q",
+            "valid": true,
+            "hitTime": 180.98744201660157
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 182.2869415283203
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 182.73712158203126
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 182.7685089111328
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 182.9191436767578
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 183.0872344970703
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 183.25196838378907
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 183.4188232421875
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 183.5193328857422
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 183.71975708007813
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 183.91920471191407
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 184.08729553222657
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 184.2871856689453
+        },
+        {
+            "keyPressed": "Q",
+            "valid": true,
+            "hitTime": 184.51947021484376
+        },
+        {
+            "keyPressed": "Q",
+            "valid": true,
+            "hitTime": 185.6195831298828
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 186.71954345703126
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 187.45530700683595
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 189.4551239013672
+        },
+        {
+            "keyPressed": "C",
+            "valid": true,
+            "hitTime": 189.4551239013672
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 189.71987915039063
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 189.98681640625
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 191.420166015625
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 191.81956481933595
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 191.920166015625
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 192.05616760253907
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 192.22039794921876
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 192.6871795654297
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 192.85491943359376
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 193.02041625976563
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 193.95449829101563
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 194.08839416503907
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 194.68710327148438
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 194.8875732421875
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 195.82131958007813
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 196.58802795410157
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 196.72085571289063
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 197.42288208007813
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 197.5552520751953
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 198.122314453125
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 198.32308959960938
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 198.4224853515625
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 199.08709716796876
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 199.18756103515626
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 199.98780822753907
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 200.68800354003907
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 200.98959350585938
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 201.12281799316407
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 201.2546844482422
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 201.3872528076172
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 201.82290649414063
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 201.8887176513672
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 202.0543975830078
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 202.62271118164063
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 202.7881317138672
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 202.8563232421875
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 202.9884796142578
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 203.1553497314453
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 203.3225555419922
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 203.4882049560547
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 203.65533447265626
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 203.78851318359376
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 204.02259826660157
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 204.1226043701172
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 204.2550506591797
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 204.3898468017578
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 204.3898468017578
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 204.55508422851563
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 204.8228759765625
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 205.02279663085938
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 205.22256469726563
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 206.35446166992188
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 206.52247619628907
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 206.75474548339845
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 208.2221221923828
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 208.32264709472657
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 208.49038696289063
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 209.38832092285157
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 209.556396484375
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 209.69053649902345
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 209.8229217529297
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 210.05502319335938
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 210.52195739746095
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 210.62225341796876
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 210.75559997558595
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 210.890625
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 211.25486755371095
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 211.4220733642578
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 211.55567932128907
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 212.15524291992188
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 212.28785705566407
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 212.32296752929688
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 212.4233856201172
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 212.55845642089845
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 212.79042053222657
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 213.0226593017578
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 213.19046020507813
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 213.32217407226563
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 213.5232696533203
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 214.29029846191407
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 214.4219970703125
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 214.52296447753907
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 214.72251892089845
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 214.8553466796875
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 215.0556182861328
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 215.19000244140626
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 215.32275390625
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 215.49049377441407
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 215.69056701660157
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 215.85494995117188
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 216.05845642089845
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 216.156005859375
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 216.32518005371095
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 216.32518005371095
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 216.789794921875
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 216.92291259765626
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 217.08953857421876
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 217.65846252441407
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 217.8563690185547
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 218.1905975341797
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 218.49014282226563
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 218.52337646484376
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 218.6224365234375
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 218.7899627685547
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 218.9236602783203
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 219.23898315429688
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 219.4905548095703
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 220.15576171875
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 220.29002380371095
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 220.39183044433595
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 220.555908203125
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 221.1898193359375
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 221.35816955566407
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 221.49029541015626
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 221.6894073486328
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 221.85760498046876
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 222.05810546875
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 222.1905517578125
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 222.3582000732422
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 222.5580291748047
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 222.82339477539063
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 223.02316284179688
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 223.19017028808595
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 224.42384338378907
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 224.75794982910157
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 226.7257843017578
+        },
+        {
+            "keyPressed": "C",
+            "valid": true,
+            "hitTime": 226.7257843017578
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 226.9588623046875
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 228.92738342285157
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 229.15933227539063
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 229.2276611328125
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 229.35946655273438
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 229.49237060546876
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 229.69174194335938
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 229.99266052246095
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 230.02735900878907
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 230.22752380371095
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 230.39212036132813
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 230.5275421142578
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 230.75941467285157
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 230.97573852539063
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 231.12741088867188
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 231.69268798828126
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 231.85931396484376
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 231.95950317382813
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 232.12745666503907
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 232.658935546875
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 232.8274383544922
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 233.01087951660157
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 233.39288330078126
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 233.55946350097657
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 233.7273406982422
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 233.8921356201172
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 234.0929412841797
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 234.3273162841797
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 234.49269104003907
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 234.6273651123047
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 235.1591033935547
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 235.25961303710938
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 235.392578125
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 235.52687072753907
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 235.72698974609376
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 235.8935089111328
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 236.05958557128907
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 236.3274688720703
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 236.693115234375
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 237.02685546875
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 237.12716674804688
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 237.29168701171876
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 237.4274139404297
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 237.59280395507813
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 237.7927703857422
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 237.9595489501953
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 238.09483337402345
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 238.2926788330078
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 239.49325561523438
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 239.85968017578126
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 240.0597686767578
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 240.25904846191407
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 240.45928955078126
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 240.69540405273438
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 240.8952178955078
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 241.05987548828126
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 241.22671508789063
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 241.3596649169922
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 241.52674865722657
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 241.65914916992188
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 241.82696533203126
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 242.12701416015626
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 242.29510498046876
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 242.4271240234375
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 242.59524536132813
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 242.7271728515625
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 242.89495849609376
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 243.05946350097657
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 243.22715759277345
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 243.2947540283203
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 243.52748107910157
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 243.72702026367188
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 243.8267364501953
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 243.9950714111328
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 244.02684020996095
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 244.19508361816407
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 244.42674255371095
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 244.6274871826172
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 244.76004028320313
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 244.9950408935547
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 245.16055297851563
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 245.32647705078126
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 245.42672729492188
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 245.66041564941407
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 245.86073303222657
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 246.0276336669922
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 246.16009521484376
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 246.3276824951172
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 246.49481201171876
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 246.69505310058595
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 246.89431762695313
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 247.06056213378907
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 247.21092224121095
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 247.5280303955078
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 247.59500122070313
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 247.76148986816407
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 247.96006774902345
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 248.1601104736328
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 248.59474182128907
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 248.82803344726563
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 249.3276824951172
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 249.55938720703126
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 250.1275634765625
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 250.32696533203126
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 250.4945068359375
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 250.66278076171876
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 250.810302734375
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 251.06289672851563
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 251.22760009765626
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 251.39434814453126
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 251.99423217773438
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 252.0279541015625
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 252.42816162109376
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 253.06280517578126
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 253.26290893554688
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 253.42803955078126
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 253.59503173828126
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 253.79425048828126
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 253.99496459960938
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 254.16287231445313
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 254.428466796875
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 254.6627197265625
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 255.0953369140625
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 255.79541015625
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 256.0954284667969
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 256.5267333984375
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 256.72796630859377
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 256.9287414550781
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 257.1466979980469
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 257.295166015625
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 257.4625549316406
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 257.6621398925781
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 257.846435546875
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 258.06256103515627
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 258.26275634765627
+        },
+        {
+            "keyPressed": "Q",
+            "valid": true,
+            "hitTime": 258.9467468261719
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 260.3793029785156
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 260.5465393066406
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 260.6786804199219
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 260.8114318847656
+        },
+        {
+            "keyPressed": "Q",
+            "valid": true,
+            "hitTime": 261.5464782714844
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 262.7783203125
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 262.8464050292969
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 263.5458984375
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 263.7129821777344
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 263.8460388183594
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 264.4788513183594
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 264.5788269042969
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 264.7463073730469
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 265.2787780761719
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 265.4788513183594
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 265.6456298828125
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 266.0458984375
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 266.2796936035156
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 266.44659423828127
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 266.57904052734377
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 266.81158447265627
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 267.0791015625
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 267.1803283691406
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 267.9139404296875
+        },
+        {
+            "keyPressed": "Q",
+            "valid": true,
+            "hitTime": 268.04669189453127
+        },
+        {
+            "keyPressed": "Q",
+            "valid": true,
+            "hitTime": 269.24615478515627
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 269.414306640625
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 270.1144104003906
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 270.71405029296877
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 271.1461181640625
+        },
+        {
+            "keyPressed": "Q",
+            "valid": true,
+            "hitTime": 271.5460205078125
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 271.7139587402344
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 271.9464111328125
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 272.3465270996094
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 272.5794677734375
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 272.9136657714844
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 273.280029296875
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 273.4798889160156
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 273.5142517089844
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 274.01416015625
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 274.31402587890627
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 274.5141296386719
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 274.7799072265625
+        },
+        {
+            "keyPressed": "Q",
+            "valid": true,
+            "hitTime": 275.2140197753906
+        },
+        {
+            "keyPressed": "Q",
+            "valid": true,
+            "hitTime": 276.413818359375
+        },
+        {
+            "keyPressed": "Q",
+            "valid": true,
+            "hitTime": 277.1471252441406
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 278.5474853515625
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 278.84710693359377
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 279.01373291015627
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 279.1819763183594
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 279.34735107421877
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 279.5819396972656
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 279.81414794921877
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 280.0137023925781
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 280.1819763183594
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 280.3818664550781
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 280.54705810546877
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 280.7471618652344
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 280.9815673828125
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 281.24700927734377
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 281.4136047363281
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 281.58197021484377
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 281.69818115234377
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 281.9820556640625
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 282.14727783203127
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 282.28204345703127
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 282.9138488769531
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 283.3475341796875
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 284.24786376953127
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 284.9817199707031
+        },
+        {
+            "keyPressed": "C",
+            "valid": true,
+            "hitTime": 284.9817199707031
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 285.38134765625
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 285.8152160644531
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 285.9836120605469
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 285.9836120605469
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 286.14825439453127
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 286.2814636230469
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 286.4479675292969
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 286.650390625
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 287.3495788574219
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 287.5149230957031
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 287.6500244140625
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 287.7817687988281
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 287.9476623535156
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 288.1139221191406
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 288.2475280761719
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 288.382080078125
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 288.5152282714844
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 288.64971923828127
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 288.81463623046877
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 288.9478454589844
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 289.1498107910156
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 289.2817687988281
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 289.4493103027344
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 289.64996337890627
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 289.8150634765625
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 289.9814453125
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 290.0813903808594
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 290.2497863769531
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 290.3819274902344
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 290.5496826171875
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 290.71429443359377
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 290.8812561035156
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 291.04901123046877
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 291.1809997558594
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 291.3497009277344
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 291.5496520996094
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 291.7491760253906
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 291.9147033691406
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 292.2153015136719
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 292.3489685058594
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 292.5155944824219
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 292.68206787109377
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 292.8811950683594
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 293.0478210449219
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 293.2150573730469
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 293.4155578613281
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 293.61505126953127
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 295.4820556640625
+        }
+    ],
+    "stanceChanges": [
+        {
+            "stance": "HIGH",
+            "changeTime": 0.6983547210693359
+        },
+        {
+            "stance": "MID",
+            "changeTime": 2.264902114868164
+        },
+        {
+            "stance": "LOW",
+            "changeTime": 2.7646303176879885
+        },
+        {
+            "stance": "MID",
+            "changeTime": 3.0974388122558595
+        },
+        {
+            "stance": "HIGH",
+            "changeTime": 3.2971858978271486
+        },
+        {
+            "stance": "MID",
+            "changeTime": 3.6322784423828127
+        },
+        {
+            "stance": "LOW",
+            "changeTime": 3.831601142883301
+        },
+        {
+            "stance": "MID",
+            "changeTime": 5.631943702697754
+        },
+        {
+            "stance": "HIGH",
+            "changeTime": 5.832021713256836
+        },
+        {
+            "stance": "MID",
+            "changeTime": 9.331782341003418
+        },
+        {
+            "stance": "LOW",
+            "changeTime": 9.800111770629883
+        },
+        {
+            "stance": "MID",
+            "changeTime": 10.931830406188965
+        },
+        {
+            "stance": "LOW",
+            "changeTime": 15.699763298034668
+        },
+        {
+            "stance": "MID",
+            "changeTime": 16.19964599609375
+        },
+        {
+            "stance": "HIGH",
+            "changeTime": 16.432647705078126
+        },
+        {
+            "stance": "MID",
+            "changeTime": 16.732627868652345
+        },
+        {
+            "stance": "LOW",
+            "changeTime": 16.93246841430664
+        },
+        {
+            "stance": "MID",
+            "changeTime": 17.56527328491211
+        },
+        {
+            "stance": "HIGH",
+            "changeTime": 18.532516479492189
+        },
+        {
+            "stance": "MID",
+            "changeTime": 19.915096282958986
+        },
+        {
+            "stance": "LOW",
+            "changeTime": 20.849159240722658
+        },
+        {
+            "stance": "MID",
+            "changeTime": 23.600265502929689
+        },
+        {
+            "stance": "HIGH",
+            "changeTime": 24.600048065185548
+        },
+        {
+            "stance": "MID",
+            "changeTime": 28.46908950805664
+        },
+        {
+            "stance": "HIGH",
+            "changeTime": 29.466915130615236
+        },
+        {
+            "stance": "LOW",
+            "changeTime": 34.26842498779297
+        },
+        {
+            "stance": "MID",
+            "changeTime": 36.968650817871097
+        },
+        {
+            "stance": "HIGH",
+            "changeTime": 37.83518600463867
+        },
+        {
+            "stance": "MID",
+            "changeTime": 42.802330017089847
+        },
+        {
+            "stance": "LOW",
+            "changeTime": 44.77084732055664
+        },
+        {
+            "stance": "MID",
+            "changeTime": 46.97014617919922
+        },
+        {
+            "stance": "HIGH",
+            "changeTime": 49.53812789916992
+        },
+        {
+            "stance": "MID",
+            "changeTime": 50.50295639038086
+        },
+        {
+            "stance": "HIGH",
+            "changeTime": 52.83802032470703
+        },
+        {
+            "stance": "MID",
+            "changeTime": 55.43808364868164
+        },
+        {
+            "stance": "HIGH",
+            "changeTime": 56.26982879638672
+        },
+        {
+            "stance": "LOW",
+            "changeTime": 61.33970642089844
+        },
+        {
+            "stance": "MID",
+            "changeTime": 63.70581817626953
+        },
+        {
+            "stance": "HIGH",
+            "changeTime": 64.54061126708985
+        },
+        {
+            "stance": "MID",
+            "changeTime": 65.94117736816406
+        },
+        {
+            "stance": "HIGH",
+            "changeTime": 69.50910186767578
+        },
+        {
+            "stance": "MID",
+            "changeTime": 70.57405853271485
+        },
+        {
+            "stance": "HIGH",
+            "changeTime": 73.64054870605469
+        },
+        {
+            "stance": "MID",
+            "changeTime": 74.40892791748047
+        },
+        {
+            "stance": "HIGH",
+            "changeTime": 76.31072998046875
+        },
+        {
+            "stance": "MID",
+            "changeTime": 89.37638854980469
+        },
+        {
+            "stance": "HIGH",
+            "changeTime": 99.70841217041016
+        },
+        {
+            "stance": "MID",
+            "changeTime": 100.6744613647461
+        },
+        {
+            "stance": "HIGH",
+            "changeTime": 107.34186553955078
+        },
+        {
+            "stance": "MID",
+            "changeTime": 114.50865173339844
+        },
+        {
+            "stance": "HIGH",
+            "changeTime": 117.54427337646485
+        },
+        {
+            "stance": "MID",
+            "changeTime": 119.57681274414063
+        },
+        {
+            "stance": "HIGH",
+            "changeTime": 129.114013671875
+        },
+        {
+            "stance": "MID",
+            "changeTime": 131.37986755371095
+        },
+        {
+            "stance": "HIGH",
+            "changeTime": 132.91441345214845
+        },
+        {
+            "stance": "MID",
+            "changeTime": 135.28253173828126
+        },
+        {
+            "stance": "HIGH",
+            "changeTime": 137.11407470703126
+        },
+        {
+            "stance": "MID",
+            "changeTime": 138.04800415039063
+        },
+        {
+            "stance": "HIGH",
+            "changeTime": 141.8817138671875
+        },
+        {
+            "stance": "MID",
+            "changeTime": 145.01541137695313
+        },
+        {
+            "stance": "LOW",
+            "changeTime": 145.31527709960938
+        },
+        {
+            "stance": "LOW",
+            "changeTime": 151.75013732910157
+        },
+        {
+            "stance": "MID",
+            "changeTime": 153.7840576171875
+        },
+        {
+            "stance": "LOW",
+            "changeTime": 163.61993408203126
+        },
+        {
+            "stance": "MID",
+            "changeTime": 165.25125122070313
+        },
+        {
+            "stance": "LOW",
+            "changeTime": 167.0182342529297
+        },
+        {
+            "stance": "MID",
+            "changeTime": 169.68521118164063
+        },
+        {
+            "stance": "HIGH",
+            "changeTime": 169.9518585205078
+        },
+        {
+            "stance": "MID",
+            "changeTime": 171.6857452392578
+        },
+        {
+            "stance": "LOW",
+            "changeTime": 172.652099609375
+        },
+        {
+            "stance": "MID",
+            "changeTime": 174.3195343017578
+        },
+        {
+            "stance": "HIGH",
+            "changeTime": 175.15225219726563
+        },
+        {
+            "stance": "MID",
+            "changeTime": 176.71929931640626
+        },
+        {
+            "stance": "LOW",
+            "changeTime": 177.58482360839845
+        },
+        {
+            "stance": "MID",
+            "changeTime": 179.28683471679688
+        },
+        {
+            "stance": "HIGH",
+            "changeTime": 180.787353515625
+        },
+        {
+            "stance": "MID",
+            "changeTime": 182.73712158203126
+        },
+        {
+            "stance": "HIGH",
+            "changeTime": 183.5193328857422
+        },
+        {
+            "stance": "LOW",
+            "changeTime": 189.98681640625
+        },
+        {
+            "stance": "MID",
+            "changeTime": 191.920166015625
+        },
+        {
+            "stance": "LOW",
+            "changeTime": 194.68710327148438
+        },
+        {
+            "stance": "MID",
+            "changeTime": 196.58802795410157
+        },
+        {
+            "stance": "HIGH",
+            "changeTime": 197.42288208007813
+        },
+        {
+            "stance": "MID",
+            "changeTime": 198.32308959960938
+        },
+        {
+            "stance": "HIGH",
+            "changeTime": 199.08709716796876
+        },
+        {
+            "stance": "MID",
+            "changeTime": 200.98959350585938
+        },
+        {
+            "stance": "HIGH",
+            "changeTime": 201.82290649414063
+        },
+        {
+            "stance": "MID",
+            "changeTime": 209.38832092285157
+        },
+        {
+            "stance": "HIGH",
+            "changeTime": 212.28785705566407
+        },
+        {
+            "stance": "MID",
+            "changeTime": 213.0226593017578
+        },
+        {
+            "stance": "HIGH",
+            "changeTime": 215.19000244140626
+        },
+        {
+            "stance": "MID",
+            "changeTime": 219.23898315429688
+        },
+        {
+            "stance": "HIGH",
+            "changeTime": 220.29002380371095
+        },
+        {
+            "stance": "MID",
+            "changeTime": 221.85760498046876
+        },
+        {
+            "stance": "HIGH",
+            "changeTime": 224.42384338378907
+        },
+        {
+            "stance": "HIGH",
+            "changeTime": 230.02735900878907
+        },
+        {
+            "stance": "MID",
+            "changeTime": 242.29510498046876
+        },
+        {
+            "stance": "HIGH",
+            "changeTime": 245.32647705078126
+        },
+        {
+            "stance": "MID",
+            "changeTime": 249.3276824951172
+        },
+        {
+            "stance": "HIGH",
+            "changeTime": 250.32696533203126
+        },
+        {
+            "stance": "MID",
+            "changeTime": 252.0279541015625
+        },
+        {
+            "stance": "LOW",
+            "changeTime": 253.06280517578126
+        },
+        {
+            "stance": "MID",
+            "changeTime": 256.0954284667969
+        },
+        {
+            "stance": "HIGH",
+            "changeTime": 260.5465393066406
+        },
+        {
+            "stance": "MID",
+            "changeTime": 262.8464050292969
+        },
+        {
+            "stance": "HIGH",
+            "changeTime": 264.4788513183594
+        },
+        {
+            "stance": "MID",
+            "changeTime": 266.81158447265627
+        },
+        {
+            "stance": "LOW",
+            "changeTime": 267.0791015625
+        },
+        {
+            "stance": "MID",
+            "changeTime": 267.9139404296875
+        },
+        {
+            "stance": "HIGH",
+            "changeTime": 274.01416015625
+        },
+        {
+            "stance": "MID",
+            "changeTime": 279.5819396972656
+        },
+        {
+            "stance": "LOW",
+            "changeTime": 280.9815673828125
+        },
+        {
+            "stance": "MID",
+            "changeTime": 283.3475341796875
+        },
+        {
+            "stance": "HIGH",
+            "changeTime": 285.9836120605469
+        },
+        {
+            "stance": "MID",
+            "changeTime": 287.3495788574219
+        }
+    ]
+}

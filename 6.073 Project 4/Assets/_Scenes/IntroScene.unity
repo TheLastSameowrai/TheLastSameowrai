@@ -816,6 +816,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 831848182}
   speed: 0
+  allowSkip: 1
 --- !u!4 &1580651431
 Transform:
   m_ObjectHideFlags: 0
