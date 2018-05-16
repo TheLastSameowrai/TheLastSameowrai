@@ -47,7 +47,7 @@ public class SpawnScript : MonoBehaviour {
         LevelConfigManager.doguraiParryWindupSpeed = 1f;
         LevelConfigManager.doguraiParrySpeed = 1f;
         LevelConfigManager.doguraiParryCooldownSpeed = 1f;
-        LevelConfigManager.doguraiStunSpeed = 0.1f;
+        LevelConfigManager.doguraiStunSpeed = 0.5f;
 
 		LevelConfigManager.EnemiesToDefeat = totalEnemies[LevelConfigManager.Level-1];
 		LevelConfigManager.SpawnRate = spawnRates[LevelConfigManager.Level-1];
