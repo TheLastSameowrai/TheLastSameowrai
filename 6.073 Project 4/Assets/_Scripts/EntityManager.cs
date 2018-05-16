@@ -86,7 +86,9 @@ public class EntityManager : MonoBehaviour {
 				looking = -1;
 			}
 
-			LevelConfigManager.looking = looking;
+			if (this.gameObject.CompareTag("Player")) {
+				LevelConfigManager.looking = looking;
+			}
 
 			gameObject.transform.localScale = looking > 0 ? new Vector3 (1, 1, 1) : new Vector3 (-1, 1, 1);
             if(gameObject.CompareTag("Enemy"))
