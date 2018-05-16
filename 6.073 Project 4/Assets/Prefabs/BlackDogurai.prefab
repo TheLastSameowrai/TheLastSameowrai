@@ -480,7 +480,7 @@ MonoBehaviour:
   speed: 9
   attackSpeed: 0.1
   health: 10
-  damage: 100
+  damage: 5
   looking: 1
   staggering: 0
   death: 0
