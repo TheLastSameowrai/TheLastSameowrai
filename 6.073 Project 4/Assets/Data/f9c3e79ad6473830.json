@@ -1,0 +1,116 @@
+{
+    "id": "f9c3e79ad6473830",
+    "plays": 1,
+    "pauses": 0,
+    "levels": [
+        {
+            "levelNumber": 1,
+            "playNumber": 1,
+            "completeTime": 14.61945915222168,
+            "currentTime": 14.61945915222168,
+            "enemies_killed": 3,
+            "enemies_spawned": 3,
+            "result": "complete"
+        }
+    ],
+    "enemiesHit": [
+        {
+            "enemyType": "WhiteDogurai",
+            "levelNumber": 1,
+            "playNumber": 1,
+            "hitTime": 5.181511402130127
+        }
+    ],
+    "keysHit": [
+        {
+            "keyPressed": "C",
+            "valid": true,
+            "hitTime": 0.0
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 0.26601219177246096
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 1.2503299713134766
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 1.7671451568603516
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 2.51019287109375
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 3.311194896697998
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 3.680014133453369
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 5.679983615875244
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 5.81204080581665
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 6.580454349517822
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 6.831814289093018
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 7.664601802825928
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 10.132610321044922
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 10.599981307983399
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 11.382959365844727
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 12.135194778442383
+        }
+    ],
+    "stanceChanges": [
+        {
+            "stance": "LOW",
+            "changeTime": 5.679983615875244
+        },
+        {
+            "stance": "MID",
+            "changeTime": 6.580454349517822
+        }
+    ]
+}

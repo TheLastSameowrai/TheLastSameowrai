@@ -199,7 +199,11 @@ public class EntityManager : MonoBehaviour {
                     {
                         damageFlashFramesCounter = damageFlashFrames;
 
-						if (staggering) {
+						print ("collision.GetCoComponentInParent<EntityManager>().gameObject.tag" + collision.GetComponentInParent<EntityManager>().gameObject.tag);
+						print ("staggering?:" + staggering);
+						if (staggering && collision.GetComponentInParent<EntityManager>().gameObject.tag != "Enemy") {
+							print ("doing double damage");
+							print (collision.GetComponentInParent<EntityManager> ().gameObject.tag);
 							health -= 2 * collision.gameObject.GetComponentInParent<EntityManager> ().damage;
 						} else {
 							health -= collision.gameObject.GetComponentInParent<EntityManager> ().damage;
@@ -226,10 +230,11 @@ public class EntityManager : MonoBehaviour {
     }
 
     public void StartDeath() {
-        Debug.Log(gameObject + "StartDeath");
+        //Debug.Log(gameObject + "StartDeath");
         death = true;
         anim.SetBool("isDying", true);
         anim.speed = 1;
+		rb2d.velocity = new Vector2(0, 0);
         
     }
 
