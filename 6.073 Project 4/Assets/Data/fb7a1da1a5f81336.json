@@ -1,0 +1,143 @@
+{
+    "id": "fb7a1da1a5f81336",
+    "plays": 1,
+    "pauses": 0,
+    "levels": [
+        {
+            "levelNumber": 1,
+            "playNumber": 1,
+            "completeTime": 13.88490104675293,
+            "currentTime": 13.88490104675293,
+            "enemies_killed": 3,
+            "enemies_spawned": 3,
+            "result": "complete"
+        }
+    ],
+    "enemiesHit": [
+        {
+            "enemyType": "WhiteDogurai",
+            "levelNumber": 1,
+            "playNumber": 1,
+            "hitTime": 8.279813766479493
+        }
+    ],
+    "keysHit": [
+        {
+            "keyPressed": "C",
+            "valid": true,
+            "hitTime": 0.0
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 0.23391151428222657
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 0.40228271484375
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 1.1181812286376954
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 3.567209243774414
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 4.134563446044922
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 4.834259033203125
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 4.933591842651367
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 6.18254280090332
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 6.767377853393555
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 8.050935745239258
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 8.834375381469727
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 9.801336288452149
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 10.167940139770508
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 10.301725387573243
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 11.28577995300293
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 11.86839485168457
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 12.234628677368164
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 12.701784133911133
+        }
+    ],
+    "stanceChanges": [
+        {
+            "stance": "LOW",
+            "changeTime": 0.40228271484375
+        },
+        {
+            "stance": "MID",
+            "changeTime": 4.834259033203125
+        },
+        {
+            "stance": "LOW",
+            "changeTime": 8.050935745239258
+        },
+        {
+            "stance": "MID",
+            "changeTime": 10.167940139770508
+        },
+        {
+            "stance": "HIGH",
+            "changeTime": 11.86839485168457
+        }
+    ]
+}
