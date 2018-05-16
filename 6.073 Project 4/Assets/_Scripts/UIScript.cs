@@ -24,6 +24,7 @@ public class UIScript : MonoBehaviour {
 
     private AudioSource musicSource;
     public AudioClip levelMusic1;
+	public AudioClip bossMusic;
     public bool playlevelCompleteSound;
     public AudioClip levelCompleteSound;
 
@@ -62,9 +63,8 @@ public class UIScript : MonoBehaviour {
 		hidePaused();
 		if (LevelConfigManager.FirstTime) {
             musicSource = GameObject.Find("musicSource").GetComponent<AudioSource>();
-            musicSource.Stop();
             musicSource.clip = levelMusic1;
-
+			musicSource.Play();
 			LevelConfigManager.StartTime = Time.time; //startTime = Time.time;
 			LevelConfigManager.Timer = timer;
 			LevelConfigManager.Timer.text = "00:00"; // Timer.text = "00:00";
@@ -111,7 +111,7 @@ public class UIScript : MonoBehaviour {
 			transitionPopup.gameObject.SetActive(false);
 			LevelConfigManager.Paused = false;
 			instructions.SetActive(true);
-            musicSource.Play();
+            //musicSource.Play();
 		}
 		if (!LevelConfigManager.GameOver && Input.GetKeyDown(KeyCode.P))
 		{
@@ -127,7 +127,7 @@ public class UIScript : MonoBehaviour {
 
 		if (Input.GetKeyDown (KeyCode.R)) 
 		{
-            musicSource.Stop();
+			musicSource.Play();
             RestartGame();
 		}
 
@@ -197,7 +197,7 @@ public class UIScript : MonoBehaviour {
 	}
 	
 	public void ToNextLevel() {
-        musicSource.Stop();
+        //musicSource.Stop();
         musicSource.clip = levelMusic1;
 		LevelConfigManager.dataManager.levelComplete(LevelConfigManager.Level, Time.time, LevelConfigManager.EnemiesDefeated, LevelConfigManager.EnemiesSpawned, "complete"); //Store Data for level
 		LevelConfigManager.Level = LevelConfigManager.Level + 1;
@@ -222,6 +222,10 @@ public class UIScript : MonoBehaviour {
 			Destroy (GameObject.Find ("Background"));
 			Destroy (this.gameObject);
 		} else {
+			if (LevelConfigManager.Level == 10) {
+				musicSource.clip = bossMusic;
+				musicSource.Play ();
+			}
 			SceneManager.LoadScene ("GameScene");
 			setLevelText ();
 			setBackground ();
