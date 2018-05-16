@@ -1,0 +1,162 @@
+{
+    "id": "85dea06342e9f17c",
+    "plays": 1,
+    "pauses": 0,
+    "levels": [
+        {
+            "levelNumber": 1,
+            "playNumber": 1,
+            "completeTime": 15.433465957641602,
+            "currentTime": 15.433465957641602,
+            "enemies_killed": 3,
+            "enemies_spawned": 3,
+            "result": "complete"
+        }
+    ],
+    "enemiesHit": [],
+    "keysHit": [
+        {
+            "keyPressed": "C",
+            "valid": true,
+            "hitTime": 0.0
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 0.23166990280151368
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 0.46344494819641116
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 0.666064977645874
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 0.9315249919891357
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 1.0978209972381592
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 1.5632288455963135
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 2.4659550189971926
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 3.3644349575042726
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 3.931025743484497
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 4.198078155517578
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 5.065966606140137
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 5.331337928771973
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 5.898593902587891
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 7.065773010253906
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 7.7975616455078129
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 7.933058738708496
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 9.466353416442871
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 11.833698272705079
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 11.932621002197266
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 13.131156921386719
+        }
+    ],
+    "stanceChanges": [
+        {
+            "stance": "HIGH",
+            "changeTime": 0.46344494819641116
+        },
+        {
+            "stance": "MID",
+            "changeTime": 0.9315249919891357
+        },
+        {
+            "stance": "LOW",
+            "changeTime": 1.0978209972381592
+        },
+        {
+            "stance": "MID",
+            "changeTime": 2.4659550189971926
+        },
+        {
+            "stance": "HIGH",
+            "changeTime": 3.931025743484497
+        },
+        {
+            "stance": "MID",
+            "changeTime": 5.065966606140137
+        },
+        {
+            "stance": "LOW",
+            "changeTime": 5.331337928771973
+        },
+        {
+            "stance": "MID",
+            "changeTime": 7.7975616455078129
+        },
+        {
+            "stance": "LOW",
+            "changeTime": 11.833698272705079
+        }
+    ]
+}

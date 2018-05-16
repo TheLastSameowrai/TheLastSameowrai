@@ -139,11 +139,16 @@ public class UIScript : MonoBehaviour {
 			levelUI.text = "Level " + LevelConfigManager.Level.ToString ();
         }
 
-		if (LevelConfigManager.EnemiesDefeated >= LevelConfigManager.EnemiesToDefeat && !LevelConfigManager.GameOver) {
-            //print ("---Setting button to true---");
-            if (playlevelCompleteSound) musicSource.Stop();
-            if (proceedButton != null) {
-                proceedButton.SetActive(true);
+		if (LevelConfigManager.EnemiesDefeated >= LevelConfigManager.EnemiesToDefeat && GameObject.FindGameObjectsWithTag ("Enemy").Length == 0 && !LevelConfigManager.GameOver) {
+			//print ("---Setting button to true---");
+			if (playlevelCompleteSound)
+				musicSource.Stop ();
+			if (proceedButton != null) {
+				proceedButton.SetActive (true);
+			}
+		} else {
+			if (proceedButton != null) {
+				proceedButton.SetActive (false);
 			}
 		}
 
@@ -213,6 +218,7 @@ public class UIScript : MonoBehaviour {
 			Time.timeScale = 1;
 			LevelConfigManager.FirstTime = true;
 			LevelConfigManager.playerHealth = 10;
+			GameObject.Find ("Player").GetComponent<EntityManager> ().health = 10;
 			LevelConfigManager.GameOver = false;
 			LevelConfigManager.dataManager.plays += 1;
 			LevelConfigManager.Level = 1;
@@ -240,6 +246,7 @@ public class UIScript : MonoBehaviour {
 		Time.timeScale = 1;
 		hidePaused ();
 		LevelConfigManager.playerHealth = 10;
+		GameObject.Find ("Player").GetComponent<EntityManager> ().health = 10;
 		LevelConfigManager.GameOver = false;
 		LevelConfigManager.dataManager.plays += 1;
 		LevelConfigManager.Level = 1;
