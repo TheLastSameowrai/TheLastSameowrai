@@ -274,7 +274,7 @@ public class UIScript : MonoBehaviour {
 	void setLevelText() {
 		switch (LevelConfigManager.Level) {
 		case 1:
-			transitionText.text = "Hurry! I just saw Dokugawa Doggunate Bork go through that door, but his puppers are in your way. <color='grey'> Defeat them with the appropriate stance to move on! </color>" ;
+			transitionText.text = "Hurry! I just saw Dokugawa Doggunate Bork go through that door, but his puppers are in your way. <color='grey'> Defeat them with a <b> different stance</b> to move on! </color>" ;
 			break;
 		case 2:
 			transitionText.text = "Great job, young one! Be careful, these guys are a <color='yellow'> little stronger </color> than the pups you just defeated.";
