@@ -208,6 +208,7 @@ public class UIScript : MonoBehaviour {
 		//print ("---Just set the button active to false----");
 		if (LevelConfigManager.Level > 10) {
 			SceneManager.LoadScene ("CreditsScene");
+			Destroy (this.gameObject);
 		} else {
 			SceneManager.LoadScene ("GameScene");
 			setLevelText ();
@@ -222,6 +223,7 @@ public class UIScript : MonoBehaviour {
 	void RestartGame() {
 		Time.timeScale = 1;
 		hidePaused ();
+		LevelConfigManager.playerHealth = 10;
 		LevelConfigManager.GameOver = false;
 		LevelConfigManager.dataManager.plays += 1;
 		LevelConfigManager.Level = 1;
