@@ -630,8 +630,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.4
-  m_Text: Long long ago when cats and dogs have roamed the earth, in the sacred litter
-    box of the legenary sa-meow-rais, holds the Golden Cat-ana.
+  m_Text: Long long ago, when cats and dogs roamed the earth, the sacred litter box
+    of the legenary sa-meow-rais, held the Golden Cat-ana.
 --- !u!222 &1272389802
 CanvasRenderer:
   m_ObjectHideFlags: 0
