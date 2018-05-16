@@ -249,6 +249,10 @@ public class EntityManager : MonoBehaviour {
 			LevelConfigManager.dataManager.levelComplete(LevelConfigManager.Level, Time.time, LevelConfigManager.EnemiesDefeated, LevelConfigManager.EnemiesSpawned, "game_over"); //Store Data for level
 			LevelConfigManager.Timer.text = "Game Over";
 			LevelConfigManager.GameOver = true;
+			AudioClip gameOverMusic = GameObject.Find ("UIScript").GetComponent<UIScript> ().gameOverMusic;
+			AudioSource musicSource = GameObject.Find ("musicSource").GetComponent<AudioSource> ();
+			musicSource.clip = gameOverMusic;
+			musicSource.Play ();
 
 			Object.Destroy (this.gameObject);
 			/*GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");

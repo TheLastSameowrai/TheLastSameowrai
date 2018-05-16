@@ -1,0 +1,150 @@
+{
+    "id": "7890ea676ec46716",
+    "plays": 1,
+    "pauses": 0,
+    "levels": [
+        {
+            "levelNumber": 1,
+            "playNumber": 1,
+            "completeTime": 13.133333206176758,
+            "currentTime": 13.133333206176758,
+            "enemies_killed": 0,
+            "enemies_spawned": 3,
+            "result": "game_over"
+        }
+    ],
+    "enemiesHit": [
+        {
+            "enemyType": "WhiteDogurai",
+            "levelNumber": 1,
+            "playNumber": 1,
+            "hitTime": 5.648510932922363
+        },
+        {
+            "enemyType": "WhiteDogurai",
+            "levelNumber": 1,
+            "playNumber": 1,
+            "hitTime": 6.948511123657227
+        },
+        {
+            "enemyType": "WhiteDogurai",
+            "levelNumber": 1,
+            "playNumber": 1,
+            "hitTime": 8.308511734008789
+        },
+        {
+            "enemyType": "WhiteDogurai",
+            "levelNumber": 1,
+            "playNumber": 1,
+            "hitTime": 8.808511734008789
+        },
+        {
+            "enemyType": "WhiteDogurai",
+            "levelNumber": 1,
+            "playNumber": 1,
+            "hitTime": 9.648510932922364
+        },
+        {
+            "enemyType": "WhiteDogurai",
+            "levelNumber": 1,
+            "playNumber": 1,
+            "hitTime": 10.148510932922364
+        },
+        {
+            "enemyType": "WhiteDogurai",
+            "levelNumber": 1,
+            "playNumber": 1,
+            "hitTime": 10.948511123657227
+        },
+        {
+            "enemyType": "WhiteDogurai",
+            "levelNumber": 1,
+            "playNumber": 1,
+            "hitTime": 11.468511581420899
+        },
+        {
+            "enemyType": "WhiteDogurai",
+            "levelNumber": 1,
+            "playNumber": 1,
+            "hitTime": 12.048511505126954
+        },
+        {
+            "enemyType": "WhiteDogurai",
+            "levelNumber": 1,
+            "playNumber": 1,
+            "hitTime": 12.268510818481446
+        },
+        {
+            "enemyType": "WhiteDogurai",
+            "levelNumber": 1,
+            "playNumber": 1,
+            "hitTime": 12.808510780334473
+        }
+    ],
+    "keysHit": [
+        {
+            "keyPressed": "C",
+            "valid": true,
+            "hitTime": 0.0
+        },
+        {
+            "keyPressed": "C",
+            "valid": true,
+            "hitTime": 0.165863037109375
+        },
+        {
+            "keyPressed": "W",
+            "valid": true,
+            "hitTime": 0.497891902923584
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 0.630640983581543
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 0.9980919361114502
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 2.0654242038726808
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 3.4977920055389406
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 11.533206939697266
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 11.698423385620118
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 11.833303451538086
+        }
+    ],
+    "stanceChanges": [
+        {
+            "stance": "HIGH",
+            "changeTime": 0.497891902923584
+        },
+        {
+            "stance": "MID",
+            "changeTime": 11.533206939697266
+        },
+        {
+            "stance": "LOW",
+            "changeTime": 11.698423385620118
+        }
+    ]
+}

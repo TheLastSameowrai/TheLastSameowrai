@@ -1632,6 +1632,7 @@ MonoBehaviour:
   garden: {fileID: 940082916}
   final: {fileID: 1632366489}
   levelMusic1: {fileID: 8300000, guid: 22e7489926cd58e4fb49414007433ffb, type: 3}
+  gameOverMusic: {fileID: 8300000, guid: 6f33ae30200cd9e42afda525bf59efbc, type: 3}
   bossMusic: {fileID: 8300000, guid: 9d5edc5de0e689146a733f8e7c1349e0, type: 3}
   playlevelCompleteSound: 0
   levelCompleteSound: {fileID: 8300000, guid: 4a958aaf2423f7d46a711b360a768499, type: 3}

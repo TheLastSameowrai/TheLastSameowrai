@@ -24,6 +24,7 @@ public class UIScript : MonoBehaviour {
 
     private AudioSource musicSource;
     public AudioClip levelMusic1;
+	public AudioClip gameOverMusic;
 	public AudioClip bossMusic;
     public bool playlevelCompleteSound;
     public AudioClip levelCompleteSound;
@@ -127,6 +128,7 @@ public class UIScript : MonoBehaviour {
 
 		if (Input.GetKeyDown (KeyCode.R)) 
 		{
+			musicSource.clip = levelMusic1;
 			musicSource.Play();
             RestartGame();
 		}
@@ -218,7 +220,10 @@ public class UIScript : MonoBehaviour {
 			Time.timeScale = 1;
 			LevelConfigManager.FirstTime = true;
 			LevelConfigManager.playerHealth = 10;
-			GameObject.Find ("Player").GetComponent<EntityManager> ().health = 10;
+			GameObject player = GameObject.Find ("Player");
+			if (player != null) {
+				player.GetComponent<EntityManager> ().health = 10;
+			}
 			LevelConfigManager.GameOver = false;
 			LevelConfigManager.dataManager.plays += 1;
 			LevelConfigManager.Level = 1;
@@ -246,7 +251,10 @@ public class UIScript : MonoBehaviour {
 		Time.timeScale = 1;
 		hidePaused ();
 		LevelConfigManager.playerHealth = 10;
-		GameObject.Find ("Player").GetComponent<EntityManager> ().health = 10;
+		GameObject player = GameObject.Find ("Player");
+		if (player != null) {
+			player.GetComponent<EntityManager> ().health = 10;
+		}
 		LevelConfigManager.GameOver = false;
 		LevelConfigManager.dataManager.plays += 1;
 		LevelConfigManager.Level = 1;
