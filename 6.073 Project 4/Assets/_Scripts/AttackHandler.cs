@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class AttackHandler : MonoBehaviour {
 
@@ -105,4 +106,12 @@ public class AttackHandler : MonoBehaviour {
         anim.SetBool("isAttacking", false);
         anim.speed = 1;
     }
+
+	public void RandStance(){
+		Array vals = Enum.GetValues(typeof(StanceManager.Stance));
+		System.Random random = new System.Random();
+		StanceManager.Stance randStance = (StanceManager.Stance)vals.GetValue(random.Next(vals.Length));
+
+		em.sm.ChangeStance(randStance);
+	}
 }

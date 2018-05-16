@@ -70,7 +70,7 @@ public class DemoEnemyController : MonoBehaviour
 
     }
 
-    void RandStance()
+    public void RandStance()
     {
         Array vals = Enum.GetValues(typeof(StanceManager.Stance));
         System.Random random = new System.Random();

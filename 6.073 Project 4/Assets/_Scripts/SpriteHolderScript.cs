@@ -69,6 +69,11 @@ public class SpriteHolderScript : MonoBehaviour {
         em.StartDeath();
     }
 
+	void RandStance()
+	{
+		ah.RandStance ();
+	}
+
     void DestroyEntity()
     {
         em.DestroyEntity();
