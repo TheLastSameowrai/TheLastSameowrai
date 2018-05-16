@@ -26,7 +26,7 @@ def plotEnemyFrequency():
 	frequencies = enemyFrequency()
 	
 	plt.bar(range(len(frequencies)), frequencies.values(), align='center',
-		color = ["blue", "brown", "purple", "yellow", "green", "orange", "white", "red"])
+		color = ["blue", "brown", "purple", "yellow", "green", "orange", "black", "white", "red"])
 	plt.xticks(range(len(frequencies)), frequencies.keys())
 
 	plt.xlabel("Enemy")
@@ -106,6 +106,6 @@ def buttonSmash():
 	print total/len(data)
 
 
-buttonSmash()
+plotEnemyFrequency()
 
 
