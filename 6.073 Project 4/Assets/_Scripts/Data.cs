@@ -73,7 +73,7 @@ public class Data : MonoBehaviour {
 	public void stanceChange(string stance, float time){
 		StanceData newStance = new StanceData ();
 		newStance.stance = stance;
-		newStance.changeTime = time - Time.time;
+		newStance.changeTime = time - start_time;
 		stances.Add (newStance);
 	}
 
@@ -94,6 +94,7 @@ public class Data : MonoBehaviour {
         levels = levelList.ToArray();
 		enemiesHit = enemyList.ToArray ();
 		keysHit = keysList.ToArray ();
+		stanceChanges = stances.ToArray ();
         string filepath =  Application.dataPath + "/Data/" + id + ".json";
         // For now, doesn't actually store the data
         File.WriteAllText(filepath, JsonUtility.ToJson(this, true));

@@ -94,7 +94,13 @@ public class EntityManager : MonoBehaviour {
                 Canvas healthCanvas = gameObject.GetComponentInChildren<Canvas>();
                 healthCanvas.transform.localScale = new Vector3(looking, 1, 1);
                 Text textLabel = healthCanvas.GetComponentInChildren<Text>();
-                textLabel.text = health.ToString();
+				textLabel.fontSize = 35;
+				textLabel.alignment = TextAnchor.MiddleLeft;
+				string healthLabel = "";
+				for (int i = 0; i < health; i++) { 
+					healthLabel += "︎❤";
+				}
+				textLabel.text = "<color='red'>" + healthLabel + "</color>";
 		    }
 
 		float xPosition = rb2d.transform.position.x;
@@ -137,7 +143,7 @@ public class EntityManager : MonoBehaviour {
 			float xPosition = rb2d.transform.position.x;
 
 			if (ah.anim.GetCurrentAnimatorStateInfo (0).IsTag ("Attack") ||
-                ah.anim.GetCurrentAnimatorStateInfo(0).IsTag("Parry")) {
+			    ah.anim.GetCurrentAnimatorStateInfo (0).IsTag ("Parry")) {
 				anim.SetFloat ("speed", 0);
 				rb2d.velocity = new Vector2 (0, 0);
 			} else {
@@ -147,6 +153,9 @@ public class EntityManager : MonoBehaviour {
 
 				}
 			}
+		} else {
+			rb2d.velocity = new Vector2 (0, 0);
+
 		}
 
     }

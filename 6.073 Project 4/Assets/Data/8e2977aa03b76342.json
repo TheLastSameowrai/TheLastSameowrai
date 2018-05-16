@@ -1,0 +1,147 @@
+{
+    "id": "8e2977aa03b76342",
+    "plays": 1,
+    "pauses": 0,
+    "levels": [
+        {
+            "levelNumber": 1,
+            "playNumber": 1,
+            "completeTime": 15.27383804321289,
+            "currentTime": 15.27383804321289,
+            "enemies_killed": 3,
+            "enemies_spawned": 3,
+            "result": "complete"
+        }
+    ],
+    "enemiesHit": [
+        {
+            "enemyType": "WhiteDogurai",
+            "levelNumber": 1,
+            "playNumber": 1,
+            "hitTime": 5.465644836425781
+        }
+    ],
+    "keysHit": [
+        {
+            "keyPressed": "C",
+            "valid": true,
+            "hitTime": 0.0
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 0.509002685546875
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 5.858329772949219
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 6.4078826904296879
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 7.239160537719727
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 7.558736801147461
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 7.7237396240234379
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 7.990823745727539
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 8.341730117797852
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 8.941051483154297
+        },
+        {
+            "keyPressed": "S",
+            "valid": true,
+            "hitTime": 9.639358520507813
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 10.058917999267579
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 10.339431762695313
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 10.823223114013672
+        },
+        {
+            "keyPressed": "A",
+            "valid": true,
+            "hitTime": 11.476844787597657
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 11.9749755859375
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 12.17434310913086
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 12.339397430419922
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 12.524036407470704
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 12.708282470703125
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 12.89297103881836
+        },
+        {
+            "keyPressed": "Space",
+            "valid": true,
+            "hitTime": 13.107177734375
+        },
+        {
+            "keyPressed": "D",
+            "valid": true,
+            "hitTime": 13.858196258544922
+        }
+    ],
+    "stanceChanges": [
+        {
+            "stance": "LOW",
+            "changeTime": 7.558736801147461
+        }
+    ]
+}
