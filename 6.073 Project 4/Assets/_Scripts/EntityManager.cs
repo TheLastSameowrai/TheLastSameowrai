@@ -227,11 +227,23 @@ public class EntityManager : MonoBehaviour {
 
     public void StartDeath() {
         //Debug.Log(gameObject + "StartDeath");
+		if (this.gameObject.tag == "Enemy") {
+			Canvas healthCanvas = gameObject.GetComponentInChildren<Canvas> ();
+			healthCanvas.transform.localScale = new Vector3 (looking, 1, 1);
+			Text textLabel = healthCanvas.GetComponentInChildren<Text> ();
+			/*textLabel.fontSize = 20;
+			textLabel.alignment = TextAnchor.MiddleCenter;
+			string healthLabel = "";
+			for (int i = 0; i < health; i++) { 
+				healthLabel += "︎❤";
+			}*/
+			textLabel.text = ""; //"<color='red'>" + healthLabel + "</color>";*
+		}
+
         death = true;
         anim.SetBool("isDying", true);
         anim.speed = 1;
 		rb2d.velocity = new Vector2(0, 0);
-        
     }
 
 
