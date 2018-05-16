@@ -78,7 +78,7 @@ public class EntityManager : MonoBehaviour {
 
 		if (staggering) {
             // removed push back for parry riposte
-
+            rb2d.velocity = new Vector2(0, 0);
 		} else {
 			if (rb2d.velocity.x > 0) {
 				looking = 1;
@@ -94,8 +94,8 @@ public class EntityManager : MonoBehaviour {
                 Canvas healthCanvas = gameObject.GetComponentInChildren<Canvas>();
                 healthCanvas.transform.localScale = new Vector3(looking, 1, 1);
                 Text textLabel = healthCanvas.GetComponentInChildren<Text>();
-				textLabel.fontSize = 35;
-				textLabel.alignment = TextAnchor.MiddleLeft;
+				textLabel.fontSize = 20;
+				textLabel.alignment = TextAnchor.MiddleCenter;
 				string healthLabel = "";
 				for (int i = 0; i < health; i++) { 
 					healthLabel += "︎❤";
