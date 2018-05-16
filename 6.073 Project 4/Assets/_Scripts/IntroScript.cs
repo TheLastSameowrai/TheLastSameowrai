@@ -30,6 +30,10 @@ public class IntroScript : MonoBehaviour {
 			t += Time.deltaTime / total_time;
 			canvas.transform.position = Vector3.Lerp(start_position, target_position, t);
 		}
+
+		if (Input.anyKey) {
+			total_time = t;
+		}
 	}
 
 	public void ToInstructionsScene() {
