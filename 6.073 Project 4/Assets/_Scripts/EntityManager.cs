@@ -199,11 +199,7 @@ public class EntityManager : MonoBehaviour {
                     {
                         damageFlashFramesCounter = damageFlashFrames;
 
-						print ("collision.GetCoComponentInParent<EntityManager>().gameObject.tag" + collision.GetComponentInParent<EntityManager>().gameObject.tag);
-						print ("staggering?:" + staggering);
 						if (staggering && collision.GetComponentInParent<EntityManager>().gameObject.tag != "Enemy") {
-							print ("doing double damage");
-							print (collision.GetComponentInParent<EntityManager> ().gameObject.tag);
 							health -= 2 * collision.gameObject.GetComponentInParent<EntityManager> ().damage;
 						} else {
 							health -= collision.gameObject.GetComponentInParent<EntityManager> ().damage;
